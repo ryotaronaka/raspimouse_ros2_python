@@ -1,0 +1,302 @@
+[0.000000] (-) TimerEvent: {}
+[0.001622] (light_sensor_values) JobQueued: {'identifier': 'light_sensor_values', 'dependencies': OrderedDict()}
+[0.003112] (raspimouse) JobQueued: {'identifier': 'raspimouse', 'dependencies': OrderedDict([('light_sensor_values', '/home/ubuntu/ros2_ws/install/light_sensor_values')])}
+[0.005847] (light_sensor_values) JobStarted: {'identifier': 'light_sensor_values'}
+[0.097785] (-) TimerEvent: {}
+[0.111834] (light_sensor_values) JobProgress: {'identifier': 'light_sensor_values', 'progress': 'cmake'}
+[0.118576] (light_sensor_values) JobProgress: {'identifier': 'light_sensor_values', 'progress': 'build'}
+[0.125172] (light_sensor_values) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ubuntu/ros2_ws/build/light_sensor_values', '--', '-j4', '-l4'], 'cwd': '/home/ubuntu/ros2_ws/build/light_sensor_values', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ubuntu'), ('SSH_CLIENT', '192.168.1.13 50554 22'), ('LC_TIME', 'C.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ubuntu/ros2_ws/install/tutorial_interfaces/lib:/home/ubuntu/ros2_ws/install/light_sensor_values/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/ubuntu'), ('OLDPWD', '/home/ubuntu'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'C.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/ubuntu/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ubuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ubuntu/.local/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'C.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'C.UTF-8'), ('LC_TELEPHONE', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/ubuntu/ros2_ws/install/tutorial_topic:/home/ubuntu/ros2_ws/install/tutorial_package:/home/ubuntu/ros2_ws/install/tutorial_interfaces:/home/ubuntu/ros2_ws/install/raspimouse:/home/ubuntu/ros2_ws/install/light_sensor_values:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'C.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'C.UTF-8'), ('LC_IDENTIFICATION', 'C.UTF-8'), ('PWD', '/home/ubuntu/ros2_ws/build/light_sensor_values'), ('SSH_CONNECTION', '192.168.1.13 50554 192.168.1.11 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ubuntu/ros2_ws/install/tutorial_interfaces/lib/python3.8/site-packages:/home/ubuntu/ros2_ws/install/raspimouse/lib/python3.8/site-packages:/home/ubuntu/ros2_ws/install/light_sensor_values/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'C.UTF-8'), ('LC_PAPER', 'C.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ubuntu/ros2_ws/install/tutorial_topic:/home/ubuntu/ros2_ws/install/tutorial_package:/home/ubuntu/ros2_ws/install/tutorial_interfaces:/home/ubuntu/ros2_ws/install/light_sensor_values:/home/ubuntu/ros2_ws/install/raspimouse:/opt/ros/foxy')]), 'shell': False}
+[0.376341] (-) TimerEvent: {}
+[0.487393] (-) TimerEvent: {}
+[0.589248] (-) TimerEvent: {}
+[0.691490] (-) TimerEvent: {}
+[0.793111] (-) TimerEvent: {}
+[0.799164] (light_sensor_values) StdoutLine: {'line': b'[  2%] Built target light_sensor_values__cpp\n'}
+[0.814587] (light_sensor_values) StdoutLine: {'line': b'[ 12%] Built target light_sensor_values__rosidl_generator_c\n'}
+[0.893606] (-) TimerEvent: {}
+[0.989295] (light_sensor_values) StdoutLine: {'line': b'[ 23%] Built target light_sensor_values__rosidl_typesupport_cpp\n'}
+[0.994010] (-) TimerEvent: {}
+[1.013844] (light_sensor_values) StdoutLine: {'line': b'[ 33%] Built target light_sensor_values__rosidl_typesupport_introspection_cpp\n'}
+[1.032383] (light_sensor_values) StdoutLine: {'line': b'[ 43%] Built target light_sensor_values__rosidl_typesupport_fastrtps_cpp\n'}
+[1.094325] (-) TimerEvent: {}
+[1.196545] (light_sensor_values) StdoutLine: {'line': b'[ 53%] Built target light_sensor_values__rosidl_typesupport_introspection_c\n'}
+[1.198216] (-) TimerEvent: {}
+[1.204934] (light_sensor_values) StdoutLine: {'line': b'[ 64%] Built target light_sensor_values__rosidl_typesupport_c\n'}
+[1.255116] (light_sensor_values) StdoutLine: {'line': b'[ 74%] Built target light_sensor_values__rosidl_typesupport_fastrtps_c\n'}
+[1.298507] (-) TimerEvent: {}
+[1.400469] (-) TimerEvent: {}
+[1.413223] (light_sensor_values) StdoutLine: {'line': b'[ 74%] Built target light_sensor_values\n'}
+[1.500575] (-) TimerEvent: {}
+[1.580551] (light_sensor_values) StdoutLine: {'line': b'[ 76%] Built target light_sensor_values__py\n'}
+[1.600853] (-) TimerEvent: {}
+[1.702141] (-) TimerEvent: {}
+[1.783211] (light_sensor_values) StdoutLine: {'line': b'[ 84%] Built target light_sensor_values__python\n'}
+[1.802513] (-) TimerEvent: {}
+[1.904027] (-) TimerEvent: {}
+[1.992361] (light_sensor_values) StdoutLine: {'line': b'[ 94%] Built target light_sensor_values__rosidl_typesupport_introspection_c__pyext\n'}
+[1.994827] (light_sensor_values) StdoutLine: {'line': b'[ 94%] Built target light_sensor_values__rosidl_typesupport_fastrtps_c__pyext\n'}
+[2.002190] (light_sensor_values) StdoutLine: {'line': b'[100%] Built target light_sensor_values__rosidl_typesupport_c__pyext\n'}
+[2.004323] (-) TimerEvent: {}
+[2.097960] (light_sensor_values) CommandEnded: {'returncode': 0}
+[2.104571] (-) TimerEvent: {}
+[2.206290] (-) TimerEvent: {}
+[2.308485] (-) TimerEvent: {}
+[2.410191] (-) TimerEvent: {}
+[2.511703] (-) TimerEvent: {}
+[2.613339] (-) TimerEvent: {}
+[2.714943] (-) TimerEvent: {}
+[2.766723] (light_sensor_values) JobProgress: {'identifier': 'light_sensor_values', 'progress': 'install'}
+[2.815399] (-) TimerEvent: {}
+[2.842167] (light_sensor_values) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ubuntu/ros2_ws/build/light_sensor_values'], 'cwd': '/home/ubuntu/ros2_ws/build/light_sensor_values', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ubuntu'), ('SSH_CLIENT', '192.168.1.13 50554 22'), ('LC_TIME', 'C.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ubuntu/ros2_ws/install/tutorial_interfaces/lib:/home/ubuntu/ros2_ws/install/light_sensor_values/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/ubuntu'), ('OLDPWD', '/home/ubuntu'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'C.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/ubuntu/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ubuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ubuntu/.local/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'C.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'C.UTF-8'), ('LC_TELEPHONE', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/ubuntu/ros2_ws/install/tutorial_topic:/home/ubuntu/ros2_ws/install/tutorial_package:/home/ubuntu/ros2_ws/install/tutorial_interfaces:/home/ubuntu/ros2_ws/install/raspimouse:/home/ubuntu/ros2_ws/install/light_sensor_values:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'C.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'C.UTF-8'), ('LC_IDENTIFICATION', 'C.UTF-8'), ('PWD', '/home/ubuntu/ros2_ws/build/light_sensor_values'), ('SSH_CONNECTION', '192.168.1.13 50554 192.168.1.11 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ubuntu/ros2_ws/install/tutorial_interfaces/lib/python3.8/site-packages:/home/ubuntu/ros2_ws/install/raspimouse/lib/python3.8/site-packages:/home/ubuntu/ros2_ws/install/light_sensor_values/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'C.UTF-8'), ('LC_PAPER', 'C.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ubuntu/ros2_ws/install/tutorial_topic:/home/ubuntu/ros2_ws/install/tutorial_package:/home/ubuntu/ros2_ws/install/tutorial_interfaces:/home/ubuntu/ros2_ws/install/light_sensor_values:/home/ubuntu/ros2_ws/install/raspimouse:/opt/ros/foxy')]), 'shell': False}
+[2.915701] (-) TimerEvent: {}
+[2.921772] (light_sensor_values) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.924910] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/ament_index/resource_index/rosidl_interfaces/light_sensor_values\n'}
+[2.927149] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values\n'}
+[2.930981] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg\n'}
+[2.932631] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/light_sensor_values.h\n'}
+[2.934796] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/detail\n'}
+[2.937691] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/detail/light_sensor_values__type_support.h\n'}
+[2.939760] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/detail/light_sensor_values__functions.h\n'}
+[2.941256] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/detail/light_sensor_values__functions.c\n'}
+[2.943130] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/detail/light_sensor_values__struct.h\n'}
+[2.944671] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/rosidl_generator_c__visibility_control.h\n'}
+[2.946683] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv\n'}
+[2.948509] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail\n'}
+[2.951597] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_servide__functions.c\n'}
+[2.954126] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_service__struct.h\n'}
+[2.955588] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_servide__functions.h\n'}
+[2.957354] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_service__functions.c\n'}
+[2.959691] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_service__functions.h\n'}
+[2.962803] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_servide__struct.h\n'}
+[2.964744] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_servide__type_support.h\n'}
+[2.966015] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_service__type_support.h\n'}
+[2.967688] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/light_sensor_values_service.h\n'}
+[2.969053] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/light_sensor_values_servide.h\n'}
+[2.970957] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/environment/library_path.sh\n'}
+[2.972825] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/environment/library_path.dsv\n'}
+[2.974673] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/lib/liblight_sensor_values__rosidl_generator_c.so\n'}
+[2.976561] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values\n'}
+[2.978378] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg\n'}
+[2.979640] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/detail\n'}
+[2.981357] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/detail/light_sensor_values__rosidl_typesupport_fastrtps_c.h\n'}
+[2.982765] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[2.984410] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv\n'}
+[2.985963] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail\n'}
+[2.987438] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_servide__rosidl_typesupport_fastrtps_c.h\n'}
+[2.990481] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_service__rosidl_typesupport_fastrtps_c.h\n'}
+[2.992816] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/lib/liblight_sensor_values__rosidl_typesupport_fastrtps_c.so\n'}
+[2.994990] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values\n'}
+[2.996948] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg\n'}
+[2.999256] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/detail\n'}
+[3.001976] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/detail/dds_fastrtps\n'}
+[3.003931] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/detail/light_sensor_values__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.006270] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[3.008428] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv\n'}
+[3.009801] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail\n'}
+[3.011888] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_servide__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.013498] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/dds_fastrtps\n'}
+[3.014647] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_service__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.016176] (-) TimerEvent: {}
+[3.017823] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/lib/liblight_sensor_values__rosidl_typesupport_fastrtps_cpp.so\n'}
+[3.019671] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values\n'}
+[3.022184] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg\n'}
+[3.023632] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/detail\n'}
+[3.024757] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/detail/light_sensor_values__rosidl_typesupport_introspection_c.h\n'}
+[3.026090] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/detail/light_sensor_values__type_support.c\n'}
+[3.027426] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[3.028564] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv\n'}
+[3.029690] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail\n'}
+[3.031173] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_servide__rosidl_typesupport_introspection_c.h\n'}
+[3.033149] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_service__rosidl_typesupport_introspection_c.h\n'}
+[3.035106] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_service__type_support.c\n'}
+[3.036874] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_servide__type_support.c\n'}
+[3.038511] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/lib/liblight_sensor_values__rosidl_typesupport_introspection_c.so\n'}
+[3.040057] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/lib/liblight_sensor_values__rosidl_typesupport_c.so\n'}
+[3.041990] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values\n'}
+[3.043626] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg\n'}
+[3.045287] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/light_sensor_values.hpp\n'}
+[3.047087] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/detail\n'}
+[3.048486] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/detail/light_sensor_values__struct.hpp\n'}
+[3.050515] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/detail/light_sensor_values__builder.hpp\n'}
+[3.052023] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/detail/light_sensor_values__traits.hpp\n'}
+[3.053695] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv\n'}
+[3.055295] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail\n'}
+[3.056917] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_servide__struct.hpp\n'}
+[3.058326] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_servide__builder.hpp\n'}
+[3.059778] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_servide__traits.hpp\n'}
+[3.061333] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_service__struct.hpp\n'}
+[3.062874] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_service__traits.hpp\n'}
+[3.064139] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_service__builder.hpp\n'}
+[3.065577] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/light_sensor_values_service.hpp\n'}
+[3.066698] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/light_sensor_values_servide.hpp\n'}
+[3.067904] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values\n'}
+[3.069232] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg\n'}
+[3.070553] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/detail\n'}
+[3.071897] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/detail/light_sensor_values__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.073229] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/msg/detail/light_sensor_values__type_support.cpp\n'}
+[3.074372] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv\n'}
+[3.075654] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail\n'}
+[3.077040] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_servide__type_support.cpp\n'}
+[3.078358] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_service__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.079753] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_service__type_support.cpp\n'}
+[3.081303] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/include/light_sensor_values/srv/detail/light_sensor_values_servide__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.082566] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/lib/liblight_sensor_values__rosidl_typesupport_introspection_cpp.so\n'}
+[3.083908] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/lib/liblight_sensor_values__rosidl_typesupport_cpp.so\n'}
+[3.085237] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/environment/pythonpath.sh\n'}
+[3.086658] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/environment/pythonpath.dsv\n'}
+[3.088002] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/lib/python3.8/site-packages/light_sensor_values/__init__.py\n'}
+[3.116556] (-) TimerEvent: {}
+[3.217922] (-) TimerEvent: {}
+[3.319510] (-) TimerEvent: {}
+[3.347657] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/lib/python3.8/site-packages/light_sensor_values/msg\n'}
+[3.349714] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/lib/python3.8/site-packages/light_sensor_values/msg/_light_sensor_values_s.c\n'}
+[3.351987] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/lib/python3.8/site-packages/light_sensor_values/msg/__init__.py\n'}
+[3.354076] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/lib/python3.8/site-packages/light_sensor_values/msg/_light_sensor_values.py\n'}
+[3.356000] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/lib/python3.8/site-packages/light_sensor_values/srv\n'}
+[3.357611] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/lib/python3.8/site-packages/light_sensor_values/srv/__init__.py\n'}
+[3.358985] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/lib/python3.8/site-packages/light_sensor_values/srv/_light_sensor_values_servide.py\n'}
+[3.360665] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/lib/python3.8/site-packages/light_sensor_values/srv/_light_sensor_values_service.py\n'}
+[3.361968] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/lib/python3.8/site-packages/light_sensor_values/srv/_light_sensor_values_servide_s.c\n'}
+[3.363284] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/lib/python3.8/site-packages/light_sensor_values/srv/_light_sensor_values_service_s.c\n'}
+[3.364660] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/lib/python3.8/site-packages/light_sensor_values/light_sensor_values_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\n'}
+[3.367427] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/lib/python3.8/site-packages/light_sensor_values/light_sensor_values_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\n'}
+[3.374011] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/lib/python3.8/site-packages/light_sensor_values/light_sensor_values_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\n'}
+[3.379140] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/lib/liblight_sensor_values__python.so\n'}
+[3.382112] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/msg/LightSensorValues.idl\n'}
+[3.384044] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/srv/LightSensorValuesService.idl\n'}
+[3.386018] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/msg/LightSensorValues.msg\n'}
+[3.390221] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/srv/LightSensorValuesService.srv\n'}
+[3.392166] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/srv/LightSensorValuesService_Request.msg\n'}
+[3.394936] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/srv/LightSensorValuesService_Response.msg\n'}
+[3.396898] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/ament_index/resource_index/package_run_dependencies/light_sensor_values\n'}
+[3.400014] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/ament_index/resource_index/parent_prefix_path/light_sensor_values\n'}
+[3.403292] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/environment/ament_prefix_path.sh\n'}
+[3.404923] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/environment/ament_prefix_path.dsv\n'}
+[3.406774] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/environment/path.sh\n'}
+[3.408288] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/environment/path.dsv\n'}
+[3.410473] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/local_setup.bash\n'}
+[3.411919] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/local_setup.sh\n'}
+[3.414574] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/local_setup.zsh\n'}
+[3.415990] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/local_setup.dsv\n'}
+[3.417766] (light_sensor_values) StdoutLine: {'line': b'-- Installing: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/package.dsv\n'}
+[3.420083] (-) TimerEvent: {}
+[3.421247] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/ament_index/resource_index/packages/light_sensor_values\n'}
+[3.422863] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/cmake/light_sensor_values__rosidl_generator_cExport.cmake\n'}
+[3.425337] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/cmake/light_sensor_values__rosidl_generator_cExport-noconfig.cmake\n'}
+[3.428493] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/cmake/light_sensor_values__rosidl_typesupport_introspection_cExport.cmake\n'}
+[3.430653] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/cmake/light_sensor_values__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[3.432695] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/cmake/light_sensor_values__rosidl_typesupport_cExport.cmake\n'}
+[3.435036] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/cmake/light_sensor_values__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[3.436606] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/cmake/light_sensor_values__rosidl_generator_cppExport.cmake\n'}
+[3.438249] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/cmake/light_sensor_values__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[3.439692] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/cmake/light_sensor_values__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[3.441244] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/cmake/light_sensor_values__rosidl_typesupport_cppExport.cmake\n'}
+[3.442586] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/cmake/light_sensor_values__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[3.443798] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/cmake/rosidl_cmake-extras.cmake\n'}
+[3.445289] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[3.449112] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[3.460129] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[3.463038] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[3.465121] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[3.466817] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[3.468366] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/cmake/light_sensor_valuesConfig.cmake\n'}
+[3.470281] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/cmake/light_sensor_valuesConfig-version.cmake\n'}
+[3.472264] (light_sensor_values) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/light_sensor_values/share/light_sensor_values/package.xml\n'}
+[3.474135] (light_sensor_values) CommandEnded: {'returncode': 0}
+[3.522180] (-) TimerEvent: {}
+[3.629728] (-) TimerEvent: {}
+[3.731603] (-) TimerEvent: {}
+[3.833875] (-) TimerEvent: {}
+[3.935415] (-) TimerEvent: {}
+[4.038189] (-) TimerEvent: {}
+[4.142939] (-) TimerEvent: {}
+[4.249024] (-) TimerEvent: {}
+[4.355664] (-) TimerEvent: {}
+[4.461836] (-) TimerEvent: {}
+[4.522701] (light_sensor_values) JobEnded: {'identifier': 'light_sensor_values', 'rc': 0}
+[4.531630] (raspimouse) JobStarted: {'identifier': 'raspimouse'}
+[4.562202] (-) TimerEvent: {}
+[4.896557] (-) TimerEvent: {}
+[4.999229] (-) TimerEvent: {}
+[5.102885] (-) TimerEvent: {}
+[5.205507] (-) TimerEvent: {}
+[5.307198] (-) TimerEvent: {}
+[5.409549] (-) TimerEvent: {}
+[5.511655] (-) TimerEvent: {}
+[5.613884] (-) TimerEvent: {}
+[5.716085] (-) TimerEvent: {}
+[5.817746] (-) TimerEvent: {}
+[5.920430] (-) TimerEvent: {}
+[6.024047] (-) TimerEvent: {}
+[6.127207] (-) TimerEvent: {}
+[6.229422] (-) TimerEvent: {}
+[6.331520] (-) TimerEvent: {}
+[6.433810] (-) TimerEvent: {}
+[6.536049] (-) TimerEvent: {}
+[6.638306] (-) TimerEvent: {}
+[6.740904] (-) TimerEvent: {}
+[6.843609] (-) TimerEvent: {}
+[6.945267] (-) TimerEvent: {}
+[7.049112] (-) TimerEvent: {}
+[7.151015] (-) TimerEvent: {}
+[7.194235] (raspimouse) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/raspimouse', 'build', '--build-base', '/home/ubuntu/ros2_ws/build/raspimouse/build', 'install', '--prefix', '/home/ubuntu/ros2_ws/install/raspimouse', '--record', '/home/ubuntu/ros2_ws/build/raspimouse/install.log', '--single-version-externally-managed'], 'cwd': '/home/ubuntu/ros2_ws/src/raspimouse', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ubuntu', 'SSH_CLIENT': '192.168.1.13 50554 22', 'LC_TIME': 'C.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ubuntu/ros2_ws/install/light_sensor_values/lib:/home/ubuntu/ros2_ws/install/tutorial_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/ubuntu', 'OLDPWD': '/home/ubuntu', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'LC_MONETARY': 'C.UTF-8', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/ubuntu/ros2_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/ubuntu/.local/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'C.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'C.UTF-8', 'LC_TELEPHONE': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/ubuntu/ros2_ws/install/tutorial_topic:/home/ubuntu/ros2_ws/install/tutorial_package:/home/ubuntu/ros2_ws/install/tutorial_interfaces:/home/ubuntu/ros2_ws/install/raspimouse:/home/ubuntu/ros2_ws/install/light_sensor_values:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'C.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'C.UTF-8', 'LC_IDENTIFICATION': 'C.UTF-8', 'PWD': '/home/ubuntu/ros2_ws/build/raspimouse', 'SSH_CONNECTION': '192.168.1.13 50554 192.168.1.11 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ubuntu/ros2_ws/install/raspimouse/lib/python3.8/site-packages:/home/ubuntu/ros2_ws/install/light_sensor_values/lib/python3.8/site-packages:/home/ubuntu/ros2_ws/install/tutorial_interfaces/lib/python3.8/site-packages:/home/ubuntu/ros2_ws/install/raspimouse/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'C.UTF-8', 'LC_PAPER': 'C.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/ubuntu/ros2_ws/install/light_sensor_values:/home/ubuntu/ros2_ws/install/tutorial_topic:/home/ubuntu/ros2_ws/install/tutorial_package:/home/ubuntu/ros2_ws/install/tutorial_interfaces'}, 'shell': False}
+[7.251308] (-) TimerEvent: {}
+[7.354190] (-) TimerEvent: {}
+[7.457260] (-) TimerEvent: {}
+[7.560201] (-) TimerEvent: {}
+[7.663139] (-) TimerEvent: {}
+[7.764655] (-) TimerEvent: {}
+[7.866464] (-) TimerEvent: {}
+[7.968407] (-) TimerEvent: {}
+[8.069699] (-) TimerEvent: {}
+[8.171244] (-) TimerEvent: {}
+[8.272647] (-) TimerEvent: {}
+[8.374128] (-) TimerEvent: {}
+[8.475545] (-) TimerEvent: {}
+[8.577123] (-) TimerEvent: {}
+[8.678383] (-) TimerEvent: {}
+[8.779730] (-) TimerEvent: {}
+[8.881183] (-) TimerEvent: {}
+[8.982603] (-) TimerEvent: {}
+[9.085582] (-) TimerEvent: {}
+[9.188157] (-) TimerEvent: {}
+[9.277950] (raspimouse) StdoutLine: {'line': b'running egg_info\n'}
+[9.284043] (raspimouse) StdoutLine: {'line': b'writing ../../build/raspimouse/raspimouse.egg-info/PKG-INFO\n'}
+[9.287204] (raspimouse) StdoutLine: {'line': b'writing dependency_links to ../../build/raspimouse/raspimouse.egg-info/dependency_links.txt\n'}
+[9.290441] (-) TimerEvent: {}
+[9.292373] (raspimouse) StdoutLine: {'line': b'writing entry points to ../../build/raspimouse/raspimouse.egg-info/entry_points.txt\n'}
+[9.295232] (raspimouse) StdoutLine: {'line': b'writing requirements to ../../build/raspimouse/raspimouse.egg-info/requires.txt\n'}
+[9.297760] (raspimouse) StdoutLine: {'line': b'writing top-level names to ../../build/raspimouse/raspimouse.egg-info/top_level.txt\n'}
+[9.390688] (-) TimerEvent: {}
+[9.494242] (-) TimerEvent: {}
+[9.595697] (-) TimerEvent: {}
+[9.665237] (raspimouse) StdoutLine: {'line': b"reading manifest file '../../build/raspimouse/raspimouse.egg-info/SOURCES.txt'\n"}
+[9.674749] (raspimouse) StdoutLine: {'line': b"writing manifest file '../../build/raspimouse/raspimouse.egg-info/SOURCES.txt'\n"}
+[9.679201] (raspimouse) StdoutLine: {'line': b'running build\n'}
+[9.682623] (raspimouse) StdoutLine: {'line': b'running build_py\n'}
+[9.685250] (raspimouse) StdoutLine: {'line': b'copying raspimouse/lightsensors.py -> /home/ubuntu/ros2_ws/build/raspimouse/build/lib/raspimouse\n'}
+[9.703421] (-) TimerEvent: {}
+[9.709551] (raspimouse) StdoutLine: {'line': b'running install\n'}
+[9.712825] (raspimouse) StdoutLine: {'line': b'running install_lib\n'}
+[9.721484] (raspimouse) StdoutLine: {'line': b'copying /home/ubuntu/ros2_ws/build/raspimouse/build/lib/raspimouse/lightsensors.py -> /home/ubuntu/ros2_ws/install/raspimouse/lib/python3.8/site-packages/raspimouse\n'}
+[9.724690] (raspimouse) StdoutLine: {'line': b'byte-compiling /home/ubuntu/ros2_ws/install/raspimouse/lib/python3.8/site-packages/raspimouse/lightsensors.py to lightsensors.cpython-38.pyc\n'}
+[9.743675] (raspimouse) StdoutLine: {'line': b'running install_data\n'}
+[9.750315] (raspimouse) StdoutLine: {'line': b'running install_egg_info\n'}
+[9.764720] (raspimouse) StdoutLine: {'line': b"removing '/home/ubuntu/ros2_ws/install/raspimouse/lib/python3.8/site-packages/raspimouse-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[9.782015] (raspimouse) StdoutLine: {'line': b'Copying ../../build/raspimouse/raspimouse.egg-info to /home/ubuntu/ros2_ws/install/raspimouse/lib/python3.8/site-packages/raspimouse-0.0.0-py3.8.egg-info\n'}
+[9.786405] (raspimouse) StdoutLine: {'line': b'running install_scripts\n'}
+[9.804145] (-) TimerEvent: {}
+[9.906044] (-) TimerEvent: {}
+[9.949932] (raspimouse) StdoutLine: {'line': b'Installing buzzer2_sub_node script to /home/ubuntu/ros2_ws/install/raspimouse/lib/raspimouse\n'}
+[9.957768] (raspimouse) StdoutLine: {'line': b'Installing buzzer3_sub_node script to /home/ubuntu/ros2_ws/install/raspimouse/lib/raspimouse\n'}
+[9.959759] (raspimouse) StdoutLine: {'line': b'Installing buzzer_node script to /home/ubuntu/ros2_ws/install/raspimouse/lib/raspimouse\n'}
+[9.961540] (raspimouse) StdoutLine: {'line': b'Installing lightsensor_sub script to /home/ubuntu/ros2_ws/install/raspimouse/lib/raspimouse\n'}
+[9.963856] (raspimouse) StdoutLine: {'line': b'Installing lightsensors script to /home/ubuntu/ros2_ws/install/raspimouse/lib/raspimouse\n'}
+[9.965167] (raspimouse) StdoutLine: {'line': b'Installing lightsensors2 script to /home/ubuntu/ros2_ws/install/raspimouse/lib/raspimouse\n'}
+[9.971679] (raspimouse) StdoutLine: {'line': b"writing list of installed files to '/home/ubuntu/ros2_ws/build/raspimouse/install.log'\n"}
+[10.006324] (-) TimerEvent: {}
+[10.107902] (-) TimerEvent: {}
+[10.189134] (raspimouse) CommandEnded: {'returncode': 0}
+[10.208618] (-) TimerEvent: {}
+[10.284725] (raspimouse) JobEnded: {'identifier': 'raspimouse', 'rc': 0}
+[10.294500] (-) EventReactorShutdown: {}

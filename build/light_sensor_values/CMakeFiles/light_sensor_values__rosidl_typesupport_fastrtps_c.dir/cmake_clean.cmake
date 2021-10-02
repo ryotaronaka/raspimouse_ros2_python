@@ -1,0 +1,15 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/light_sensor_values__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/light_sensor_values/msg/detail/light_sensor_values__type_support_c.cpp.o"
+  "CMakeFiles/light_sensor_values__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/light_sensor_values/srv/detail/light_sensor_values_service__type_support_c.cpp.o"
+  "liblight_sensor_values__rosidl_typesupport_fastrtps_c.pdb"
+  "liblight_sensor_values__rosidl_typesupport_fastrtps_c.so"
+  "rosidl_typesupport_fastrtps_c/light_sensor_values/msg/detail/light_sensor_values__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/light_sensor_values/msg/detail/light_sensor_values__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/light_sensor_values/srv/detail/light_sensor_values_service__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/light_sensor_values/srv/detail/light_sensor_values_service__type_support_c.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/light_sensor_values__rosidl_typesupport_fastrtps_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

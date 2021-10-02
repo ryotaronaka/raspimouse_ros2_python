@@ -1,0 +1,2 @@
+int16 right_hz
+int16 left_hz

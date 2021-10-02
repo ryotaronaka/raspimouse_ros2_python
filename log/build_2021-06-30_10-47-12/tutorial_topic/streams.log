@@ -1,0 +1,29 @@
+[0.183s] Invoking command in '/home/ubuntu/ros2_ws/build/tutorial_topic': CMAKE_PREFIX_PATH=/home/ubuntu/ros2_ws/install/tutorial_interfaces:/home/ubuntu/ros2_ws/install/tutorial_topic:/home/ubuntu/ros2_ws/install/tutorial_package:/opt/ros/foxy /usr/bin/cmake --build /home/ubuntu/ros2_ws/build/tutorial_topic -- -j4 -l4
+[0.878s] [ 12%] [32mBuilding CXX object CMakeFiles/subscriber_custom.dir/src/subscriber_custom.cpp.o[0m
+[12.803s] [01m[K/home/ubuntu/ros2_ws/src/tutorial_topic/src/subscriber_custom.cpp:5:7:[m[K [01;31m[Kerror: [m[K‘[01m[Ktutorial_interfaces[m[K’ has not been declared
+[12.804s]     5 | using [01;31m[Ktutorial_interfaces[m[K::msg::Int32Stamped;
+[12.805s]       |       [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[12.823s] [01m[K/home/ubuntu/ros2_ws/src/tutorial_topic/src/subscriber_custom.cpp:10:31:[m[K [01;31m[Kerror: [m[K‘[01m[KInt32Stamped[m[K’ does not name a type
+[12.824s]    10 | void onNumberSubscribed(const [01;31m[KInt32Stamped[m[K::SharedPtr msg){
+[12.825s]       |                               [01;31m[K^~~~~~~~~~~~[m[K
+[12.826s] [01m[K/home/ubuntu/ros2_ws/src/tutorial_topic/src/subscriber_custom.cpp:10:55:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kmsg[m[K’
+[12.827s]    10 | void onNumberSubscribed(const Int32Stamped::SharedPtr [01;31m[Kmsg[m[K){
+[12.828s]       |                                                       [01;31m[K^~~[m[K
+[12.829s] [01m[K/home/ubuntu/ros2_ws/src/tutorial_topic/src/subscriber_custom.cpp:10:54:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kmsg[m[K’
+[12.829s]    10 | void onNumberSubscribed[34m[K([m[Kconst Int32Stamped::SharedPtr[01;31m[K [m[K[32m[Kmsg[m[K){
+[12.830s]       |                        [34m[K~[m[K                             [01;31m[K^[m[K[32m[K~~~[m[K
+[12.831s]       |                                                      [32m[K)[m[K
+[12.831s] [01m[K/home/ubuntu/ros2_ws/src/tutorial_topic/src/subscriber_custom.cpp:10:55:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kmsg[m[K’
+[12.832s]    10 | void onNumberSubscribed(const Int32Stamped::SharedPtr [01;31m[Kmsg[m[K){
+[12.833s]       |                                                       [01;31m[K^~~[m[K
+[12.841s] [01m[K/home/ubuntu/ros2_ws/src/tutorial_topic/src/subscriber_custom.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[12.842s] [01m[K/home/ubuntu/ros2_ws/src/tutorial_topic/src/subscriber_custom.cpp:21:44:[m[K [01;31m[Kerror: [m[K‘[01m[KInt32Stamped[m[K’ was not declared in this scope
+[12.843s]    21 |     auto sub = g_node->create_subscription<[01;31m[KInt32Stamped[m[K>("number", 10, onNumberSubscribed);
+[12.843s]       |                                            [01;31m[K^~~~~~~~~~~~[m[K
+[12.860s] [01m[K/home/ubuntu/ros2_ws/src/tutorial_topic/src/subscriber_custom.cpp:21:72:[m[K [01;31m[Kerror: [m[K‘[01m[KonNumberSubscribed[m[K’ was not declared in this scope
+[12.861s]    21 |     auto sub = g_node->create_subscription<Int32Stamped>("number", 10, [01;31m[KonNumberSubscribed[m[K);
+[12.862s]       |                                                                        [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[17.533s] make[2]: *** [CMakeFiles/subscriber_custom.dir/build.make:63: CMakeFiles/subscriber_custom.dir/src/subscriber_custom.cpp.o] Error 1
+[17.535s] make[1]: *** [CMakeFiles/Makefile2:84: CMakeFiles/subscriber_custom.dir/all] Error 2
+[17.536s] make: *** [Makefile:141: all] Error 2
+[17.548s] Invoked command in '/home/ubuntu/ros2_ws/build/tutorial_topic' returned '2': CMAKE_PREFIX_PATH=/home/ubuntu/ros2_ws/install/tutorial_interfaces:/home/ubuntu/ros2_ws/install/tutorial_topic:/home/ubuntu/ros2_ws/install/tutorial_package:/opt/ros/foxy /usr/bin/cmake --build /home/ubuntu/ros2_ws/build/tutorial_topic -- -j4 -l4
