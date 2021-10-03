@@ -39,14 +39,14 @@ void MotorFreqsService_Request_fini_function(void * message_memory)
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMember MotorFreqsService_Request_message_member_array[2] = {
   {
-    "e",  // name
+    "right_hz",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT16,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(raspimouse_msgs::srv::MotorFreqsService_Request, e),  // bytes offset in struct
+    offsetof(raspimouse_msgs::srv::MotorFreqsService_Request, right_hz),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -54,14 +54,14 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember MotorFreqsSer
     nullptr  // resize(index) function pointer
   },
   {
-    "f",  // name
+    "left_hz",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT16,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(raspimouse_msgs::srv::MotorFreqsService_Request, f),  // bytes offset in struct
+    offsetof(raspimouse_msgs::srv::MotorFreqsService_Request, left_hz),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer

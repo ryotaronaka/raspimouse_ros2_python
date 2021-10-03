@@ -65,6 +65,11 @@ CMakeFiles/raspimouse_msgs: /home/ubuntu/ros2_ws/src/raspimouse_msgs/msg/TimedMo
 CMakeFiles/raspimouse_msgs: /home/ubuntu/ros2_ws/src/raspimouse_msgs/srv/TimedMotionService.srv
 CMakeFiles/raspimouse_msgs: rosidl_cmake/srv/TimedMotionService_Request.msg
 CMakeFiles/raspimouse_msgs: rosidl_cmake/srv/TimedMotionService_Response.msg
+CMakeFiles/raspimouse_msgs: /home/ubuntu/ros2_ws/src/raspimouse_msgs/action/Music.action
+CMakeFiles/raspimouse_msgs: /opt/ros/foxy/share/action_msgs/msg/GoalInfo.idl
+CMakeFiles/raspimouse_msgs: /opt/ros/foxy/share/action_msgs/msg/GoalStatus.idl
+CMakeFiles/raspimouse_msgs: /opt/ros/foxy/share/action_msgs/msg/GoalStatusArray.idl
+CMakeFiles/raspimouse_msgs: /opt/ros/foxy/share/action_msgs/srv/CancelGoal.idl
 
 
 raspimouse_msgs: CMakeFiles/raspimouse_msgs

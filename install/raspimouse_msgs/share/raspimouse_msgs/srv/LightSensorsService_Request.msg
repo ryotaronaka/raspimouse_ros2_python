@@ -1,4 +1,4 @@
-int16 a
-int16 b
-int16 c
-int16 d
+int16 right_forward
+int16 right_side
+int16 left_side
+int16 left_forward

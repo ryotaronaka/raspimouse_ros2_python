@@ -20,10 +20,10 @@ extern "C"
 // Struct defined in srv/LightSensorsService in the package raspimouse_msgs.
 typedef struct raspimouse_msgs__srv__LightSensorsService_Request
 {
-  int16_t a;
-  int16_t b;
-  int16_t c;
-  int16_t d;
+  int16_t right_forward;
+  int16_t right_side;
+  int16_t left_side;
+  int16_t left_forward;
 } raspimouse_msgs__srv__LightSensorsService_Request;
 
 // Struct for a sequence of raspimouse_msgs__srv__LightSensorsService_Request.

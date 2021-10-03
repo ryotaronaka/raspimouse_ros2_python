@@ -53,17 +53,17 @@ class LightSensorsService_Request(metaclass=Metaclass_LightSensorsService_Reques
     """Message class 'LightSensorsService_Request'."""
 
     __slots__ = [
-        '_a',
-        '_b',
-        '_c',
-        '_d',
+        '_right_forward',
+        '_right_side',
+        '_left_side',
+        '_left_forward',
     ]
 
     _fields_and_field_types = {
-        'a': 'int16',
-        'b': 'int16',
-        'c': 'int16',
-        'd': 'int16',
+        'right_forward': 'int16',
+        'right_side': 'int16',
+        'left_side': 'int16',
+        'left_forward': 'int16',
     }
 
     SLOT_TYPES = (
@@ -77,10 +77,10 @@ class LightSensorsService_Request(metaclass=Metaclass_LightSensorsService_Reques
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.a = kwargs.get('a', int())
-        self.b = kwargs.get('b', int())
-        self.c = kwargs.get('c', int())
-        self.d = kwargs.get('d', int())
+        self.right_forward = kwargs.get('right_forward', int())
+        self.right_side = kwargs.get('right_side', int())
+        self.left_side = kwargs.get('left_side', int())
+        self.left_forward = kwargs.get('left_forward', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -111,13 +111,13 @@ class LightSensorsService_Request(metaclass=Metaclass_LightSensorsService_Reques
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.a != other.a:
+        if self.right_forward != other.right_forward:
             return False
-        if self.b != other.b:
+        if self.right_side != other.right_side:
             return False
-        if self.c != other.c:
+        if self.left_side != other.left_side:
             return False
-        if self.d != other.d:
+        if self.left_forward != other.left_forward:
             return False
         return True
 
@@ -127,64 +127,64 @@ class LightSensorsService_Request(metaclass=Metaclass_LightSensorsService_Reques
         return copy(cls._fields_and_field_types)
 
     @property
-    def a(self):
-        """Message field 'a'."""
-        return self._a
+    def right_forward(self):
+        """Message field 'right_forward'."""
+        return self._right_forward
 
-    @a.setter
-    def a(self, value):
+    @right_forward.setter
+    def right_forward(self, value):
         if __debug__:
             assert \
                 isinstance(value, int), \
-                "The 'a' field must be of type 'int'"
+                "The 'right_forward' field must be of type 'int'"
             assert value >= -32768 and value < 32768, \
-                "The 'a' field must be an integer in [-32768, 32767]"
-        self._a = value
+                "The 'right_forward' field must be an integer in [-32768, 32767]"
+        self._right_forward = value
 
     @property
-    def b(self):
-        """Message field 'b'."""
-        return self._b
+    def right_side(self):
+        """Message field 'right_side'."""
+        return self._right_side
 
-    @b.setter
-    def b(self, value):
+    @right_side.setter
+    def right_side(self, value):
         if __debug__:
             assert \
                 isinstance(value, int), \
-                "The 'b' field must be of type 'int'"
+                "The 'right_side' field must be of type 'int'"
             assert value >= -32768 and value < 32768, \
-                "The 'b' field must be an integer in [-32768, 32767]"
-        self._b = value
+                "The 'right_side' field must be an integer in [-32768, 32767]"
+        self._right_side = value
 
     @property
-    def c(self):
-        """Message field 'c'."""
-        return self._c
+    def left_side(self):
+        """Message field 'left_side'."""
+        return self._left_side
 
-    @c.setter
-    def c(self, value):
+    @left_side.setter
+    def left_side(self, value):
         if __debug__:
             assert \
                 isinstance(value, int), \
-                "The 'c' field must be of type 'int'"
+                "The 'left_side' field must be of type 'int'"
             assert value >= -32768 and value < 32768, \
-                "The 'c' field must be an integer in [-32768, 32767]"
-        self._c = value
+                "The 'left_side' field must be an integer in [-32768, 32767]"
+        self._left_side = value
 
     @property
-    def d(self):
-        """Message field 'd'."""
-        return self._d
+    def left_forward(self):
+        """Message field 'left_forward'."""
+        return self._left_forward
 
-    @d.setter
-    def d(self, value):
+    @left_forward.setter
+    def left_forward(self, value):
         if __debug__:
             assert \
                 isinstance(value, int), \
-                "The 'd' field must be of type 'int'"
+                "The 'left_forward' field must be of type 'int'"
             assert value >= -32768 and value < 32768, \
-                "The 'd' field must be an integer in [-32768, 32767]"
-        self._d = value
+                "The 'left_forward' field must be an integer in [-32768, 32767]"
+        self._left_forward = value
 
 
 # Import statements for member types

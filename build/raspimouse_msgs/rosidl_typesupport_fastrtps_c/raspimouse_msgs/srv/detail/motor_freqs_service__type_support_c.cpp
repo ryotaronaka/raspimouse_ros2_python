@@ -49,14 +49,14 @@ static bool _MotorFreqsService_Request__cdr_serialize(
     return false;
   }
   const _MotorFreqsService_Request__ros_msg_type * ros_message = static_cast<const _MotorFreqsService_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: e
+  // Field name: right_hz
   {
-    cdr << ros_message->e;
+    cdr << ros_message->right_hz;
   }
 
-  // Field name: f
+  // Field name: left_hz
   {
-    cdr << ros_message->f;
+    cdr << ros_message->left_hz;
   }
 
   return true;
@@ -71,14 +71,14 @@ static bool _MotorFreqsService_Request__cdr_deserialize(
     return false;
   }
   _MotorFreqsService_Request__ros_msg_type * ros_message = static_cast<_MotorFreqsService_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: e
+  // Field name: right_hz
   {
-    cdr >> ros_message->e;
+    cdr >> ros_message->right_hz;
   }
 
-  // Field name: f
+  // Field name: left_hz
   {
-    cdr >> ros_message->f;
+    cdr >> ros_message->left_hz;
   }
 
   return true;
@@ -98,15 +98,15 @@ size_t get_serialized_size_raspimouse_msgs__srv__MotorFreqsService_Request(
   (void)padding;
   (void)wchar_size;
 
-  // field.name e
+  // field.name right_hz
   {
-    size_t item_size = sizeof(ros_message->e);
+    size_t item_size = sizeof(ros_message->right_hz);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name f
+  // field.name left_hz
   {
-    size_t item_size = sizeof(ros_message->f);
+    size_t item_size = sizeof(ros_message->left_hz);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -134,14 +134,14 @@ size_t max_serialized_size_raspimouse_msgs__srv__MotorFreqsService_Request(
   (void)wchar_size;
   (void)full_bounded;
 
-  // member: e
+  // member: right_hz
   {
     size_t array_size = 1;
 
     current_alignment += array_size * sizeof(uint16_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
   }
-  // member: f
+  // member: left_hz
   {
     size_t array_size = 1;
 

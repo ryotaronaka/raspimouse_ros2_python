@@ -20,8 +20,8 @@ extern "C"
 // Struct defined in srv/MotorFreqsService in the package raspimouse_msgs.
 typedef struct raspimouse_msgs__srv__MotorFreqsService_Request
 {
-  int16_t e;
-  int16_t f;
+  int16_t right_hz;
+  int16_t left_hz;
 } raspimouse_msgs__srv__MotorFreqsService_Request;
 
 // Struct for a sequence of raspimouse_msgs__srv__MotorFreqsService_Request.

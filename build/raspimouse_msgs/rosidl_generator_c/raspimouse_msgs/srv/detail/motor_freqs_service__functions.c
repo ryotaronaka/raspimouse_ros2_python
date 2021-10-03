@@ -14,8 +14,8 @@ raspimouse_msgs__srv__MotorFreqsService_Request__init(raspimouse_msgs__srv__Moto
   if (!msg) {
     return false;
   }
-  // e
-  // f
+  // right_hz
+  // left_hz
   return true;
 }
 
@@ -25,8 +25,8 @@ raspimouse_msgs__srv__MotorFreqsService_Request__fini(raspimouse_msgs__srv__Moto
   if (!msg) {
     return;
   }
-  // e
-  // f
+  // right_hz
+  // left_hz
 }
 
 raspimouse_msgs__srv__MotorFreqsService_Request *

@@ -33,14 +33,14 @@ void LightSensorsService_Request__rosidl_typesupport_introspection_c__LightSenso
 
 static rosidl_typesupport_introspection_c__MessageMember LightSensorsService_Request__rosidl_typesupport_introspection_c__LightSensorsService_Request_message_member_array[4] = {
   {
-    "a",  // name
+    "right_forward",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT16,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(raspimouse_msgs__srv__LightSensorsService_Request, a),  // bytes offset in struct
+    offsetof(raspimouse_msgs__srv__LightSensorsService_Request, right_forward),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -48,14 +48,14 @@ static rosidl_typesupport_introspection_c__MessageMember LightSensorsService_Req
     NULL  // resize(index) function pointer
   },
   {
-    "b",  // name
+    "right_side",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT16,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(raspimouse_msgs__srv__LightSensorsService_Request, b),  // bytes offset in struct
+    offsetof(raspimouse_msgs__srv__LightSensorsService_Request, right_side),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -63,14 +63,14 @@ static rosidl_typesupport_introspection_c__MessageMember LightSensorsService_Req
     NULL  // resize(index) function pointer
   },
   {
-    "c",  // name
+    "left_side",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT16,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(raspimouse_msgs__srv__LightSensorsService_Request, c),  // bytes offset in struct
+    offsetof(raspimouse_msgs__srv__LightSensorsService_Request, left_side),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -78,14 +78,14 @@ static rosidl_typesupport_introspection_c__MessageMember LightSensorsService_Req
     NULL  // resize(index) function pointer
   },
   {
-    "d",  // name
+    "left_forward",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT16,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(raspimouse_msgs__srv__LightSensorsService_Request, d),  // bytes offset in struct
+    offsetof(raspimouse_msgs__srv__LightSensorsService_Request, left_forward),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

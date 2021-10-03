@@ -1,0 +1,39 @@
+[0.214s] Invoking command in '/home/ubuntu/ros2_ws/build/raspimouse_msgs': /usr/bin/cmake --build /home/ubuntu/ros2_ws/build/raspimouse_msgs -- -j4 -l4
+[0.477s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.706s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.710s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.462s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[3.489s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.522s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[4.754s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[5.237s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[6.616s] Error parsing '/home/ubuntu/ros2_ws/src/raspimouse_msgs/package.xml':
+[7.642s] Traceback (most recent call last):
+[7.644s]   File "/opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 143, in <module>
+[7.646s]     main()
+[7.647s]   File "/opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 52, in main
+[7.649s]     raise e
+[7.650s]   File "/opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 48, in main
+[7.652s]     package = parse_package_string(
+[7.653s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 773, in parse_package_string
+[7.655s]     pkg.validate(warnings=warnings)
+[7.656s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 316, in validate
+[7.658s]     raise InvalidPackage('\n'.join(errors), self.filename)
+[7.661s] catkin_pkg.package.InvalidPackage: Error(s) in package '/home/ubuntu/ros2_ws/src/raspimouse_msgs/package.xml':
+[7.663s] Invalid email "34445043+ryotaronaka@users.noreply.github.com " for person "ryotaronaka"
+[7.868s] CMake Error at /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:94 (message):
+[7.870s]   execute_process(/usr/bin/python3
+[7.872s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[7.873s]   /home/ubuntu/ros2_ws/src/raspimouse_msgs/package.xml
+[7.874s]   /home/ubuntu/ros2_ws/build/raspimouse_msgs/ament_cmake_core/package.cmake)
+[7.876s]   returned error code 1
+[7.877s] Call Stack (most recent call first):
+[7.878s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[7.879s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)
+[7.881s]   CMakeLists.txt:24 (rosidl_generate_interfaces)
+[7.882s] 
+[7.883s] 
+[7.887s] -- Configuring incomplete, errors occurred!
+[7.889s] See also "/home/ubuntu/ros2_ws/build/raspimouse_msgs/CMakeFiles/CMakeOutput.log".
+[7.913s] make: *** [Makefile:1948: cmake_check_build_system] Error 1
+[7.925s] Invoked command in '/home/ubuntu/ros2_ws/build/raspimouse_msgs' returned '2': /usr/bin/cmake --build /home/ubuntu/ros2_ws/build/raspimouse_msgs -- -j4 -l4

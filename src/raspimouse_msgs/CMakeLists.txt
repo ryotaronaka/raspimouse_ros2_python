@@ -28,6 +28,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/MotorFreqsService.srv"
   "msg/TimedMotion.msg"
   "srv/TimedMotionService.srv"
+  "action/Music.action"
 )
 
 if(BUILD_TESTING)

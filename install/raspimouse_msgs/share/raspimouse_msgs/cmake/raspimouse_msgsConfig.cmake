@@ -16,7 +16,7 @@ set(_raspimouse_msgs_CONFIG_INCLUDED TRUE)
 
 # output package information
 if(NOT raspimouse_msgs_FIND_QUIETLY)
-  message(STATUS "Found raspimouse_msgs: 0.0.0 (${raspimouse_msgs_DIR})")
+  message(STATUS "Found raspimouse_msgs: 0.0.1 (${raspimouse_msgs_DIR})")
 endif()
 
 # warn when using a deprecated package

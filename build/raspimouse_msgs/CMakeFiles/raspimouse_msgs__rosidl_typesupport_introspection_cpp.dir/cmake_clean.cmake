@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/raspimouse_msgs/action/detail/music__type_support.cpp.o"
   "CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/raspimouse_msgs/msg/detail/light_sensors__type_support.cpp.o"
   "CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/raspimouse_msgs/msg/detail/motor_freqs__type_support.cpp.o"
   "CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/raspimouse_msgs/msg/detail/timed_motion__type_support.cpp.o"
@@ -7,6 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/raspimouse_msgs/srv/detail/timed_motion_service__type_support.cpp.o"
   "libraspimouse_msgs__rosidl_typesupport_introspection_cpp.pdb"
   "libraspimouse_msgs__rosidl_typesupport_introspection_cpp.so"
+  "rosidl_typesupport_introspection_cpp/raspimouse_msgs/action/detail/music__rosidl_typesupport_introspection_cpp.hpp"
+  "rosidl_typesupport_introspection_cpp/raspimouse_msgs/action/detail/music__type_support.cpp"
   "rosidl_typesupport_introspection_cpp/raspimouse_msgs/msg/detail/light_sensors__rosidl_typesupport_introspection_cpp.hpp"
   "rosidl_typesupport_introspection_cpp/raspimouse_msgs/msg/detail/light_sensors__type_support.cpp"
   "rosidl_typesupport_introspection_cpp/raspimouse_msgs/msg/detail/motor_freqs__rosidl_typesupport_introspection_cpp.hpp"

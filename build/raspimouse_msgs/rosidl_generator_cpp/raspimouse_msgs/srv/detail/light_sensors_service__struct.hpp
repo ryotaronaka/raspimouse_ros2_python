@@ -37,10 +37,10 @@ struct LightSensorsService_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->a = 0;
-      this->b = 0;
-      this->c = 0;
-      this->d = 0;
+      this->right_forward = 0;
+      this->right_side = 0;
+      this->left_side = 0;
+      this->left_forward = 0;
     }
   }
 
@@ -50,50 +50,50 @@ struct LightSensorsService_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->a = 0;
-      this->b = 0;
-      this->c = 0;
-      this->d = 0;
+      this->right_forward = 0;
+      this->right_side = 0;
+      this->left_side = 0;
+      this->left_forward = 0;
     }
   }
 
   // field types and members
-  using _a_type =
+  using _right_forward_type =
     int16_t;
-  _a_type a;
-  using _b_type =
+  _right_forward_type right_forward;
+  using _right_side_type =
     int16_t;
-  _b_type b;
-  using _c_type =
+  _right_side_type right_side;
+  using _left_side_type =
     int16_t;
-  _c_type c;
-  using _d_type =
+  _left_side_type left_side;
+  using _left_forward_type =
     int16_t;
-  _d_type d;
+  _left_forward_type left_forward;
 
   // setters for named parameter idiom
-  Type & set__a(
+  Type & set__right_forward(
     const int16_t & _arg)
   {
-    this->a = _arg;
+    this->right_forward = _arg;
     return *this;
   }
-  Type & set__b(
+  Type & set__right_side(
     const int16_t & _arg)
   {
-    this->b = _arg;
+    this->right_side = _arg;
     return *this;
   }
-  Type & set__c(
+  Type & set__left_side(
     const int16_t & _arg)
   {
-    this->c = _arg;
+    this->left_side = _arg;
     return *this;
   }
-  Type & set__d(
+  Type & set__left_forward(
     const int16_t & _arg)
   {
-    this->d = _arg;
+    this->left_forward = _arg;
     return *this;
   }
 
@@ -139,16 +139,16 @@ struct LightSensorsService_Request_
   // comparison operators
   bool operator==(const LightSensorsService_Request_ & other) const
   {
-    if (this->a != other.a) {
+    if (this->right_forward != other.right_forward) {
       return false;
     }
-    if (this->b != other.b) {
+    if (this->right_side != other.right_side) {
       return false;
     }
-    if (this->c != other.c) {
+    if (this->left_side != other.left_side) {
       return false;
     }
-    if (this->d != other.d) {
+    if (this->left_forward != other.left_forward) {
       return false;
     }
     return true;

@@ -32,10 +32,10 @@ cdr_serialize(
   const raspimouse_msgs::srv::MotorFreqsService_Request & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: e
-  cdr << ros_message.e;
-  // Member: f
-  cdr << ros_message.f;
+  // Member: right_hz
+  cdr << ros_message.right_hz;
+  // Member: left_hz
+  cdr << ros_message.left_hz;
   return true;
 }
 
@@ -45,11 +45,11 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   raspimouse_msgs::srv::MotorFreqsService_Request & ros_message)
 {
-  // Member: e
-  cdr >> ros_message.e;
+  // Member: right_hz
+  cdr >> ros_message.right_hz;
 
-  // Member: f
-  cdr >> ros_message.f;
+  // Member: left_hz
+  cdr >> ros_message.left_hz;
 
   return true;
 }
@@ -67,15 +67,15 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: e
+  // Member: right_hz
   {
-    size_t item_size = sizeof(ros_message.e);
+    size_t item_size = sizeof(ros_message.right_hz);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: f
+  // Member: left_hz
   {
-    size_t item_size = sizeof(ros_message.f);
+    size_t item_size = sizeof(ros_message.left_hz);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -98,7 +98,7 @@ max_serialized_size_MotorFreqsService_Request(
   (void)full_bounded;
 
 
-  // Member: e
+  // Member: right_hz
   {
     size_t array_size = 1;
 
@@ -106,7 +106,7 @@ max_serialized_size_MotorFreqsService_Request(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
   }
 
-  // Member: f
+  // Member: left_hz
   {
     size_t array_size = 1;
 

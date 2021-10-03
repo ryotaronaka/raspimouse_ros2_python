@@ -20,15 +20,15 @@ namespace srv
 namespace builder
 {
 
-class Init_LightSensorsService_Request_d
+class Init_LightSensorsService_Request_left_forward
 {
 public:
-  explicit Init_LightSensorsService_Request_d(::raspimouse_msgs::srv::LightSensorsService_Request & msg)
+  explicit Init_LightSensorsService_Request_left_forward(::raspimouse_msgs::srv::LightSensorsService_Request & msg)
   : msg_(msg)
   {}
-  ::raspimouse_msgs::srv::LightSensorsService_Request d(::raspimouse_msgs::srv::LightSensorsService_Request::_d_type arg)
+  ::raspimouse_msgs::srv::LightSensorsService_Request left_forward(::raspimouse_msgs::srv::LightSensorsService_Request::_left_forward_type arg)
   {
-    msg_.d = std::move(arg);
+    msg_.left_forward = std::move(arg);
     return std::move(msg_);
   }
 
@@ -36,48 +36,48 @@ private:
   ::raspimouse_msgs::srv::LightSensorsService_Request msg_;
 };
 
-class Init_LightSensorsService_Request_c
+class Init_LightSensorsService_Request_left_side
 {
 public:
-  explicit Init_LightSensorsService_Request_c(::raspimouse_msgs::srv::LightSensorsService_Request & msg)
+  explicit Init_LightSensorsService_Request_left_side(::raspimouse_msgs::srv::LightSensorsService_Request & msg)
   : msg_(msg)
   {}
-  Init_LightSensorsService_Request_d c(::raspimouse_msgs::srv::LightSensorsService_Request::_c_type arg)
+  Init_LightSensorsService_Request_left_forward left_side(::raspimouse_msgs::srv::LightSensorsService_Request::_left_side_type arg)
   {
-    msg_.c = std::move(arg);
-    return Init_LightSensorsService_Request_d(msg_);
+    msg_.left_side = std::move(arg);
+    return Init_LightSensorsService_Request_left_forward(msg_);
   }
 
 private:
   ::raspimouse_msgs::srv::LightSensorsService_Request msg_;
 };
 
-class Init_LightSensorsService_Request_b
+class Init_LightSensorsService_Request_right_side
 {
 public:
-  explicit Init_LightSensorsService_Request_b(::raspimouse_msgs::srv::LightSensorsService_Request & msg)
+  explicit Init_LightSensorsService_Request_right_side(::raspimouse_msgs::srv::LightSensorsService_Request & msg)
   : msg_(msg)
   {}
-  Init_LightSensorsService_Request_c b(::raspimouse_msgs::srv::LightSensorsService_Request::_b_type arg)
+  Init_LightSensorsService_Request_left_side right_side(::raspimouse_msgs::srv::LightSensorsService_Request::_right_side_type arg)
   {
-    msg_.b = std::move(arg);
-    return Init_LightSensorsService_Request_c(msg_);
+    msg_.right_side = std::move(arg);
+    return Init_LightSensorsService_Request_left_side(msg_);
   }
 
 private:
   ::raspimouse_msgs::srv::LightSensorsService_Request msg_;
 };
 
-class Init_LightSensorsService_Request_a
+class Init_LightSensorsService_Request_right_forward
 {
 public:
-  Init_LightSensorsService_Request_a()
+  Init_LightSensorsService_Request_right_forward()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_LightSensorsService_Request_b a(::raspimouse_msgs::srv::LightSensorsService_Request::_a_type arg)
+  Init_LightSensorsService_Request_right_side right_forward(::raspimouse_msgs::srv::LightSensorsService_Request::_right_forward_type arg)
   {
-    msg_.a = std::move(arg);
-    return Init_LightSensorsService_Request_b(msg_);
+    msg_.right_forward = std::move(arg);
+    return Init_LightSensorsService_Request_right_side(msg_);
   }
 
 private:
@@ -95,7 +95,7 @@ template<>
 inline
 auto build<::raspimouse_msgs::srv::LightSensorsService_Request>()
 {
-  return raspimouse_msgs::srv::builder::Init_LightSensorsService_Request_a();
+  return raspimouse_msgs::srv::builder::Init_LightSensorsService_Request_right_forward();
 }
 
 }  // namespace raspimouse_msgs

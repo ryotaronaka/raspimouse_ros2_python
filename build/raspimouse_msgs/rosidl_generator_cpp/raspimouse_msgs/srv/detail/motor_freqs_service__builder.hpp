@@ -20,15 +20,15 @@ namespace srv
 namespace builder
 {
 
-class Init_MotorFreqsService_Request_f
+class Init_MotorFreqsService_Request_left_hz
 {
 public:
-  explicit Init_MotorFreqsService_Request_f(::raspimouse_msgs::srv::MotorFreqsService_Request & msg)
+  explicit Init_MotorFreqsService_Request_left_hz(::raspimouse_msgs::srv::MotorFreqsService_Request & msg)
   : msg_(msg)
   {}
-  ::raspimouse_msgs::srv::MotorFreqsService_Request f(::raspimouse_msgs::srv::MotorFreqsService_Request::_f_type arg)
+  ::raspimouse_msgs::srv::MotorFreqsService_Request left_hz(::raspimouse_msgs::srv::MotorFreqsService_Request::_left_hz_type arg)
   {
-    msg_.f = std::move(arg);
+    msg_.left_hz = std::move(arg);
     return std::move(msg_);
   }
 
@@ -36,16 +36,16 @@ private:
   ::raspimouse_msgs::srv::MotorFreqsService_Request msg_;
 };
 
-class Init_MotorFreqsService_Request_e
+class Init_MotorFreqsService_Request_right_hz
 {
 public:
-  Init_MotorFreqsService_Request_e()
+  Init_MotorFreqsService_Request_right_hz()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_MotorFreqsService_Request_f e(::raspimouse_msgs::srv::MotorFreqsService_Request::_e_type arg)
+  Init_MotorFreqsService_Request_left_hz right_hz(::raspimouse_msgs::srv::MotorFreqsService_Request::_right_hz_type arg)
   {
-    msg_.e = std::move(arg);
-    return Init_MotorFreqsService_Request_f(msg_);
+    msg_.right_hz = std::move(arg);
+    return Init_MotorFreqsService_Request_left_hz(msg_);
   }
 
 private:
@@ -63,7 +63,7 @@ template<>
 inline
 auto build<::raspimouse_msgs::srv::MotorFreqsService_Request>()
 {
-  return raspimouse_msgs::srv::builder::Init_MotorFreqsService_Request_e();
+  return raspimouse_msgs::srv::builder::Init_MotorFreqsService_Request_right_hz();
 }
 
 }  // namespace raspimouse_msgs

@@ -135,6 +135,19 @@ CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/srv/_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/srv/_timed_motion_service_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ubuntu/ros2_ws/build/raspimouse_msgs/rosidl_generator_py/raspimouse_msgs/srv/_timed_motion_service_s.c -o CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/srv/_timed_motion_service_s.c.s
 
+CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/action/_music_s.c.o: CMakeFiles/raspimouse_msgs__python.dir/flags.make
+CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/action/_music_s.c.o: rosidl_generator_py/raspimouse_msgs/action/_music_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/ros2_ws/build/raspimouse_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/action/_music_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/action/_music_s.c.o   -c /home/ubuntu/ros2_ws/build/raspimouse_msgs/rosidl_generator_py/raspimouse_msgs/action/_music_s.c
+
+CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/action/_music_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/action/_music_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ubuntu/ros2_ws/build/raspimouse_msgs/rosidl_generator_py/raspimouse_msgs/action/_music_s.c > CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/action/_music_s.c.i
+
+CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/action/_music_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/action/_music_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ubuntu/ros2_ws/build/raspimouse_msgs/rosidl_generator_py/raspimouse_msgs/action/_music_s.c -o CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/action/_music_s.c.s
+
 # Object files for target raspimouse_msgs__python
 raspimouse_msgs__python_OBJECTS = \
 "CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/msg/_light_sensors_s.c.o" \
@@ -142,7 +155,8 @@ raspimouse_msgs__python_OBJECTS = \
 "CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/msg/_motor_freqs_s.c.o" \
 "CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/srv/_motor_freqs_service_s.c.o" \
 "CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/msg/_timed_motion_s.c.o" \
-"CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/srv/_timed_motion_service_s.c.o"
+"CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/srv/_timed_motion_service_s.c.o" \
+"CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/action/_music_s.c.o"
 
 # External object files for target raspimouse_msgs__python
 raspimouse_msgs__python_EXTERNAL_OBJECTS =
@@ -153,16 +167,38 @@ rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: CMakeFiles/ra
 rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/srv/_motor_freqs_service_s.c.o
 rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/msg/_timed_motion_s.c.o
 rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/srv/_timed_motion_service_s.c.o
+rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/action/_music_s.c.o
 rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: CMakeFiles/raspimouse_msgs__python.dir/build.make
 rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: libraspimouse_msgs__rosidl_generator_c.so
 rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /usr/lib/aarch64-linux-gnu/libpython3.8.so
 rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: libraspimouse_msgs__rosidl_typesupport_c.so
+rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/share/action_msgs/cmake/../../../lib/libaction_msgs__python.so
+rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/share/builtin_interfaces/cmake/../../../lib/libbuiltin_interfaces__python.so
+rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/share/unique_identifier_msgs/cmake/../../../lib/libunique_identifier_msgs__python.so
+rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/lib/libaction_msgs__rosidl_typesupport_introspection_c.so
+rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/lib/libaction_msgs__rosidl_generator_c.so
+rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/lib/libaction_msgs__rosidl_typesupport_c.so
+rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/lib/libaction_msgs__rosidl_typesupport_introspection_cpp.so
+rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/lib/libaction_msgs__rosidl_typesupport_cpp.so
+rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
+rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_generator_c.so
+rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
+rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
+rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
+rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/lib/libunique_identifier_msgs__rosidl_typesupport_introspection_c.so
+rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/lib/libunique_identifier_msgs__rosidl_generator_c.so
+rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/lib/libunique_identifier_msgs__rosidl_typesupport_c.so
+rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/lib/libunique_identifier_msgs__rosidl_typesupport_introspection_cpp.so
+rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/lib/librosidl_typesupport_introspection_cpp.so
+rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/lib/librosidl_typesupport_introspection_c.so
+rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/lib/libunique_identifier_msgs__rosidl_typesupport_cpp.so
+rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/lib/librosidl_typesupport_cpp.so
 rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/lib/librosidl_typesupport_c.so
 rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/lib/librosidl_runtime_c.so
 rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/lib/librcpputils.so
 rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: /opt/ros/foxy/lib/librcutils.so
 rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so: CMakeFiles/raspimouse_msgs__python.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/ros2_ws/build/raspimouse_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C shared library rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/ros2_ws/build/raspimouse_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C shared library rosidl_generator_py/raspimouse_msgs/libraspimouse_msgs__python.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/raspimouse_msgs__python.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

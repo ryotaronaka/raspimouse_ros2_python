@@ -71,6 +71,14 @@ rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__ros
 rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__rosidl_typesupport_introspection_c.h: rosidl_adapter/raspimouse_msgs/srv/MotorFreqsService.idl
 rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__rosidl_typesupport_introspection_c.h: rosidl_adapter/raspimouse_msgs/msg/TimedMotion.idl
 rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__rosidl_typesupport_introspection_c.h: rosidl_adapter/raspimouse_msgs/srv/TimedMotionService.idl
+rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__rosidl_typesupport_introspection_c.h: rosidl_adapter/raspimouse_msgs/action/Music.idl
+rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__rosidl_typesupport_introspection_c.h: /opt/ros/foxy/share/action_msgs/msg/GoalInfo.idl
+rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__rosidl_typesupport_introspection_c.h: /opt/ros/foxy/share/action_msgs/msg/GoalStatus.idl
+rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__rosidl_typesupport_introspection_c.h: /opt/ros/foxy/share/action_msgs/msg/GoalStatusArray.idl
+rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__rosidl_typesupport_introspection_c.h: /opt/ros/foxy/share/action_msgs/srv/CancelGoal.idl
+rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__rosidl_typesupport_introspection_c.h: /opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl
+rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__rosidl_typesupport_introspection_c.h: /opt/ros/foxy/share/builtin_interfaces/msg/Time.idl
+rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__rosidl_typesupport_introspection_c.h: /opt/ros/foxy/share/unique_identifier_msgs/msg/UUID.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/ros2_ws/build/raspimouse_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C introspection for ROS interfaces"
 	/usr/bin/python3 /opt/ros/foxy/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c --generator-arguments-file /home/ubuntu/ros2_ws/build/raspimouse_msgs/rosidl_typesupport_introspection_c__arguments.json
 
@@ -89,6 +97,9 @@ rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/timed_motion__rosi
 rosidl_typesupport_introspection_c/raspimouse_msgs/srv/detail/timed_motion_service__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/raspimouse_msgs/srv/detail/timed_motion_service__rosidl_typesupport_introspection_c.h
 
+rosidl_typesupport_introspection_c/raspimouse_msgs/action/detail/music__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/raspimouse_msgs/action/detail/music__rosidl_typesupport_introspection_c.h
+
 rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__type_support.c: rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__type_support.c
 
@@ -106,6 +117,9 @@ rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/timed_motion__type
 
 rosidl_typesupport_introspection_c/raspimouse_msgs/srv/detail/timed_motion_service__type_support.c: rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/raspimouse_msgs/srv/detail/timed_motion_service__type_support.c
+
+rosidl_typesupport_introspection_c/raspimouse_msgs/action/detail/music__type_support.c: rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/raspimouse_msgs/action/detail/music__type_support.c
 
 CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__type_support.c.o: CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__type_support.c.o: rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__type_support.c
@@ -185,6 +199,19 @@ CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesu
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/srv/detail/timed_motion_service__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ubuntu/ros2_ws/build/raspimouse_msgs/rosidl_typesupport_introspection_c/raspimouse_msgs/srv/detail/timed_motion_service__type_support.c -o CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/srv/detail/timed_motion_service__type_support.c.s
 
+CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/action/detail/music__type_support.c.o: CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/action/detail/music__type_support.c.o: rosidl_typesupport_introspection_c/raspimouse_msgs/action/detail/music__type_support.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/ros2_ws/build/raspimouse_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/action/detail/music__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/action/detail/music__type_support.c.o   -c /home/ubuntu/ros2_ws/build/raspimouse_msgs/rosidl_typesupport_introspection_c/raspimouse_msgs/action/detail/music__type_support.c
+
+CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/action/detail/music__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/action/detail/music__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ubuntu/ros2_ws/build/raspimouse_msgs/rosidl_typesupport_introspection_c/raspimouse_msgs/action/detail/music__type_support.c > CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/action/detail/music__type_support.c.i
+
+CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/action/detail/music__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/action/detail/music__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ubuntu/ros2_ws/build/raspimouse_msgs/rosidl_typesupport_introspection_c/raspimouse_msgs/action/detail/music__type_support.c -o CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/action/detail/music__type_support.c.s
+
 # Object files for target raspimouse_msgs__rosidl_typesupport_introspection_c
 raspimouse_msgs__rosidl_typesupport_introspection_c_OBJECTS = \
 "CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__type_support.c.o" \
@@ -192,7 +219,8 @@ raspimouse_msgs__rosidl_typesupport_introspection_c_OBJECTS = \
 "CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/motor_freqs__type_support.c.o" \
 "CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/srv/detail/motor_freqs_service__type_support.c.o" \
 "CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/timed_motion__type_support.c.o" \
-"CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/srv/detail/timed_motion_service__type_support.c.o"
+"CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/srv/detail/timed_motion_service__type_support.c.o" \
+"CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/action/detail/music__type_support.c.o"
 
 # External object files for target raspimouse_msgs__rosidl_typesupport_introspection_c
 raspimouse_msgs__rosidl_typesupport_introspection_c_EXTERNAL_OBJECTS =
@@ -203,13 +231,33 @@ libraspimouse_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/raspimouse
 libraspimouse_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/srv/detail/motor_freqs_service__type_support.c.o
 libraspimouse_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/timed_motion__type_support.c.o
 libraspimouse_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/srv/detail/timed_motion_service__type_support.c.o
+libraspimouse_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/raspimouse_msgs/action/detail/music__type_support.c.o
 libraspimouse_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/build.make
 libraspimouse_msgs__rosidl_typesupport_introspection_c.so: libraspimouse_msgs__rosidl_generator_c.so
+libraspimouse_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/libaction_msgs__rosidl_typesupport_c.so
+libraspimouse_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/libaction_msgs__rosidl_typesupport_introspection_cpp.so
+libraspimouse_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/libaction_msgs__rosidl_typesupport_cpp.so
+libraspimouse_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/libaction_msgs__rosidl_typesupport_introspection_c.so
+libraspimouse_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/libaction_msgs__rosidl_generator_c.so
+libraspimouse_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
+libraspimouse_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_generator_c.so
+libraspimouse_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
+libraspimouse_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
+libraspimouse_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
+libraspimouse_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/libunique_identifier_msgs__rosidl_typesupport_introspection_c.so
+libraspimouse_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/libunique_identifier_msgs__rosidl_generator_c.so
+libraspimouse_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/libunique_identifier_msgs__rosidl_typesupport_c.so
+libraspimouse_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/libunique_identifier_msgs__rosidl_typesupport_introspection_cpp.so
+libraspimouse_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/librosidl_typesupport_introspection_cpp.so
 libraspimouse_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/librosidl_typesupport_introspection_c.so
+libraspimouse_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/libunique_identifier_msgs__rosidl_typesupport_cpp.so
+libraspimouse_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/librosidl_typesupport_cpp.so
+libraspimouse_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/librosidl_typesupport_c.so
+libraspimouse_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/librcpputils.so
 libraspimouse_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/librosidl_runtime_c.so
 libraspimouse_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/librcutils.so
 libraspimouse_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/ros2_ws/build/raspimouse_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C shared library libraspimouse_msgs__rosidl_typesupport_introspection_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/ros2_ws/build/raspimouse_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C shared library libraspimouse_msgs__rosidl_typesupport_introspection_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -227,12 +275,14 @@ CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/depend: rosid
 CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/raspimouse_msgs/srv/detail/motor_freqs_service__rosidl_typesupport_introspection_c.h
 CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/timed_motion__rosidl_typesupport_introspection_c.h
 CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/raspimouse_msgs/srv/detail/timed_motion_service__rosidl_typesupport_introspection_c.h
+CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/raspimouse_msgs/action/detail/music__rosidl_typesupport_introspection_c.h
 CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/light_sensors__type_support.c
 CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/raspimouse_msgs/srv/detail/light_sensors_service__type_support.c
 CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/motor_freqs__type_support.c
 CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/raspimouse_msgs/srv/detail/motor_freqs_service__type_support.c
 CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/raspimouse_msgs/msg/detail/timed_motion__type_support.c
 CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/raspimouse_msgs/srv/detail/timed_motion_service__type_support.c
+CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/raspimouse_msgs/action/detail/music__type_support.c
 	cd /home/ubuntu/ros2_ws/build/raspimouse_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/ros2_ws/src/raspimouse_msgs /home/ubuntu/ros2_ws/src/raspimouse_msgs /home/ubuntu/ros2_ws/build/raspimouse_msgs /home/ubuntu/ros2_ws/build/raspimouse_msgs /home/ubuntu/ros2_ws/build/raspimouse_msgs/CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/raspimouse_msgs__rosidl_typesupport_introspection_c.dir/depend
 

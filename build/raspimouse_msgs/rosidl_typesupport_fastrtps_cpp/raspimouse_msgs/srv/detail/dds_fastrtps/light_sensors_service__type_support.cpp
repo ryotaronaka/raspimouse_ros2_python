@@ -32,14 +32,14 @@ cdr_serialize(
   const raspimouse_msgs::srv::LightSensorsService_Request & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: a
-  cdr << ros_message.a;
-  // Member: b
-  cdr << ros_message.b;
-  // Member: c
-  cdr << ros_message.c;
-  // Member: d
-  cdr << ros_message.d;
+  // Member: right_forward
+  cdr << ros_message.right_forward;
+  // Member: right_side
+  cdr << ros_message.right_side;
+  // Member: left_side
+  cdr << ros_message.left_side;
+  // Member: left_forward
+  cdr << ros_message.left_forward;
   return true;
 }
 
@@ -49,17 +49,17 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   raspimouse_msgs::srv::LightSensorsService_Request & ros_message)
 {
-  // Member: a
-  cdr >> ros_message.a;
+  // Member: right_forward
+  cdr >> ros_message.right_forward;
 
-  // Member: b
-  cdr >> ros_message.b;
+  // Member: right_side
+  cdr >> ros_message.right_side;
 
-  // Member: c
-  cdr >> ros_message.c;
+  // Member: left_side
+  cdr >> ros_message.left_side;
 
-  // Member: d
-  cdr >> ros_message.d;
+  // Member: left_forward
+  cdr >> ros_message.left_forward;
 
   return true;
 }
@@ -77,27 +77,27 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: a
+  // Member: right_forward
   {
-    size_t item_size = sizeof(ros_message.a);
+    size_t item_size = sizeof(ros_message.right_forward);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: b
+  // Member: right_side
   {
-    size_t item_size = sizeof(ros_message.b);
+    size_t item_size = sizeof(ros_message.right_side);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: c
+  // Member: left_side
   {
-    size_t item_size = sizeof(ros_message.c);
+    size_t item_size = sizeof(ros_message.left_side);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: d
+  // Member: left_forward
   {
-    size_t item_size = sizeof(ros_message.d);
+    size_t item_size = sizeof(ros_message.left_forward);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -120,7 +120,7 @@ max_serialized_size_LightSensorsService_Request(
   (void)full_bounded;
 
 
-  // Member: a
+  // Member: right_forward
   {
     size_t array_size = 1;
 
@@ -128,7 +128,7 @@ max_serialized_size_LightSensorsService_Request(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
   }
 
-  // Member: b
+  // Member: right_side
   {
     size_t array_size = 1;
 
@@ -136,7 +136,7 @@ max_serialized_size_LightSensorsService_Request(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
   }
 
-  // Member: c
+  // Member: left_side
   {
     size_t array_size = 1;
 
@@ -144,7 +144,7 @@ max_serialized_size_LightSensorsService_Request(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
   }
 
-  // Member: d
+  // Member: left_forward
   {
     size_t array_size = 1;
 

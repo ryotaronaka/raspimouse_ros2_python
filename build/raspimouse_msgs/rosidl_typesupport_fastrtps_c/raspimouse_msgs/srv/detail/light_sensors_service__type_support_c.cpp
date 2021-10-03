@@ -49,24 +49,24 @@ static bool _LightSensorsService_Request__cdr_serialize(
     return false;
   }
   const _LightSensorsService_Request__ros_msg_type * ros_message = static_cast<const _LightSensorsService_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: a
+  // Field name: right_forward
   {
-    cdr << ros_message->a;
+    cdr << ros_message->right_forward;
   }
 
-  // Field name: b
+  // Field name: right_side
   {
-    cdr << ros_message->b;
+    cdr << ros_message->right_side;
   }
 
-  // Field name: c
+  // Field name: left_side
   {
-    cdr << ros_message->c;
+    cdr << ros_message->left_side;
   }
 
-  // Field name: d
+  // Field name: left_forward
   {
-    cdr << ros_message->d;
+    cdr << ros_message->left_forward;
   }
 
   return true;
@@ -81,24 +81,24 @@ static bool _LightSensorsService_Request__cdr_deserialize(
     return false;
   }
   _LightSensorsService_Request__ros_msg_type * ros_message = static_cast<_LightSensorsService_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: a
+  // Field name: right_forward
   {
-    cdr >> ros_message->a;
+    cdr >> ros_message->right_forward;
   }
 
-  // Field name: b
+  // Field name: right_side
   {
-    cdr >> ros_message->b;
+    cdr >> ros_message->right_side;
   }
 
-  // Field name: c
+  // Field name: left_side
   {
-    cdr >> ros_message->c;
+    cdr >> ros_message->left_side;
   }
 
-  // Field name: d
+  // Field name: left_forward
   {
-    cdr >> ros_message->d;
+    cdr >> ros_message->left_forward;
   }
 
   return true;
@@ -118,27 +118,27 @@ size_t get_serialized_size_raspimouse_msgs__srv__LightSensorsService_Request(
   (void)padding;
   (void)wchar_size;
 
-  // field.name a
+  // field.name right_forward
   {
-    size_t item_size = sizeof(ros_message->a);
+    size_t item_size = sizeof(ros_message->right_forward);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name b
+  // field.name right_side
   {
-    size_t item_size = sizeof(ros_message->b);
+    size_t item_size = sizeof(ros_message->right_side);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name c
+  // field.name left_side
   {
-    size_t item_size = sizeof(ros_message->c);
+    size_t item_size = sizeof(ros_message->left_side);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name d
+  // field.name left_forward
   {
-    size_t item_size = sizeof(ros_message->d);
+    size_t item_size = sizeof(ros_message->left_forward);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -166,28 +166,28 @@ size_t max_serialized_size_raspimouse_msgs__srv__LightSensorsService_Request(
   (void)wchar_size;
   (void)full_bounded;
 
-  // member: a
+  // member: right_forward
   {
     size_t array_size = 1;
 
     current_alignment += array_size * sizeof(uint16_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
   }
-  // member: b
+  // member: right_side
   {
     size_t array_size = 1;
 
     current_alignment += array_size * sizeof(uint16_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
   }
-  // member: c
+  // member: left_side
   {
     size_t array_size = 1;
 
     current_alignment += array_size * sizeof(uint16_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
   }
-  // member: d
+  // member: left_forward
   {
     size_t array_size = 1;
 

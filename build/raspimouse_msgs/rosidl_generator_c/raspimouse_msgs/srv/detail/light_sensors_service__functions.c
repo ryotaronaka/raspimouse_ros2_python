@@ -14,10 +14,10 @@ raspimouse_msgs__srv__LightSensorsService_Request__init(raspimouse_msgs__srv__Li
   if (!msg) {
     return false;
   }
-  // a
-  // b
-  // c
-  // d
+  // right_forward
+  // right_side
+  // left_side
+  // left_forward
   return true;
 }
 
@@ -27,10 +27,10 @@ raspimouse_msgs__srv__LightSensorsService_Request__fini(raspimouse_msgs__srv__Li
   if (!msg) {
     return;
   }
-  // a
-  // b
-  // c
-  // d
+  // right_forward
+  // right_side
+  // left_side
+  // left_forward
 }
 
 raspimouse_msgs__srv__LightSensorsService_Request *

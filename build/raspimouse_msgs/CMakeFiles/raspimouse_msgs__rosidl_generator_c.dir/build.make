@@ -76,6 +76,14 @@ rosidl_generator_c/raspimouse_msgs/msg/light_sensors.h: rosidl_adapter/raspimous
 rosidl_generator_c/raspimouse_msgs/msg/light_sensors.h: rosidl_adapter/raspimouse_msgs/srv/MotorFreqsService.idl
 rosidl_generator_c/raspimouse_msgs/msg/light_sensors.h: rosidl_adapter/raspimouse_msgs/msg/TimedMotion.idl
 rosidl_generator_c/raspimouse_msgs/msg/light_sensors.h: rosidl_adapter/raspimouse_msgs/srv/TimedMotionService.idl
+rosidl_generator_c/raspimouse_msgs/msg/light_sensors.h: rosidl_adapter/raspimouse_msgs/action/Music.idl
+rosidl_generator_c/raspimouse_msgs/msg/light_sensors.h: /opt/ros/foxy/share/action_msgs/msg/GoalInfo.idl
+rosidl_generator_c/raspimouse_msgs/msg/light_sensors.h: /opt/ros/foxy/share/action_msgs/msg/GoalStatus.idl
+rosidl_generator_c/raspimouse_msgs/msg/light_sensors.h: /opt/ros/foxy/share/action_msgs/msg/GoalStatusArray.idl
+rosidl_generator_c/raspimouse_msgs/msg/light_sensors.h: /opt/ros/foxy/share/action_msgs/srv/CancelGoal.idl
+rosidl_generator_c/raspimouse_msgs/msg/light_sensors.h: /opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl
+rosidl_generator_c/raspimouse_msgs/msg/light_sensors.h: /opt/ros/foxy/share/builtin_interfaces/msg/Time.idl
+rosidl_generator_c/raspimouse_msgs/msg/light_sensors.h: /opt/ros/foxy/share/unique_identifier_msgs/msg/UUID.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/ros2_ws/build/raspimouse_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
 	/usr/bin/python3 /opt/ros/foxy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/ubuntu/ros2_ws/build/raspimouse_msgs/rosidl_generator_c__arguments.json
 
@@ -148,6 +156,18 @@ rosidl_generator_c/raspimouse_msgs/srv/detail/timed_motion_service__struct.h: ro
 rosidl_generator_c/raspimouse_msgs/srv/detail/timed_motion_service__type_support.h: rosidl_generator_c/raspimouse_msgs/msg/light_sensors.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/raspimouse_msgs/srv/detail/timed_motion_service__type_support.h
 
+rosidl_generator_c/raspimouse_msgs/action/music.h: rosidl_generator_c/raspimouse_msgs/msg/light_sensors.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/raspimouse_msgs/action/music.h
+
+rosidl_generator_c/raspimouse_msgs/action/detail/music__functions.h: rosidl_generator_c/raspimouse_msgs/msg/light_sensors.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/raspimouse_msgs/action/detail/music__functions.h
+
+rosidl_generator_c/raspimouse_msgs/action/detail/music__struct.h: rosidl_generator_c/raspimouse_msgs/msg/light_sensors.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/raspimouse_msgs/action/detail/music__struct.h
+
+rosidl_generator_c/raspimouse_msgs/action/detail/music__type_support.h: rosidl_generator_c/raspimouse_msgs/msg/light_sensors.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/raspimouse_msgs/action/detail/music__type_support.h
+
 rosidl_generator_c/raspimouse_msgs/msg/detail/light_sensors__functions.c: rosidl_generator_c/raspimouse_msgs/msg/light_sensors.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/raspimouse_msgs/msg/detail/light_sensors__functions.c
 
@@ -165,6 +185,9 @@ rosidl_generator_c/raspimouse_msgs/msg/detail/timed_motion__functions.c: rosidl_
 
 rosidl_generator_c/raspimouse_msgs/srv/detail/timed_motion_service__functions.c: rosidl_generator_c/raspimouse_msgs/msg/light_sensors.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/raspimouse_msgs/srv/detail/timed_motion_service__functions.c
+
+rosidl_generator_c/raspimouse_msgs/action/detail/music__functions.c: rosidl_generator_c/raspimouse_msgs/msg/light_sensors.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/raspimouse_msgs/action/detail/music__functions.c
 
 CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/msg/detail/light_sensors__functions.c.o: CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/msg/detail/light_sensors__functions.c.o: rosidl_generator_c/raspimouse_msgs/msg/detail/light_sensors__functions.c
@@ -244,6 +267,19 @@ CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/srv/detail/timed_motion_service__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ubuntu/ros2_ws/build/raspimouse_msgs/rosidl_generator_c/raspimouse_msgs/srv/detail/timed_motion_service__functions.c -o CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/srv/detail/timed_motion_service__functions.c.s
 
+CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/action/detail/music__functions.c.o: CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/flags.make
+CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/action/detail/music__functions.c.o: rosidl_generator_c/raspimouse_msgs/action/detail/music__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/ros2_ws/build/raspimouse_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/action/detail/music__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/action/detail/music__functions.c.o   -c /home/ubuntu/ros2_ws/build/raspimouse_msgs/rosidl_generator_c/raspimouse_msgs/action/detail/music__functions.c
+
+CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/action/detail/music__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/action/detail/music__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ubuntu/ros2_ws/build/raspimouse_msgs/rosidl_generator_c/raspimouse_msgs/action/detail/music__functions.c > CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/action/detail/music__functions.c.i
+
+CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/action/detail/music__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/action/detail/music__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ubuntu/ros2_ws/build/raspimouse_msgs/rosidl_generator_c/raspimouse_msgs/action/detail/music__functions.c -o CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/action/detail/music__functions.c.s
+
 # Object files for target raspimouse_msgs__rosidl_generator_c
 raspimouse_msgs__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/msg/detail/light_sensors__functions.c.o" \
@@ -251,7 +287,8 @@ raspimouse_msgs__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/msg/detail/motor_freqs__functions.c.o" \
 "CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/srv/detail/motor_freqs_service__functions.c.o" \
 "CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/msg/detail/timed_motion__functions.c.o" \
-"CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/srv/detail/timed_motion_service__functions.c.o"
+"CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/srv/detail/timed_motion_service__functions.c.o" \
+"CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/action/detail/music__functions.c.o"
 
 # External object files for target raspimouse_msgs__rosidl_generator_c
 raspimouse_msgs__rosidl_generator_c_EXTERNAL_OBJECTS =
@@ -262,11 +299,32 @@ libraspimouse_msgs__rosidl_generator_c.so: CMakeFiles/raspimouse_msgs__rosidl_ge
 libraspimouse_msgs__rosidl_generator_c.so: CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/srv/detail/motor_freqs_service__functions.c.o
 libraspimouse_msgs__rosidl_generator_c.so: CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/msg/detail/timed_motion__functions.c.o
 libraspimouse_msgs__rosidl_generator_c.so: CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/srv/detail/timed_motion_service__functions.c.o
+libraspimouse_msgs__rosidl_generator_c.so: CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/rosidl_generator_c/raspimouse_msgs/action/detail/music__functions.c.o
 libraspimouse_msgs__rosidl_generator_c.so: CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/build.make
+libraspimouse_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/libaction_msgs__rosidl_typesupport_introspection_c.so
+libraspimouse_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/libaction_msgs__rosidl_typesupport_c.so
+libraspimouse_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/libaction_msgs__rosidl_typesupport_introspection_cpp.so
+libraspimouse_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/libaction_msgs__rosidl_typesupport_cpp.so
+libraspimouse_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/libaction_msgs__rosidl_generator_c.so
+libraspimouse_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
+libraspimouse_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_generator_c.so
+libraspimouse_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
+libraspimouse_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
+libraspimouse_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
+libraspimouse_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/libunique_identifier_msgs__rosidl_typesupport_introspection_c.so
+libraspimouse_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/libunique_identifier_msgs__rosidl_generator_c.so
+libraspimouse_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/libunique_identifier_msgs__rosidl_typesupport_c.so
+libraspimouse_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/libunique_identifier_msgs__rosidl_typesupport_introspection_cpp.so
+libraspimouse_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/librosidl_typesupport_introspection_cpp.so
+libraspimouse_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/librosidl_typesupport_introspection_c.so
+libraspimouse_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/libunique_identifier_msgs__rosidl_typesupport_cpp.so
+libraspimouse_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/librosidl_typesupport_cpp.so
+libraspimouse_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/librosidl_typesupport_c.so
 libraspimouse_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/librosidl_runtime_c.so
+libraspimouse_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/librcpputils.so
 libraspimouse_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/librcutils.so
 libraspimouse_msgs__rosidl_generator_c.so: CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/ros2_ws/build/raspimouse_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C shared library libraspimouse_msgs__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/ros2_ws/build/raspimouse_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C shared library libraspimouse_msgs__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -302,12 +360,17 @@ CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/ra
 CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/raspimouse_msgs/srv/detail/timed_motion_service__functions.h
 CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/raspimouse_msgs/srv/detail/timed_motion_service__struct.h
 CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/raspimouse_msgs/srv/detail/timed_motion_service__type_support.h
+CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/raspimouse_msgs/action/music.h
+CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/raspimouse_msgs/action/detail/music__functions.h
+CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/raspimouse_msgs/action/detail/music__struct.h
+CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/raspimouse_msgs/action/detail/music__type_support.h
 CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/raspimouse_msgs/msg/detail/light_sensors__functions.c
 CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/raspimouse_msgs/srv/detail/light_sensors_service__functions.c
 CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/raspimouse_msgs/msg/detail/motor_freqs__functions.c
 CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/raspimouse_msgs/srv/detail/motor_freqs_service__functions.c
 CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/raspimouse_msgs/msg/detail/timed_motion__functions.c
 CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/raspimouse_msgs/srv/detail/timed_motion_service__functions.c
+CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/raspimouse_msgs/action/detail/music__functions.c
 	cd /home/ubuntu/ros2_ws/build/raspimouse_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/ros2_ws/src/raspimouse_msgs /home/ubuntu/ros2_ws/src/raspimouse_msgs /home/ubuntu/ros2_ws/build/raspimouse_msgs /home/ubuntu/ros2_ws/build/raspimouse_msgs /home/ubuntu/ros2_ws/build/raspimouse_msgs/CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/raspimouse_msgs__rosidl_generator_c.dir/depend
 

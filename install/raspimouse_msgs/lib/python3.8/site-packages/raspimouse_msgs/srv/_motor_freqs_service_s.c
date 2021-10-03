@@ -50,22 +50,22 @@ bool raspimouse_msgs__srv__motor_freqs_service__request__convert_from_py(PyObjec
     assert(strncmp("raspimouse_msgs.srv._motor_freqs_service.MotorFreqsService_Request", full_classname_dest, 66) == 0);
   }
   raspimouse_msgs__srv__MotorFreqsService_Request * ros_message = _ros_message;
-  {  // e
-    PyObject * field = PyObject_GetAttrString(_pymsg, "e");
+  {  // right_hz
+    PyObject * field = PyObject_GetAttrString(_pymsg, "right_hz");
     if (!field) {
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->e = (int16_t)PyLong_AsLong(field);
+    ros_message->right_hz = (int16_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
-  {  // f
-    PyObject * field = PyObject_GetAttrString(_pymsg, "f");
+  {  // left_hz
+    PyObject * field = PyObject_GetAttrString(_pymsg, "left_hz");
     if (!field) {
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->f = (int16_t)PyLong_AsLong(field);
+    ros_message->left_hz = (int16_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
 
@@ -90,22 +90,22 @@ PyObject * raspimouse_msgs__srv__motor_freqs_service__request__convert_to_py(voi
     }
   }
   raspimouse_msgs__srv__MotorFreqsService_Request * ros_message = (raspimouse_msgs__srv__MotorFreqsService_Request *)raw_ros_message;
-  {  // e
+  {  // right_hz
     PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->e);
+    field = PyLong_FromLong(ros_message->right_hz);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "e", field);
+      int rc = PyObject_SetAttrString(_pymessage, "right_hz", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // f
+  {  // left_hz
     PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->f);
+    field = PyLong_FromLong(ros_message->left_hz);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "f", field);
+      int rc = PyObject_SetAttrString(_pymessage, "left_hz", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

@@ -37,8 +37,8 @@ struct MotorFreqsService_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->e = 0;
-      this->f = 0;
+      this->right_hz = 0;
+      this->left_hz = 0;
     }
   }
 
@@ -48,30 +48,30 @@ struct MotorFreqsService_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->e = 0;
-      this->f = 0;
+      this->right_hz = 0;
+      this->left_hz = 0;
     }
   }
 
   // field types and members
-  using _e_type =
+  using _right_hz_type =
     int16_t;
-  _e_type e;
-  using _f_type =
+  _right_hz_type right_hz;
+  using _left_hz_type =
     int16_t;
-  _f_type f;
+  _left_hz_type left_hz;
 
   // setters for named parameter idiom
-  Type & set__e(
+  Type & set__right_hz(
     const int16_t & _arg)
   {
-    this->e = _arg;
+    this->right_hz = _arg;
     return *this;
   }
-  Type & set__f(
+  Type & set__left_hz(
     const int16_t & _arg)
   {
-    this->f = _arg;
+    this->left_hz = _arg;
     return *this;
   }
 
@@ -117,10 +117,10 @@ struct MotorFreqsService_Request_
   // comparison operators
   bool operator==(const MotorFreqsService_Request_ & other) const
   {
-    if (this->e != other.e) {
+    if (this->right_hz != other.right_hz) {
       return false;
     }
-    if (this->f != other.f) {
+    if (this->left_hz != other.left_hz) {
       return false;
     }
     return true;

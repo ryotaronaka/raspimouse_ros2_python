@@ -6,9 +6,9 @@
 module raspimouse_msgs {
   module srv {
     struct MotorFreqsService_Request {
-      int16 e;
+      int16 right_hz;
 
-      int16 f;
+      int16 left_hz;
     };
     struct MotorFreqsService_Response {
       uint8 structure_needs_at_least_one_member;

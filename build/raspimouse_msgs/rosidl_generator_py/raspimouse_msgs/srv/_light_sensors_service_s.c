@@ -50,40 +50,40 @@ bool raspimouse_msgs__srv__light_sensors_service__request__convert_from_py(PyObj
     assert(strncmp("raspimouse_msgs.srv._light_sensors_service.LightSensorsService_Request", full_classname_dest, 70) == 0);
   }
   raspimouse_msgs__srv__LightSensorsService_Request * ros_message = _ros_message;
-  {  // a
-    PyObject * field = PyObject_GetAttrString(_pymsg, "a");
+  {  // right_forward
+    PyObject * field = PyObject_GetAttrString(_pymsg, "right_forward");
     if (!field) {
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->a = (int16_t)PyLong_AsLong(field);
+    ros_message->right_forward = (int16_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
-  {  // b
-    PyObject * field = PyObject_GetAttrString(_pymsg, "b");
+  {  // right_side
+    PyObject * field = PyObject_GetAttrString(_pymsg, "right_side");
     if (!field) {
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->b = (int16_t)PyLong_AsLong(field);
+    ros_message->right_side = (int16_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
-  {  // c
-    PyObject * field = PyObject_GetAttrString(_pymsg, "c");
+  {  // left_side
+    PyObject * field = PyObject_GetAttrString(_pymsg, "left_side");
     if (!field) {
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->c = (int16_t)PyLong_AsLong(field);
+    ros_message->left_side = (int16_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
-  {  // d
-    PyObject * field = PyObject_GetAttrString(_pymsg, "d");
+  {  // left_forward
+    PyObject * field = PyObject_GetAttrString(_pymsg, "left_forward");
     if (!field) {
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->d = (int16_t)PyLong_AsLong(field);
+    ros_message->left_forward = (int16_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
 
@@ -108,44 +108,44 @@ PyObject * raspimouse_msgs__srv__light_sensors_service__request__convert_to_py(v
     }
   }
   raspimouse_msgs__srv__LightSensorsService_Request * ros_message = (raspimouse_msgs__srv__LightSensorsService_Request *)raw_ros_message;
-  {  // a
+  {  // right_forward
     PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->a);
+    field = PyLong_FromLong(ros_message->right_forward);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "a", field);
+      int rc = PyObject_SetAttrString(_pymessage, "right_forward", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // b
+  {  // right_side
     PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->b);
+    field = PyLong_FromLong(ros_message->right_side);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "b", field);
+      int rc = PyObject_SetAttrString(_pymessage, "right_side", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // c
+  {  // left_side
     PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->c);
+    field = PyLong_FromLong(ros_message->left_side);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "c", field);
+      int rc = PyObject_SetAttrString(_pymessage, "left_side", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // d
+  {  // left_forward
     PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->d);
+    field = PyLong_FromLong(ros_message->left_forward);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "d", field);
+      int rc = PyObject_SetAttrString(_pymessage, "left_forward", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

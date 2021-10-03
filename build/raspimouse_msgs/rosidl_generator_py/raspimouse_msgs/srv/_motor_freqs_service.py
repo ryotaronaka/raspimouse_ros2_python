@@ -53,13 +53,13 @@ class MotorFreqsService_Request(metaclass=Metaclass_MotorFreqsService_Request):
     """Message class 'MotorFreqsService_Request'."""
 
     __slots__ = [
-        '_e',
-        '_f',
+        '_right_hz',
+        '_left_hz',
     ]
 
     _fields_and_field_types = {
-        'e': 'int16',
-        'f': 'int16',
+        'right_hz': 'int16',
+        'left_hz': 'int16',
     }
 
     SLOT_TYPES = (
@@ -71,8 +71,8 @@ class MotorFreqsService_Request(metaclass=Metaclass_MotorFreqsService_Request):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.e = kwargs.get('e', int())
-        self.f = kwargs.get('f', int())
+        self.right_hz = kwargs.get('right_hz', int())
+        self.left_hz = kwargs.get('left_hz', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -103,9 +103,9 @@ class MotorFreqsService_Request(metaclass=Metaclass_MotorFreqsService_Request):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.e != other.e:
+        if self.right_hz != other.right_hz:
             return False
-        if self.f != other.f:
+        if self.left_hz != other.left_hz:
             return False
         return True
 
@@ -115,34 +115,34 @@ class MotorFreqsService_Request(metaclass=Metaclass_MotorFreqsService_Request):
         return copy(cls._fields_and_field_types)
 
     @property
-    def e(self):
-        """Message field 'e'."""
-        return self._e
+    def right_hz(self):
+        """Message field 'right_hz'."""
+        return self._right_hz
 
-    @e.setter
-    def e(self, value):
+    @right_hz.setter
+    def right_hz(self, value):
         if __debug__:
             assert \
                 isinstance(value, int), \
-                "The 'e' field must be of type 'int'"
+                "The 'right_hz' field must be of type 'int'"
             assert value >= -32768 and value < 32768, \
-                "The 'e' field must be an integer in [-32768, 32767]"
-        self._e = value
+                "The 'right_hz' field must be an integer in [-32768, 32767]"
+        self._right_hz = value
 
     @property
-    def f(self):
-        """Message field 'f'."""
-        return self._f
+    def left_hz(self):
+        """Message field 'left_hz'."""
+        return self._left_hz
 
-    @f.setter
-    def f(self, value):
+    @left_hz.setter
+    def left_hz(self, value):
         if __debug__:
             assert \
                 isinstance(value, int), \
-                "The 'f' field must be of type 'int'"
+                "The 'left_hz' field must be of type 'int'"
             assert value >= -32768 and value < 32768, \
-                "The 'f' field must be an integer in [-32768, 32767]"
-        self._f = value
+                "The 'left_hz' field must be an integer in [-32768, 32767]"
+        self._left_hz = value
 
 
 # Import statements for member types
