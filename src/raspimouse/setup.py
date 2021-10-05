@@ -1,4 +1,6 @@
 from setuptools import setup
+import os
+from glob import glob
 
 package_name = 'raspimouse'
 
@@ -10,6 +12,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (os.path.join('share', package_name), glob('launch/' + package_name + '_launch.py')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -20,10 +23,11 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'buzzer_node = raspimouse.buzzer_node:main',
+            'buzzer_pub_node = raspimouse.buzzer_pub_node:main',
             'buzzer2_sub_node = raspimouse.buzzer2_sub_node:main',
             'buzzer3_sub_node = raspimouse.buzzer3_sub_node:main',
             'buzzer4_sub_node = raspimouse.buzzer4_sub_node:main',
+            'buzzer = raspimouse.buzzer:main',
             'lightsensors_sub = raspimouse.lightsensors_sub:main',
             'lightsensors = raspimouse.lightsensors:main',
             'motors1 = raspimouse.motors1:main',

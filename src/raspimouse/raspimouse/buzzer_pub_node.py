@@ -1,7 +1,7 @@
 # 
 # colcon build
 # source ~/ros2_ws/install/setup.bash
-# ros2 run raspimouse buzzer_node
+# ros2 run raspimouse buzzer_pub_node
 
 import rclpy
 from rclpy import timer
