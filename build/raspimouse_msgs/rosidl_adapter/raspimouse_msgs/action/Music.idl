@@ -5,15 +5,21 @@
 
 module raspimouse_msgs {
   module action {
+    @verbatim (language="comment", text=
+      " Request")
     struct Music_Goal {
       sequence<uint16> freqs;
 
       sequence<float> durations;
     };
     struct Music_Result {
+      @verbatim (language="comment", text=
+        "Result")
       boolean finished;
     };
     struct Music_Feedback {
+      @verbatim (language="comment", text=
+        " Reedback")
       uint32 remaining_steps;
     };
   };
