@@ -1,0 +1,34 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from raspimouse_msgs/action/Movement.action
+// generated code does not contain a copyright notice
+
+
+module raspimouse_msgs {
+  module action {
+    @verbatim (language="comment", text=
+      " Request")
+    struct Movement_Goal {
+      float linear_x;
+
+      float linear_y;
+
+      float linear_z;
+
+      float angular_x;
+
+      float angular_y;
+
+      float angular_z;
+    };
+    struct Movement_Result {
+      @verbatim (language="comment", text=
+        "Result")
+      boolean finished;
+    };
+    struct Movement_Feedback {
+      @verbatim (language="comment", text=
+        " Reedback")
+      uint32 remaining_steps;
+    };
+  };
+};

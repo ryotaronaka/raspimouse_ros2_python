@@ -54,7 +54,7 @@ class BuzzerActionServer(Node):
         result = Music.Result()
         feedback_msg = Music.Feedback()
 
-        for i, f in enumerate(goal_msg_freqs):
+        for i, f in enumerate(goal_msg_freqs): # インデックス番号, 要素の順に取得できる
             self.get_logger().info("Freq : %s" % f)
             self.write_freqs(f)
             if i >= len(goal_handle.request.durations):

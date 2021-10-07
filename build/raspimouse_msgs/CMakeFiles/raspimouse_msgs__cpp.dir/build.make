@@ -81,6 +81,10 @@ CMakeFiles/raspimouse_msgs__cpp: rosidl_generator_cpp/raspimouse_msgs/action/mus
 CMakeFiles/raspimouse_msgs__cpp: rosidl_generator_cpp/raspimouse_msgs/action/detail/music__builder.hpp
 CMakeFiles/raspimouse_msgs__cpp: rosidl_generator_cpp/raspimouse_msgs/action/detail/music__struct.hpp
 CMakeFiles/raspimouse_msgs__cpp: rosidl_generator_cpp/raspimouse_msgs/action/detail/music__traits.hpp
+CMakeFiles/raspimouse_msgs__cpp: rosidl_generator_cpp/raspimouse_msgs/action/movement.hpp
+CMakeFiles/raspimouse_msgs__cpp: rosidl_generator_cpp/raspimouse_msgs/action/detail/movement__builder.hpp
+CMakeFiles/raspimouse_msgs__cpp: rosidl_generator_cpp/raspimouse_msgs/action/detail/movement__struct.hpp
+CMakeFiles/raspimouse_msgs__cpp: rosidl_generator_cpp/raspimouse_msgs/action/detail/movement__traits.hpp
 
 
 rosidl_generator_cpp/raspimouse_msgs/msg/light_sensors.hpp: /opt/ros/foxy/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -105,6 +109,7 @@ rosidl_generator_cpp/raspimouse_msgs/msg/light_sensors.hpp: rosidl_adapter/raspi
 rosidl_generator_cpp/raspimouse_msgs/msg/light_sensors.hpp: rosidl_adapter/raspimouse_msgs/msg/TimedMotion.idl
 rosidl_generator_cpp/raspimouse_msgs/msg/light_sensors.hpp: rosidl_adapter/raspimouse_msgs/srv/TimedMotionService.idl
 rosidl_generator_cpp/raspimouse_msgs/msg/light_sensors.hpp: rosidl_adapter/raspimouse_msgs/action/Music.idl
+rosidl_generator_cpp/raspimouse_msgs/msg/light_sensors.hpp: rosidl_adapter/raspimouse_msgs/action/Movement.idl
 rosidl_generator_cpp/raspimouse_msgs/msg/light_sensors.hpp: /opt/ros/foxy/share/action_msgs/msg/GoalInfo.idl
 rosidl_generator_cpp/raspimouse_msgs/msg/light_sensors.hpp: /opt/ros/foxy/share/action_msgs/msg/GoalStatus.idl
 rosidl_generator_cpp/raspimouse_msgs/msg/light_sensors.hpp: /opt/ros/foxy/share/action_msgs/msg/GoalStatusArray.idl
@@ -196,6 +201,18 @@ rosidl_generator_cpp/raspimouse_msgs/action/detail/music__struct.hpp: rosidl_gen
 rosidl_generator_cpp/raspimouse_msgs/action/detail/music__traits.hpp: rosidl_generator_cpp/raspimouse_msgs/msg/light_sensors.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/raspimouse_msgs/action/detail/music__traits.hpp
 
+rosidl_generator_cpp/raspimouse_msgs/action/movement.hpp: rosidl_generator_cpp/raspimouse_msgs/msg/light_sensors.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/raspimouse_msgs/action/movement.hpp
+
+rosidl_generator_cpp/raspimouse_msgs/action/detail/movement__builder.hpp: rosidl_generator_cpp/raspimouse_msgs/msg/light_sensors.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/raspimouse_msgs/action/detail/movement__builder.hpp
+
+rosidl_generator_cpp/raspimouse_msgs/action/detail/movement__struct.hpp: rosidl_generator_cpp/raspimouse_msgs/msg/light_sensors.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/raspimouse_msgs/action/detail/movement__struct.hpp
+
+rosidl_generator_cpp/raspimouse_msgs/action/detail/movement__traits.hpp: rosidl_generator_cpp/raspimouse_msgs/msg/light_sensors.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/raspimouse_msgs/action/detail/movement__traits.hpp
+
 raspimouse_msgs__cpp: CMakeFiles/raspimouse_msgs__cpp
 raspimouse_msgs__cpp: rosidl_generator_cpp/raspimouse_msgs/msg/light_sensors.hpp
 raspimouse_msgs__cpp: rosidl_generator_cpp/raspimouse_msgs/msg/detail/light_sensors__builder.hpp
@@ -225,6 +242,10 @@ raspimouse_msgs__cpp: rosidl_generator_cpp/raspimouse_msgs/action/music.hpp
 raspimouse_msgs__cpp: rosidl_generator_cpp/raspimouse_msgs/action/detail/music__builder.hpp
 raspimouse_msgs__cpp: rosidl_generator_cpp/raspimouse_msgs/action/detail/music__struct.hpp
 raspimouse_msgs__cpp: rosidl_generator_cpp/raspimouse_msgs/action/detail/music__traits.hpp
+raspimouse_msgs__cpp: rosidl_generator_cpp/raspimouse_msgs/action/movement.hpp
+raspimouse_msgs__cpp: rosidl_generator_cpp/raspimouse_msgs/action/detail/movement__builder.hpp
+raspimouse_msgs__cpp: rosidl_generator_cpp/raspimouse_msgs/action/detail/movement__struct.hpp
+raspimouse_msgs__cpp: rosidl_generator_cpp/raspimouse_msgs/action/detail/movement__traits.hpp
 raspimouse_msgs__cpp: CMakeFiles/raspimouse_msgs__cpp.dir/build.make
 
 .PHONY : raspimouse_msgs__cpp

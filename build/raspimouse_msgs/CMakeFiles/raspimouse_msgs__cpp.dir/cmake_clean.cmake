@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/raspimouse_msgs__cpp"
+  "rosidl_generator_cpp/raspimouse_msgs/action/detail/movement__builder.hpp"
+  "rosidl_generator_cpp/raspimouse_msgs/action/detail/movement__struct.hpp"
+  "rosidl_generator_cpp/raspimouse_msgs/action/detail/movement__traits.hpp"
   "rosidl_generator_cpp/raspimouse_msgs/action/detail/music__builder.hpp"
   "rosidl_generator_cpp/raspimouse_msgs/action/detail/music__struct.hpp"
   "rosidl_generator_cpp/raspimouse_msgs/action/detail/music__traits.hpp"
+  "rosidl_generator_cpp/raspimouse_msgs/action/movement.hpp"
   "rosidl_generator_cpp/raspimouse_msgs/action/music.hpp"
   "rosidl_generator_cpp/raspimouse_msgs/msg/detail/light_sensors__builder.hpp"
   "rosidl_generator_cpp/raspimouse_msgs/msg/detail/light_sensors__struct.hpp"
