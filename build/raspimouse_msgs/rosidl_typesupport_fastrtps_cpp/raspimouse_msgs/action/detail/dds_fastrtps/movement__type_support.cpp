@@ -44,6 +44,12 @@ cdr_serialize(
   cdr << ros_message.angular_y;
   // Member: angular_z
   cdr << ros_message.angular_z;
+  // Member: left_hz
+  cdr << ros_message.left_hz;
+  // Member: right_hz
+  cdr << ros_message.right_hz;
+  // Member: duration_ms
+  cdr << ros_message.duration_ms;
   return true;
 }
 
@@ -70,6 +76,15 @@ cdr_deserialize(
 
   // Member: angular_z
   cdr >> ros_message.angular_z;
+
+  // Member: left_hz
+  cdr >> ros_message.left_hz;
+
+  // Member: right_hz
+  cdr >> ros_message.right_hz;
+
+  // Member: duration_ms
+  cdr >> ros_message.duration_ms;
 
   return true;
 }
@@ -120,6 +135,24 @@ get_serialized_size(
   // Member: angular_z
   {
     size_t item_size = sizeof(ros_message.angular_z);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: left_hz
+  {
+    size_t item_size = sizeof(ros_message.left_hz);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: right_hz
+  {
+    size_t item_size = sizeof(ros_message.right_hz);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: duration_ms
+  {
+    size_t item_size = sizeof(ros_message.duration_ms);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -183,6 +216,30 @@ max_serialized_size_Movement_Goal(
   }
 
   // Member: angular_z
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: left_hz
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint16_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
+  }
+
+  // Member: right_hz
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint16_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
+  }
+
+  // Member: duration_ms
   {
     size_t array_size = 1;
 

@@ -79,6 +79,21 @@ static bool _Movement_Goal__cdr_serialize(
     cdr << ros_message->angular_z;
   }
 
+  // Field name: left_hz
+  {
+    cdr << ros_message->left_hz;
+  }
+
+  // Field name: right_hz
+  {
+    cdr << ros_message->right_hz;
+  }
+
+  // Field name: duration_ms
+  {
+    cdr << ros_message->duration_ms;
+  }
+
   return true;
 }
 
@@ -119,6 +134,21 @@ static bool _Movement_Goal__cdr_deserialize(
   // Field name: angular_z
   {
     cdr >> ros_message->angular_z;
+  }
+
+  // Field name: left_hz
+  {
+    cdr >> ros_message->left_hz;
+  }
+
+  // Field name: right_hz
+  {
+    cdr >> ros_message->right_hz;
+  }
+
+  // Field name: duration_ms
+  {
+    cdr >> ros_message->duration_ms;
   }
 
   return true;
@@ -171,6 +201,24 @@ size_t get_serialized_size_raspimouse_msgs__action__Movement_Goal(
   // field.name angular_z
   {
     size_t item_size = sizeof(ros_message->angular_z);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name left_hz
+  {
+    size_t item_size = sizeof(ros_message->left_hz);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name right_hz
+  {
+    size_t item_size = sizeof(ros_message->right_hz);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name duration_ms
+  {
+    size_t item_size = sizeof(ros_message->duration_ms);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -234,6 +282,27 @@ size_t max_serialized_size_raspimouse_msgs__action__Movement_Goal(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
   // member: angular_z
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: left_hz
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint16_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
+  }
+  // member: right_hz
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint16_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
+  }
+  // member: duration_ms
   {
     size_t array_size = 1;
 

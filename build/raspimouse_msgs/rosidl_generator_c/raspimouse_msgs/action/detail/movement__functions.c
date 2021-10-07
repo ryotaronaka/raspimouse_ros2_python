@@ -21,6 +21,9 @@ raspimouse_msgs__action__Movement_Goal__init(raspimouse_msgs__action__Movement_G
   // angular_x
   // angular_y
   // angular_z
+  // left_hz
+  // right_hz
+  // duration_ms
   return true;
 }
 
@@ -36,6 +39,9 @@ raspimouse_msgs__action__Movement_Goal__fini(raspimouse_msgs__action__Movement_G
   // angular_x
   // angular_y
   // angular_z
+  // left_hz
+  // right_hz
+  // duration_ms
 }
 
 raspimouse_msgs__action__Movement_Goal *

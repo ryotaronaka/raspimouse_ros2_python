@@ -27,5 +27,9 @@ def generate_launch_description():
         Node(
             package='raspimouse',
             executable='motors',
+        ),
+        Node(
+            package='raspimouse',
+            executable='move',
         )
     ])

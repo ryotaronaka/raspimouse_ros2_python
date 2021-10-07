@@ -37,7 +37,7 @@ void Movement_Goal_fini_function(void * message_memory)
   typed_message->~Movement_Goal();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember Movement_Goal_message_member_array[6] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember Movement_Goal_message_member_array[9] = {
   {
     "linear_x",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
@@ -127,13 +127,58 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Movement_Goal
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "left_hz",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT16,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(raspimouse_msgs::action::Movement_Goal, left_hz),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "right_hz",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT16,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(raspimouse_msgs::action::Movement_Goal, right_hz),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "duration_ms",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT32,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(raspimouse_msgs::action::Movement_Goal, duration_ms),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers Movement_Goal_message_members = {
   "raspimouse_msgs::action",  // message namespace
   "Movement_Goal",  // message name
-  6,  // number of fields
+  9,  // number of fields
   sizeof(raspimouse_msgs::action::Movement_Goal),
   Movement_Goal_message_member_array,  // message members
   Movement_Goal_init_function,  // function to initialize message memory (memory has to be allocated)

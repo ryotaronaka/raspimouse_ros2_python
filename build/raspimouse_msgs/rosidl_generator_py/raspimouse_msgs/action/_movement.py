@@ -59,6 +59,9 @@ class Movement_Goal(metaclass=Metaclass_Movement_Goal):
         '_angular_x',
         '_angular_y',
         '_angular_z',
+        '_left_hz',
+        '_right_hz',
+        '_duration_ms',
     ]
 
     _fields_and_field_types = {
@@ -68,6 +71,9 @@ class Movement_Goal(metaclass=Metaclass_Movement_Goal):
         'angular_x': 'float',
         'angular_y': 'float',
         'angular_z': 'float',
+        'left_hz': 'int16',
+        'right_hz': 'int16',
+        'duration_ms': 'uint32',
     }
 
     SLOT_TYPES = (
@@ -77,6 +83,9 @@ class Movement_Goal(metaclass=Metaclass_Movement_Goal):
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int16'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int16'),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint32'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -89,6 +98,9 @@ class Movement_Goal(metaclass=Metaclass_Movement_Goal):
         self.angular_x = kwargs.get('angular_x', float())
         self.angular_y = kwargs.get('angular_y', float())
         self.angular_z = kwargs.get('angular_z', float())
+        self.left_hz = kwargs.get('left_hz', int())
+        self.right_hz = kwargs.get('right_hz', int())
+        self.duration_ms = kwargs.get('duration_ms', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -130,6 +142,12 @@ class Movement_Goal(metaclass=Metaclass_Movement_Goal):
         if self.angular_y != other.angular_y:
             return False
         if self.angular_z != other.angular_z:
+            return False
+        if self.left_hz != other.left_hz:
+            return False
+        if self.right_hz != other.right_hz:
+            return False
+        if self.duration_ms != other.duration_ms:
             return False
         return True
 
@@ -215,6 +233,51 @@ class Movement_Goal(metaclass=Metaclass_Movement_Goal):
                 isinstance(value, float), \
                 "The 'angular_z' field must be of type 'float'"
         self._angular_z = value
+
+    @property
+    def left_hz(self):
+        """Message field 'left_hz'."""
+        return self._left_hz
+
+    @left_hz.setter
+    def left_hz(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'left_hz' field must be of type 'int'"
+            assert value >= -32768 and value < 32768, \
+                "The 'left_hz' field must be an integer in [-32768, 32767]"
+        self._left_hz = value
+
+    @property
+    def right_hz(self):
+        """Message field 'right_hz'."""
+        return self._right_hz
+
+    @right_hz.setter
+    def right_hz(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'right_hz' field must be of type 'int'"
+            assert value >= -32768 and value < 32768, \
+                "The 'right_hz' field must be an integer in [-32768, 32767]"
+        self._right_hz = value
+
+    @property
+    def duration_ms(self):
+        """Message field 'duration_ms'."""
+        return self._duration_ms
+
+    @duration_ms.setter
+    def duration_ms(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'duration_ms' field must be of type 'int'"
+            assert value >= 0 and value < 4294967296, \
+                "The 'duration_ms' field must be an unsigned integer in [0, 4294967295]"
+        self._duration_ms = value
 
 
 # Import statements for member types

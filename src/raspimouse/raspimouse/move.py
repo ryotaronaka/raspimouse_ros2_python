@@ -5,6 +5,7 @@
 # ros2 service call /motor_off std_srvs/srv/Trigger
 # ros2 service call /motor_on std_srvs/srv/Trigger
 # ros2 action send_goal /move raspimouse_msgs/action/Movement '{linear_x: 0.0, linear_y: 0.0, linear_z: 0.0, angular_x: 0.0, angular_y: 0.0, angular_z: 1.0}'
+# linear_x: 0.2, angular_z: 1.0
 
 import rclpy, sys, math
 import threading

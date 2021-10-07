@@ -26,6 +26,9 @@ typedef struct raspimouse_msgs__action__Movement_Goal
   float angular_x;
   float angular_y;
   float angular_z;
+  int16_t left_hz;
+  int16_t right_hz;
+  uint32_t duration_ms;
 } raspimouse_msgs__action__Movement_Goal;
 
 // Struct for a sequence of raspimouse_msgs__action__Movement_Goal.

@@ -43,6 +43,9 @@ struct Movement_Goal_
       this->angular_x = 0.0f;
       this->angular_y = 0.0f;
       this->angular_z = 0.0f;
+      this->left_hz = 0;
+      this->right_hz = 0;
+      this->duration_ms = 0ul;
     }
   }
 
@@ -58,6 +61,9 @@ struct Movement_Goal_
       this->angular_x = 0.0f;
       this->angular_y = 0.0f;
       this->angular_z = 0.0f;
+      this->left_hz = 0;
+      this->right_hz = 0;
+      this->duration_ms = 0ul;
     }
   }
 
@@ -80,6 +86,15 @@ struct Movement_Goal_
   using _angular_z_type =
     float;
   _angular_z_type angular_z;
+  using _left_hz_type =
+    int16_t;
+  _left_hz_type left_hz;
+  using _right_hz_type =
+    int16_t;
+  _right_hz_type right_hz;
+  using _duration_ms_type =
+    uint32_t;
+  _duration_ms_type duration_ms;
 
   // setters for named parameter idiom
   Type & set__linear_x(
@@ -116,6 +131,24 @@ struct Movement_Goal_
     const float & _arg)
   {
     this->angular_z = _arg;
+    return *this;
+  }
+  Type & set__left_hz(
+    const int16_t & _arg)
+  {
+    this->left_hz = _arg;
+    return *this;
+  }
+  Type & set__right_hz(
+    const int16_t & _arg)
+  {
+    this->right_hz = _arg;
+    return *this;
+  }
+  Type & set__duration_ms(
+    const uint32_t & _arg)
+  {
+    this->duration_ms = _arg;
     return *this;
   }
 
@@ -177,6 +210,15 @@ struct Movement_Goal_
       return false;
     }
     if (this->angular_z != other.angular_z) {
+      return false;
+    }
+    if (this->left_hz != other.left_hz) {
+      return false;
+    }
+    if (this->right_hz != other.right_hz) {
+      return false;
+    }
+    if (this->duration_ms != other.duration_ms) {
       return false;
     }
     return true;

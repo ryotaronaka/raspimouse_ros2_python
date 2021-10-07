@@ -20,16 +20,64 @@ namespace action
 namespace builder
 {
 
+class Init_Movement_Goal_duration_ms
+{
+public:
+  explicit Init_Movement_Goal_duration_ms(::raspimouse_msgs::action::Movement_Goal & msg)
+  : msg_(msg)
+  {}
+  ::raspimouse_msgs::action::Movement_Goal duration_ms(::raspimouse_msgs::action::Movement_Goal::_duration_ms_type arg)
+  {
+    msg_.duration_ms = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::raspimouse_msgs::action::Movement_Goal msg_;
+};
+
+class Init_Movement_Goal_right_hz
+{
+public:
+  explicit Init_Movement_Goal_right_hz(::raspimouse_msgs::action::Movement_Goal & msg)
+  : msg_(msg)
+  {}
+  Init_Movement_Goal_duration_ms right_hz(::raspimouse_msgs::action::Movement_Goal::_right_hz_type arg)
+  {
+    msg_.right_hz = std::move(arg);
+    return Init_Movement_Goal_duration_ms(msg_);
+  }
+
+private:
+  ::raspimouse_msgs::action::Movement_Goal msg_;
+};
+
+class Init_Movement_Goal_left_hz
+{
+public:
+  explicit Init_Movement_Goal_left_hz(::raspimouse_msgs::action::Movement_Goal & msg)
+  : msg_(msg)
+  {}
+  Init_Movement_Goal_right_hz left_hz(::raspimouse_msgs::action::Movement_Goal::_left_hz_type arg)
+  {
+    msg_.left_hz = std::move(arg);
+    return Init_Movement_Goal_right_hz(msg_);
+  }
+
+private:
+  ::raspimouse_msgs::action::Movement_Goal msg_;
+};
+
 class Init_Movement_Goal_angular_z
 {
 public:
   explicit Init_Movement_Goal_angular_z(::raspimouse_msgs::action::Movement_Goal & msg)
   : msg_(msg)
   {}
-  ::raspimouse_msgs::action::Movement_Goal angular_z(::raspimouse_msgs::action::Movement_Goal::_angular_z_type arg)
+  Init_Movement_Goal_left_hz angular_z(::raspimouse_msgs::action::Movement_Goal::_angular_z_type arg)
   {
     msg_.angular_z = std::move(arg);
-    return std::move(msg_);
+    return Init_Movement_Goal_left_hz(msg_);
   }
 
 private:

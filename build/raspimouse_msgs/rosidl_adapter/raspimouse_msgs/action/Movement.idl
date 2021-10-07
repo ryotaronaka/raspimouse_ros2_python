@@ -6,7 +6,8 @@
 module raspimouse_msgs {
   module action {
     @verbatim (language="comment", text=
-      " Request")
+      " Request" "\n"
+      "# LinearAngular")
     struct Movement_Goal {
       float linear_x;
 
@@ -19,6 +20,14 @@ module raspimouse_msgs {
       float angular_y;
 
       float angular_z;
+
+      @verbatim (language="comment", text=
+        "# Timed motion")
+      int16 left_hz;
+
+      int16 right_hz;
+
+      uint32 duration_ms;
     };
     struct Movement_Result {
       @verbatim (language="comment", text=
