@@ -7,14 +7,11 @@
 # ros2 service call /motor_on std_srvs/srv/Trigger
 # ros2 run raspimouse_run_corridor wall_stop
 
-import rclpy,copy
+import rclpy
 from geometry_msgs.msg import Twist
-from raspimouse_msgs.action import Movement
 from std_srvs.srv import Trigger
 from raspimouse_msgs.msg import LightSensors
 from rclpy.node import Node
-from rclpy.action import ActionClient
-import time
 
 class WallStop(Node):
     def __init__(self):
@@ -36,7 +33,14 @@ class WallStop(Node):
             10
         )
 
-        self._action_client = ActionClient(self, Movement, '/move')
+        self._publisher = self.create_publisher( 
+            Twist,
+            '/cmd_vel',
+            10
+        )
+
+        timer_period = 1.0
+        self.timer = self.create_timer(timer_period, self.run_callback)
     
     def callback(self, msg):
         self.sensor_values = msg
@@ -45,26 +49,17 @@ class WallStop(Node):
         #self.get_logger().info('I heard left_side : "%d"' % msg.left_side)
         #self.get_logger().info('I heard left_forward : "%d"' % msg.left_forward)
     
-    # '{linear_x: 0.0, linear_y: 0.0, linear_z: 0.0, angular_x: 0.0, angular_y: 0.0, angular_z: 1.0}'
-    def send_goal(self, linear_x, linear_y, angular_z):
-        goal_msg = Movement.Goal()
-        goal_msg.linear_x = linear_x
-        goal_msg.linear_y = linear_y
-        goal_msg.angular_z = angular_z
-
-        self._action_client.wait_for_server()
-
-        return self._action_client.send_goal_async(goal_msg)
-
-
+    def run_callback(self):
+        data = Twist()
+        data.linear.x = 0.1 if self.sensor_values.sum_all < 300 else 0.0
+        self._publisher.publish(data)
 
 def main(args=None):
     rclpy.init(args=args)
-    action_client = WallStop()
-
-    future = action_client.send_goal(0.0, 0.0, 1.0)
-
-    rclpy.spin_until_future_complete(action_client, future)
+    wall_stop = WallStop()
+    rclpy.spin(wall_stop)
+    wall_stop.destroy_node()
+    rclpy.shutdown()
 
 
 if __name__ == '__main__':

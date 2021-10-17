@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'wall_stop_service = raspimouse_run_corridor.wall_stop_service:main',
             'wall_stop = raspimouse_run_corridor.wall_stop:main',
         ],
     },
