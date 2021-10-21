@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/raspimouse_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/raspimouse_msgs/action/detail/move_robot__type_support_c.cpp.o"
   "CMakeFiles/raspimouse_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/raspimouse_msgs/action/detail/movement__type_support_c.cpp.o"
   "CMakeFiles/raspimouse_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/raspimouse_msgs/action/detail/music__type_support_c.cpp.o"
   "CMakeFiles/raspimouse_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/raspimouse_msgs/msg/detail/light_sensors__type_support_c.cpp.o"
@@ -9,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/raspimouse_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/raspimouse_msgs/srv/detail/timed_motion_service__type_support_c.cpp.o"
   "libraspimouse_msgs__rosidl_typesupport_fastrtps_c.pdb"
   "libraspimouse_msgs__rosidl_typesupport_fastrtps_c.so"
+  "rosidl_typesupport_fastrtps_c/raspimouse_msgs/action/detail/move_robot__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/raspimouse_msgs/action/detail/move_robot__type_support_c.cpp"
   "rosidl_typesupport_fastrtps_c/raspimouse_msgs/action/detail/movement__rosidl_typesupport_fastrtps_c.h"
   "rosidl_typesupport_fastrtps_c/raspimouse_msgs/action/detail/movement__type_support_c.cpp"
   "rosidl_typesupport_fastrtps_c/raspimouse_msgs/action/detail/music__rosidl_typesupport_fastrtps_c.h"

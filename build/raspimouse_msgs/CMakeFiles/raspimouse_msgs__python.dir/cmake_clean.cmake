@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/action/_move_robot_s.c.o"
   "CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/action/_movement_s.c.o"
   "CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/action/_music_s.c.o"
   "CMakeFiles/raspimouse_msgs__python.dir/rosidl_generator_py/raspimouse_msgs/msg/_light_sensors_s.c.o"

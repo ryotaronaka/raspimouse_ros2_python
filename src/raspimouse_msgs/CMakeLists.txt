@@ -30,6 +30,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/TimedMotionService.srv"
   "action/Music.action"
   "action/Movement.action"
+  "action/MoveRobot.action"
 )
 
 if(BUILD_TESTING)

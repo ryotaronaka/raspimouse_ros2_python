@@ -64,6 +64,7 @@ raspimouse_msgs__py/CMakeFiles/raspimouse_msgs__py: rosidl_generator_py/raspimou
 raspimouse_msgs__py/CMakeFiles/raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/srv/_timed_motion_service.py
 raspimouse_msgs__py/CMakeFiles/raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/action/_music.py
 raspimouse_msgs__py/CMakeFiles/raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/action/_movement.py
+raspimouse_msgs__py/CMakeFiles/raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/action/_move_robot.py
 raspimouse_msgs__py/CMakeFiles/raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/msg/__init__.py
 raspimouse_msgs__py/CMakeFiles/raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/srv/__init__.py
 raspimouse_msgs__py/CMakeFiles/raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/action/__init__.py
@@ -75,6 +76,7 @@ raspimouse_msgs__py/CMakeFiles/raspimouse_msgs__py: rosidl_generator_py/raspimou
 raspimouse_msgs__py/CMakeFiles/raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/srv/_timed_motion_service_s.c
 raspimouse_msgs__py/CMakeFiles/raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/action/_music_s.c
 raspimouse_msgs__py/CMakeFiles/raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/action/_movement_s.c
+raspimouse_msgs__py/CMakeFiles/raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/action/_move_robot_s.c
 
 
 rosidl_generator_py/raspimouse_msgs/_raspimouse_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/lib/rosidl_generator_py/rosidl_generator_py
@@ -98,6 +100,7 @@ rosidl_generator_py/raspimouse_msgs/_raspimouse_msgs_s.ep.rosidl_typesupport_fas
 rosidl_generator_py/raspimouse_msgs/_raspimouse_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/raspimouse_msgs/srv/TimedMotionService.idl
 rosidl_generator_py/raspimouse_msgs/_raspimouse_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/raspimouse_msgs/action/Music.idl
 rosidl_generator_py/raspimouse_msgs/_raspimouse_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/raspimouse_msgs/action/Movement.idl
+rosidl_generator_py/raspimouse_msgs/_raspimouse_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/raspimouse_msgs/action/MoveRobot.idl
 rosidl_generator_py/raspimouse_msgs/_raspimouse_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/action_msgs/msg/GoalInfo.idl
 rosidl_generator_py/raspimouse_msgs/_raspimouse_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/action_msgs/msg/GoalStatus.idl
 rosidl_generator_py/raspimouse_msgs/_raspimouse_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/action_msgs/msg/GoalStatusArray.idl
@@ -138,6 +141,9 @@ rosidl_generator_py/raspimouse_msgs/action/_music.py: rosidl_generator_py/raspim
 rosidl_generator_py/raspimouse_msgs/action/_movement.py: rosidl_generator_py/raspimouse_msgs/_raspimouse_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/raspimouse_msgs/action/_movement.py
 
+rosidl_generator_py/raspimouse_msgs/action/_move_robot.py: rosidl_generator_py/raspimouse_msgs/_raspimouse_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/raspimouse_msgs/action/_move_robot.py
+
 rosidl_generator_py/raspimouse_msgs/msg/__init__.py: rosidl_generator_py/raspimouse_msgs/_raspimouse_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/raspimouse_msgs/msg/__init__.py
 
@@ -171,6 +177,9 @@ rosidl_generator_py/raspimouse_msgs/action/_music_s.c: rosidl_generator_py/raspi
 rosidl_generator_py/raspimouse_msgs/action/_movement_s.c: rosidl_generator_py/raspimouse_msgs/_raspimouse_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/raspimouse_msgs/action/_movement_s.c
 
+rosidl_generator_py/raspimouse_msgs/action/_move_robot_s.c: rosidl_generator_py/raspimouse_msgs/_raspimouse_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/raspimouse_msgs/action/_move_robot_s.c
+
 raspimouse_msgs__py: raspimouse_msgs__py/CMakeFiles/raspimouse_msgs__py
 raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/_raspimouse_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/_raspimouse_msgs_s.ep.rosidl_typesupport_introspection_c.c
@@ -183,6 +192,7 @@ raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/msg/_timed_motion.py
 raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/srv/_timed_motion_service.py
 raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/action/_music.py
 raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/action/_movement.py
+raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/action/_move_robot.py
 raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/msg/__init__.py
 raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/srv/__init__.py
 raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/action/__init__.py
@@ -194,6 +204,7 @@ raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/msg/_timed_motion_s.c
 raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/srv/_timed_motion_service_s.c
 raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/action/_music_s.c
 raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/action/_movement_s.c
+raspimouse_msgs__py: rosidl_generator_py/raspimouse_msgs/action/_move_robot_s.c
 raspimouse_msgs__py: raspimouse_msgs__py/CMakeFiles/raspimouse_msgs__py.dir/build.make
 
 .PHONY : raspimouse_msgs__py

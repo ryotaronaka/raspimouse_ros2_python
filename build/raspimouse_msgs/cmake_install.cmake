@@ -391,6 +391,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/raspimouse_msgs/action" TYPE FILE FILES "/home/ubuntu/ros2_ws/build/raspimouse_msgs/rosidl_adapter/raspimouse_msgs/action/MoveRobot.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/raspimouse_msgs/msg" TYPE FILE FILES "/home/ubuntu/ros2_ws/src/raspimouse_msgs/msg/LightSensors.msg")
 endif()
 
@@ -444,6 +448,10 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/raspimouse_msgs/action" TYPE FILE FILES "/home/ubuntu/ros2_ws/src/raspimouse_msgs/action/Movement.action")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/raspimouse_msgs/action" TYPE FILE FILES "/home/ubuntu/ros2_ws/src/raspimouse_msgs/action/MoveRobot.action")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

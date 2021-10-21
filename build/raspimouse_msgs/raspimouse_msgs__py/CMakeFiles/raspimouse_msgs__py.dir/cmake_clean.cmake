@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/raspimouse_msgs/_raspimouse_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "../rosidl_generator_py/raspimouse_msgs/_raspimouse_msgs_s.ep.rosidl_typesupport_introspection_c.c"
   "../rosidl_generator_py/raspimouse_msgs/action/__init__.py"
+  "../rosidl_generator_py/raspimouse_msgs/action/_move_robot.py"
+  "../rosidl_generator_py/raspimouse_msgs/action/_move_robot_s.c"
   "../rosidl_generator_py/raspimouse_msgs/action/_movement.py"
   "../rosidl_generator_py/raspimouse_msgs/action/_movement_s.c"
   "../rosidl_generator_py/raspimouse_msgs/action/_music.py"
