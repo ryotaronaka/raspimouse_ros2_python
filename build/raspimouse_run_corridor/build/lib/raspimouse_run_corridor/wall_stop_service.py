@@ -39,7 +39,7 @@ class WallStop(Node):
             10
         )
 
-        timer_period = 1.0
+        timer_period = 0.25
         self.timer = self.create_timer(timer_period, self.run_callback)
     
     def callback(self, msg):

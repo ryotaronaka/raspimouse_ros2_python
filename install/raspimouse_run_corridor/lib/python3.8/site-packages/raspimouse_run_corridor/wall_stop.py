@@ -9,7 +9,7 @@
 
 import rclpy,copy
 from geometry_msgs.msg import Twist
-from raspimouse_msgs.action import Movement
+from raspimouse_msgs.action import MoveRobot
 from std_srvs.srv import Trigger
 from raspimouse_msgs.msg import LightSensors
 from rclpy.node import Node
@@ -36,7 +36,8 @@ class WallStop(Node):
             10
         )
 
-        self._action_client = ActionClient(self, Movement, '/move')
+        self._action_client = ActionClient(self, MoveRobot, '/move')
+        
     
     def callback(self, msg):
         self.sensor_values = msg
@@ -46,25 +47,44 @@ class WallStop(Node):
         #self.get_logger().info('I heard left_forward : "%d"' % msg.left_forward)
     
     # '{linear_x: 0.0, linear_y: 0.0, linear_z: 0.0, angular_x: 0.0, angular_y: 0.0, angular_z: 1.0}'
-    def send_goal(self, linear_x, linear_y, angular_z):
-        goal_msg = Movement.Goal()
-        goal_msg.linear_x = linear_x
-        goal_msg.linear_y = linear_y
-        goal_msg.angular_z = angular_z
+    def send_goal(self, pos_x, pos_y, ang_z):
+        goal_msg = MoveRobot.Goal()
+        goal_msg.x = pos_x
+        goal_msg.y = pos_y
+        goal_msg.z = ang_z
 
+        # アクションサーバーが開始されるのを待つ
         self._action_client.wait_for_server()
+        
+        self._send_goal_future = self._action_client.send_goal_async(goal_msg)
 
-        return self._action_client.send_goal_async(goal_msg)
+        self._send_goal_future.add_done_callback(self.goal_response_callback)
 
+    def goal_response_callback(self, future):
+        goal_handle = future.result()
+        if not goal_handle.accepted:
+            self.get_logger().info('Goal rejected :(')
+            return
 
+        self.get_logger().info('Goal accepted :)')
+
+        self._get_result_future = goal_handle.get_result_async()
+        self._get_result_future.add_done_callback(self.get_result_callback)
+    
+    def get_result_callback(self, future):
+        result = future.result().result
+        self.get_logger().info('Result: {0}'.format(result.sequence))
+        rclpy.shutdown()
+    
+    def feedback_callback(self, feedback_msg):
+        feedback = feedback_msg.feedback
+        self.get_logger().info('Received feedback: {0}'.format(feedback.partial_sequence))
 
 def main(args=None):
     rclpy.init(args=args)
     action_client = WallStop()
-
-    future = action_client.send_goal(0.0, 0.0, 1.0)
-
-    rclpy.spin_until_future_complete(action_client, future)
+    action_client.send_goal(0.5, 0.0, 0.0)  
+    rclpy.spin(action_client)
 
 
 if __name__ == '__main__':
