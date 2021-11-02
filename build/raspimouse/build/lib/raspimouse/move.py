@@ -62,7 +62,7 @@ class Motor(Node):
             '/move',
             execute_callback = self.execute_callback, # Callback function for processing accepted goals.
             goal_callback = self.goal_callback,
-            #handle_accepted_callback=self.handle_accepted_callback,
+            handle_accepted_callback=self.handle_accepted_callback,
             cancel_callback=self.cancel_callback
         )
 
@@ -122,7 +122,7 @@ class Motor(Node):
     def execute_callback(self, goal_handle):
         self.get_logger().info('Executing goal...')
         
-        vel_ = 0.1
+        vel_ = 1.0
         old_distance = 0.0
         target_vel = Twist()
 
@@ -159,11 +159,10 @@ class Motor(Node):
             #    goal_handle.canceled(result)
             #    break
             if old_distance >= target_distance:
-                result.message = "Succeeded"
                 goal_handle.succeed()
                 self.cmd_vel(0.0, 0.0) #stop
                 result = MoveRobot.Result()
-                result.message = 'MoveRobot Finished.'
+                result.message = 'MoveRobot suceeded.'
                 return result
                 break
             else:
@@ -174,10 +173,9 @@ class Motor(Node):
                 self.cmd_vel(target_vel.linear.x, target_vel.linear.y)
                 old_distance = old_distance + target_vel.linear.x
                 self.get_logger().info('old_distance : "%f"' % old_distance)
-                #result = MoveRobot.Result()
-                #result.message = 'MoveRobot NEXT.'
-                #return result
             time.sleep(2.5) 
+
+        #It can't be stoped.
 
     def goal_callback(self, goal_request):
         self.get_logger().info('Received goal request')
@@ -191,7 +189,7 @@ class Motor(Node):
             self._goal_handle = goal_handle
 
         goal_handle.execute()
-    
+
     def cancel_callback(self, goal):
         self.get_logger().info('Received cancel request')
         return CancelResponse.ACCEPT

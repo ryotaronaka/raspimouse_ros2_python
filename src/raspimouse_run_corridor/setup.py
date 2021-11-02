@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
             'wall_stop_service = raspimouse_run_corridor.wall_stop_service:main',
             'wall_stop = raspimouse_run_corridor.wall_stop:main',
+            '_wall_stop = raspimouse_run_corridor._wall_stop:main',
         ],
     },
 )
