@@ -57,8 +57,8 @@ class LightSensors_Node(Node):
     def get_freq(self):
         f = self.declare_parameter('lightsensors_freq', 5)
         f = f._value
-        # self.get_logger().info("lightsensors_freq : {0}".format(f))
-        self.get_logger().info("lightsensors_freq : %d" % f)
+        #self.get_logger().info("lightsensors_freq : {0}".format(f))
+        self.get_logger().info("lightsensors_freq : %f" % f)
         try:
             if f <= 0:
                 raise Exception()
