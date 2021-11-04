@@ -83,7 +83,7 @@ class WallStop(Node):
 def main(args=None):
     rclpy.init(args=args)
     action_client = WallStop()
-    action_client.send_goal(0.5, 0.0, 0.0)  
+    action_client.send_goal(0.0, 0.5, 0.0)  
     rclpy.spin(action_client)
 
 

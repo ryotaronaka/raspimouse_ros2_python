@@ -53,8 +53,8 @@ class Motor(Node):
             self.callback_off,
         )
 
-        # cycle time(int)
-        self.duration_ms = 1000
+        # parameter
+        self.stepping_motor_hz = 400
 
         #--- Action ---#
         self._goal_handle = None
@@ -63,8 +63,7 @@ class Motor(Node):
             self,
             MoveRobot,
             '/move',
-            #execute_callback = self.execute_callback, # Callback function for processing accepted goals.
-            execute_callback = self.execute_callback_simple,
+            execute_callback = self.execute_callback_simple, # Callback function for processing accepted goals.
             goal_callback = self.goal_callback,
             #handle_accepted_callback=self.handle_accepted_callback,
             cancel_callback=self.cancel_callback
@@ -73,48 +72,77 @@ class Motor(Node):
         print("*** move action ***")
     
     def execute_callback_simple(self, goal_handle):
+        # Vector: x(side +:right, -:left), y(+:forward, -:back), z(no-use) / unit(m)
         self.get_logger().info('Executing goal(simple)...')
-        target_x = goal_handle.request.x
-        target_y = goal_handle.request.y
-        target_z = goal_handle.request.z
-        target_vel = Twist()
-
-        self.get_logger().info('target_x : "%f"' % target_x)
-
-        #decide velocity
-        if target_x == 0.0 and target_y == 0.0:
-            target_vel.linear.x = 0.0
-            target_vel.linear.y = 0.0
-            target_vel.angular.z = 0.0
-        else:
-            target_dir = math.atan2(target_x, target_y) # ｘが進行方向、ｙが横方向
-            target_vel.linear.y = math.cos(target_dir)
-            target_vel.linear.x = math.sin(target_dir)
-            target_vel.angular.z = 0.0
-            # 計算がおかしいので修正すること
-
-        target_distance = math.sqrt(target_x*target_x+target_y*target_y)
-        self.get_logger().info('target_distance : "%f"' % target_distance)
-        self.get_logger().info('target_dir : "%f"' % target_dir)
-
+        vector = Twist()
+        vector.linear.x = goal_handle.request.x
+        vector.linear.y = goal_handle.request.y
+        vector.linear.z = goal_handle.request.z
+        
+        self.get_logger().info('vector.x : "%f"' % vector.linear.x)
+        self.get_logger().info('vector.y : "%f"' % vector.linear.y)
+        
         #/*** フィードバックとリザルトの宣言 ***/
         feedback = MoveRobot.Feedback()
         result = MoveRobot.Result()
 
         #*** Run ***
-        self.cmd_vel(target_vel) # unit:m/s
+        tm_result = self.timedmotion(vector)
         #time.sleep(self.duration_ms/1000 + 0.2)
         #*** Wait for result ***
-            
-        feedback.x = math.cos(target_dir) + target_vel.linear.x
-        feedback.y = math.sin(target_dir) + target_vel.linear.y
-        feedback.z = 0.0
+        
+        # 最終的にはゴールとして送られてくるベクトルを足し合わせる
+        feedback.x = vector.linear.x
+        feedback.y = vector.linear.y
+        feedback.z = vector.linear.z
         goal_handle.publish_feedback(feedback)
 
         goal_handle.succeed()
         #self.cmd_vel(0.0, 0.0) #stop
+        self.set_raw_freq(0.0, 0.0)
+
         result.message = 'MoveRobot suceeded.'
         return result
+
+    #motors.py : ros2 service call /timed_motion raspimouse_msgs/srv/TimedMotionService "{left_hz: 300, right_hz: -300, duration_ms: 500}"
+    def timedmotion(self, vector):
+        # Vector: x(side +:right, -:left), y(+:forward, -:back), z(no-use) / unit(m)
+        # 本来は速度(m/s)を周波数に変換する計算式。ここではVectorを速度として取り扱う。後ほど、動作周波数で実際の動作時間に換算する。
+        self.get_logger().info("timed motion requested.")
+        forward_hz = 80000.0*vector.linear.y/(9*math.pi)
+        rot_hz = (400.0*math.atan2(vector.linear.x, vector.linear.y))/math.pi
+        #right_adj = 1.15
+        
+        left_hz = forward_hz - rot_hz
+        right_hz = forward_hz + rot_hz
+        self.get_logger().info('left_hz : "%f"' % left_hz)
+        self.get_logger().info('right_hz : "%f"' % right_hz)
+        # この速度ではステッピングモーターが動けないので、調整する(l:r=stepping_motor_hz:x)
+        duration_ms = abs((left_hz/self.stepping_motor_hz)*1000)
+        right_hz = self.stepping_motor_hz*(right_hz/left_hz)
+        left_hz = self.stepping_motor_hz
+
+        self.get_logger().info('left_hz : "%f"' % left_hz)
+        self.get_logger().info('right_hz : "%f"' % right_hz)
+        self.get_logger().info('duration_ms : "%f"' % duration_ms)       
+
+        if not self.is_on:
+            self.get_logger().info("not enpowered")
+            return 0
+        
+        dev = "/dev/rtmotor0"
+        try:
+            with open(dev, 'w') as f:
+                f.write("%s %s %s\n" % (str(left_hz), str(right_hz), str(int(duration_ms))))
+                self.last_time = self.get_clock().now()
+                self.get_logger().info("pull TimedMotion : %s" % self.last_time)
+
+        except:
+            self.get_logger().info("cannot write to " + dev)
+            return 0
+        
+        #time.sleep(duration_ms/1000)
+        return 1
 
     def goal_callback(self, goal_request):
         self.get_logger().info('Received goal request')
@@ -181,42 +209,6 @@ class Motor(Node):
     
     def callback_off(self, request, response):
         return self.onoff_response(False)
-
-    def cmd_vel(self, target_vel): # m/s が送られてきている
-        self.get_logger().info("cmd_vel requested.")
-        forward_hz = 80000.0*target_vel.linear.x/(9*math.pi)
-        rot_hz = 400.0*target_vel.angular.z/math.pi
-        right_adj = 1.15
-
-        self.get_logger().info("cmd_vel requested_2.")
-        self.get_logger().info("cmd_vel requested_3.")
-        left_hz = int(round(forward_hz - rot_hz))
-        right_hz = int(round((forward_hz + rot_hz)*right_adj))
-        self.get_logger().info("cmd_vel requested_5.")
-
-        self.get_logger().info("left_hz/s : %d" % left_hz)
-        self.get_logger().info("right_hz/s : %d" % right_hz)
-
-        return_tm = self.timedmotion(left_hz, right_hz)
-    
-    #motors.py : ros2 service call /timed_motion raspimouse_msgs/srv/TimedMotionService "{left_hz: 300, right_hz: -300, duration_ms: 500}"
-    def timedmotion(self, left_hz, right_hz):
-        if not self.is_on:
-            self.get_logger().info("not enpowered")
-            return 0
-        
-        dev = "/dev/rtmotor0"
-        try:
-            with open(dev, 'w') as f:
-                f.write("%s %s %s\n" % (str(left_hz), str(right_hz), str(self.duration_ms)))
-                self.last_time = self.get_clock().now()
-                self.get_logger().info("pull TimedMotion : %s" % self.last_time)
-
-        except:
-            self.get_logger().info("cannot write to " + dev)
-            return 0
-        
-        return 1
 
 def main(args=None):
     rclpy.init(args=args)

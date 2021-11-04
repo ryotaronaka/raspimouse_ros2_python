@@ -1,0 +1,558 @@
+[0.000000] (-) TimerEvent: {}
+[0.005842] (raspimouse) JobQueued: {'identifier': 'raspimouse', 'dependencies': OrderedDict()}
+[0.006584] (raspimouse_msgs) JobQueued: {'identifier': 'raspimouse_msgs', 'dependencies': OrderedDict()}
+[0.007331] (raspimouse_launch) JobQueued: {'identifier': 'raspimouse_launch', 'dependencies': OrderedDict([('raspimouse', '/home/ubuntu/ros2_ws/install/raspimouse')])}
+[0.007981] (raspimouse_run_corridor) JobQueued: {'identifier': 'raspimouse_run_corridor', 'dependencies': OrderedDict([('raspimouse', '/home/ubuntu/ros2_ws/install/raspimouse')])}
+[0.008577] (raspimouse) JobStarted: {'identifier': 'raspimouse'}
+[0.103271] (-) TimerEvent: {}
+[0.196268] (raspimouse_msgs) JobStarted: {'identifier': 'raspimouse_msgs'}
+[0.209166] (-) TimerEvent: {}
+[0.312402] (-) TimerEvent: {}
+[0.414878] (-) TimerEvent: {}
+[0.516347] (-) TimerEvent: {}
+[0.618062] (-) TimerEvent: {}
+[0.719777] (-) TimerEvent: {}
+[0.821234] (-) TimerEvent: {}
+[0.923026] (-) TimerEvent: {}
+[1.025654] (-) TimerEvent: {}
+[1.130089] (-) TimerEvent: {}
+[1.233667] (-) TimerEvent: {}
+[1.335375] (-) TimerEvent: {}
+[1.438949] (-) TimerEvent: {}
+[1.541338] (-) TimerEvent: {}
+[1.646274] (-) TimerEvent: {}
+[1.749970] (-) TimerEvent: {}
+[1.853570] (-) TimerEvent: {}
+[1.955272] (-) TimerEvent: {}
+[2.058036] (-) TimerEvent: {}
+[2.159845] (-) TimerEvent: {}
+[2.263427] (-) TimerEvent: {}
+[2.365091] (-) TimerEvent: {}
+[2.467050] (-) TimerEvent: {}
+[2.568907] (-) TimerEvent: {}
+[2.671376] (-) TimerEvent: {}
+[2.774533] (raspimouse_msgs) JobProgress: {'identifier': 'raspimouse_msgs', 'progress': 'cmake'}
+[2.775439] (-) TimerEvent: {}
+[2.786587] (raspimouse_msgs) JobProgress: {'identifier': 'raspimouse_msgs', 'progress': 'build'}
+[2.797194] (raspimouse_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ubuntu/ros2_ws/build/raspimouse_msgs', '--', '-j4', '-l4'], 'cwd': '/home/ubuntu/ros2_ws/build/raspimouse_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ubuntu'), ('SSH_CLIENT', '192.168.1.13 58130 22'), ('LC_TIME', 'C.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ubuntu/ros2_ws/install/raspimouse_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/ubuntu'), ('OLDPWD', '/home/ubuntu'), ('SSH_TTY', '/dev/pts/2'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'C.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/ubuntu/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ubuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ubuntu/.local/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'C.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'C.UTF-8'), ('LC_TELEPHONE', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/ubuntu/ros2_ws/install/raspimouse_run_corridor:/home/ubuntu/ros2_ws/install/raspimouse_msgs:/home/ubuntu/ros2_ws/install/raspimouse_launch:/home/ubuntu/ros2_ws/install/raspimouse:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'C.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'C.UTF-8'), ('LC_IDENTIFICATION', 'C.UTF-8'), ('PWD', '/home/ubuntu/ros2_ws/build/raspimouse_msgs'), ('SSH_CONNECTION', '192.168.1.13 58130 192.168.1.11 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ubuntu/ros2_ws/install/raspimouse_run_corridor/lib/python3.8/site-packages:/home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages:/home/ubuntu/ros2_ws/install/raspimouse/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'C.UTF-8'), ('LC_PAPER', 'C.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ubuntu/ros2_ws/install/raspimouse_msgs:/home/ubuntu/ros2_ws/install/raspimouse_launch:/home/ubuntu/ros2_ws/install/raspimouse_run_corridor:/home/ubuntu/ros2_ws/install/raspimouse:/opt/ros/foxy')]), 'shell': False}
+[2.876253] (-) TimerEvent: {}
+[2.882115] (raspimouse) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/raspimouse', 'build', '--build-base', '/home/ubuntu/ros2_ws/build/raspimouse/build', 'install', '--prefix', '/home/ubuntu/ros2_ws/install/raspimouse', '--record', '/home/ubuntu/ros2_ws/build/raspimouse/install.log', '--single-version-externally-managed'], 'cwd': '/home/ubuntu/ros2_ws/src/raspimouse', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ubuntu', 'SSH_CLIENT': '192.168.1.13 58130 22', 'LC_TIME': 'C.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ubuntu/ros2_ws/install/raspimouse_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/ubuntu', 'OLDPWD': '/home/ubuntu', 'SSH_TTY': '/dev/pts/2', 'ROS_PYTHON_VERSION': '3', 'LC_MONETARY': 'C.UTF-8', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/ubuntu/ros2_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/ubuntu/.local/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'C.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'C.UTF-8', 'LC_TELEPHONE': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/ubuntu/ros2_ws/install/raspimouse_run_corridor:/home/ubuntu/ros2_ws/install/raspimouse_msgs:/home/ubuntu/ros2_ws/install/raspimouse_launch:/home/ubuntu/ros2_ws/install/raspimouse:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'C.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'C.UTF-8', 'LC_IDENTIFICATION': 'C.UTF-8', 'PWD': '/home/ubuntu/ros2_ws/build/raspimouse', 'SSH_CONNECTION': '192.168.1.13 58130 192.168.1.11 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ubuntu/ros2_ws/install/raspimouse/lib/python3.8/site-packages:/home/ubuntu/ros2_ws/install/raspimouse_run_corridor/lib/python3.8/site-packages:/home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages:/home/ubuntu/ros2_ws/install/raspimouse/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'C.UTF-8', 'LC_PAPER': 'C.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/ubuntu/ros2_ws/install/raspimouse_msgs:/home/ubuntu/ros2_ws/install/raspimouse_launch'}, 'shell': False}
+[2.976721] (-) TimerEvent: {}
+[3.085073] (-) TimerEvent: {}
+[3.189860] (-) TimerEvent: {}
+[3.295946] (-) TimerEvent: {}
+[3.401601] (-) TimerEvent: {}
+[3.507796] (-) TimerEvent: {}
+[3.613015] (-) TimerEvent: {}
+[3.714877] (-) TimerEvent: {}
+[3.821781] (-) TimerEvent: {}
+[3.926115] (-) TimerEvent: {}
+[4.029906] (-) TimerEvent: {}
+[4.131907] (-) TimerEvent: {}
+[4.235470] (-) TimerEvent: {}
+[4.338588] (-) TimerEvent: {}
+[4.466250] (-) TimerEvent: {}
+[4.571455] (-) TimerEvent: {}
+[4.676184] (-) TimerEvent: {}
+[4.780185] (-) TimerEvent: {}
+[4.881935] (-) TimerEvent: {}
+[4.983467] (-) TimerEvent: {}
+[5.086952] (-) TimerEvent: {}
+[5.190046] (-) TimerEvent: {}
+[5.292599] (-) TimerEvent: {}
+[5.356019] (raspimouse_msgs) StdoutLine: {'line': b'[  1%] Built target raspimouse_msgs__cpp\n'}
+[5.385782] (raspimouse_msgs) StdoutLine: {'line': b'[ 12%] Built target raspimouse_msgs__rosidl_generator_c\n'}
+[5.392961] (-) TimerEvent: {}
+[5.495347] (-) TimerEvent: {}
+[5.597385] (-) TimerEvent: {}
+[5.699183] (-) TimerEvent: {}
+[5.800995] (-) TimerEvent: {}
+[5.855573] (raspimouse_msgs) StdoutLine: {'line': b'[ 24%] Built target raspimouse_msgs__rosidl_typesupport_cpp\n'}
+[5.901349] (-) TimerEvent: {}
+[5.981387] (raspimouse_msgs) StdoutLine: {'line': b'[ 35%] Built target raspimouse_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[6.001689] (-) TimerEvent: {}
+[6.017733] (raspimouse) StdoutLine: {'line': b'running egg_info\n'}
+[6.024249] (raspimouse) StdoutLine: {'line': b'writing ../../build/raspimouse/raspimouse.egg-info/PKG-INFO\n'}
+[6.028645] (raspimouse) StdoutLine: {'line': b'writing dependency_links to ../../build/raspimouse/raspimouse.egg-info/dependency_links.txt\n'}
+[6.031970] (raspimouse) StdoutLine: {'line': b'writing entry points to ../../build/raspimouse/raspimouse.egg-info/entry_points.txt\n'}
+[6.041426] (raspimouse) StdoutLine: {'line': b'writing requirements to ../../build/raspimouse/raspimouse.egg-info/requires.txt\n'}
+[6.045439] (raspimouse) StdoutLine: {'line': b'writing top-level names to ../../build/raspimouse/raspimouse.egg-info/top_level.txt\n'}
+[6.067553] (raspimouse_msgs) StdoutLine: {'line': b'[ 47%] Built target raspimouse_msgs__rosidl_typesupport_introspection_cpp\n'}
+[6.102004] (-) TimerEvent: {}
+[6.204545] (-) TimerEvent: {}
+[6.306856] (-) TimerEvent: {}
+[6.348627] (raspimouse_msgs) StdoutLine: {'line': b'[ 58%] Built target raspimouse_msgs__rosidl_typesupport_introspection_c\n'}
+[6.407171] (-) TimerEvent: {}
+[6.423769] (raspimouse_msgs) StdoutLine: {'line': b'[ 70%] Built target raspimouse_msgs__rosidl_typesupport_c\n'}
+[6.507521] (-) TimerEvent: {}
+[6.525377] (raspimouse_msgs) StdoutLine: {'line': b'[ 82%] Built target raspimouse_msgs__rosidl_typesupport_fastrtps_c\n'}
+[6.607821] (-) TimerEvent: {}
+[6.654818] (raspimouse) StdoutLine: {'line': b"reading manifest file '../../build/raspimouse/raspimouse.egg-info/SOURCES.txt'\n"}
+[6.671256] (raspimouse) StdoutLine: {'line': b"writing manifest file '../../build/raspimouse/raspimouse.egg-info/SOURCES.txt'\n"}
+[6.673513] (raspimouse) StdoutLine: {'line': b'running build\n'}
+[6.675025] (raspimouse) StdoutLine: {'line': b'running build_py\n'}
+[6.681237] (raspimouse) StdoutLine: {'line': b'copying raspimouse/move.py -> /home/ubuntu/ros2_ws/build/raspimouse/build/lib/raspimouse\n'}
+[6.708208] (-) TimerEvent: {}
+[6.752675] (raspimouse_msgs) StdoutLine: {'line': b'[ 82%] Built target raspimouse_msgs\n'}
+[6.808477] (-) TimerEvent: {}
+[6.912393] (-) TimerEvent: {}
+[6.968704] (raspimouse) StdoutLine: {'line': b'running install\n'}
+[6.985119] (raspimouse) StdoutLine: {'line': b'running install_lib\n'}
+[7.012798] (-) TimerEvent: {}
+[7.019555] (raspimouse) StdoutLine: {'line': b'copying /home/ubuntu/ros2_ws/build/raspimouse/build/lib/raspimouse/move.py -> /home/ubuntu/ros2_ws/install/raspimouse/lib/python3.8/site-packages/raspimouse\n'}
+[7.037940] (raspimouse) StdoutLine: {'line': b'byte-compiling /home/ubuntu/ros2_ws/install/raspimouse/lib/python3.8/site-packages/raspimouse/move.py to move.cpython-38.pyc\n'}
+[7.066197] (raspimouse) StdoutLine: {'line': b'running install_data\n'}
+[7.079580] (raspimouse) StdoutLine: {'line': b'running install_egg_info\n'}
+[7.102232] (raspimouse) StdoutLine: {'line': b"removing '/home/ubuntu/ros2_ws/install/raspimouse/lib/python3.8/site-packages/raspimouse-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[7.110500] (raspimouse) StdoutLine: {'line': b'Copying ../../build/raspimouse/raspimouse.egg-info to /home/ubuntu/ros2_ws/install/raspimouse/lib/python3.8/site-packages/raspimouse-0.0.0-py3.8.egg-info\n'}
+[7.113159] (-) TimerEvent: {}
+[7.133647] (raspimouse) StdoutLine: {'line': b'running install_scripts\n'}
+[7.198274] (raspimouse_msgs) StdoutLine: {'line': b'[ 83%] Built target raspimouse_msgs__py\n'}
+[7.213483] (-) TimerEvent: {}
+[7.314990] (-) TimerEvent: {}
+[7.373355] (raspimouse) StdoutLine: {'line': b'Installing buzzer script to /home/ubuntu/ros2_ws/install/raspimouse/lib/raspimouse\n'}
+[7.376480] (raspimouse) StdoutLine: {'line': b'Installing buzzer2_sub_node script to /home/ubuntu/ros2_ws/install/raspimouse/lib/raspimouse\n'}
+[7.380071] (raspimouse) StdoutLine: {'line': b'Installing buzzer3_sub_node script to /home/ubuntu/ros2_ws/install/raspimouse/lib/raspimouse\n'}
+[7.388142] (raspimouse) StdoutLine: {'line': b'Installing buzzer4_sub_node script to /home/ubuntu/ros2_ws/install/raspimouse/lib/raspimouse\n'}
+[7.390032] (raspimouse) StdoutLine: {'line': b'Installing buzzer_pub_node script to /home/ubuntu/ros2_ws/install/raspimouse/lib/raspimouse\n'}
+[7.392021] (raspimouse) StdoutLine: {'line': b'Installing lightsensors script to /home/ubuntu/ros2_ws/install/raspimouse/lib/raspimouse\n'}
+[7.394274] (raspimouse) StdoutLine: {'line': b'Installing lightsensors_sub script to /home/ubuntu/ros2_ws/install/raspimouse/lib/raspimouse\n'}
+[7.396747] (raspimouse) StdoutLine: {'line': b'Installing motors script to /home/ubuntu/ros2_ws/install/raspimouse/lib/raspimouse\n'}
+[7.400949] (raspimouse) StdoutLine: {'line': b'Installing motors1 script to /home/ubuntu/ros2_ws/install/raspimouse/lib/raspimouse\n'}
+[7.415244] (-) TimerEvent: {}
+[7.418237] (raspimouse) StdoutLine: {'line': b'Installing motors2 script to /home/ubuntu/ros2_ws/install/raspimouse/lib/raspimouse\n'}
+[7.420599] (raspimouse) StdoutLine: {'line': b'Installing move script to /home/ubuntu/ros2_ws/install/raspimouse/lib/raspimouse\n'}
+[7.422871] (raspimouse) StdoutLine: {'line': b"writing list of installed files to '/home/ubuntu/ros2_ws/build/raspimouse/install.log'\n"}
+[7.515982] (-) TimerEvent: {}
+[7.623090] (raspimouse_msgs) StdoutLine: {'line': b'[ 93%] Built target raspimouse_msgs__python\n'}
+[7.625297] (-) TimerEvent: {}
+[7.685344] (raspimouse) CommandEnded: {'returncode': 0}
+[7.725682] (-) TimerEvent: {}
+[7.840567] (-) TimerEvent: {}
+[7.947606] (-) TimerEvent: {}
+[7.987076] (raspimouse) JobEnded: {'identifier': 'raspimouse', 'rc': 0}
+[7.994234] (raspimouse_launch) JobStarted: {'identifier': 'raspimouse_launch'}
+[8.053246] (-) TimerEvent: {}
+[8.104666] (raspimouse_msgs) StdoutLine: {'line': b'[ 95%] Built target raspimouse_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[8.171029] (-) TimerEvent: {}
+[8.178087] (raspimouse_msgs) StdoutLine: {'line': b'[ 97%] Built target raspimouse_msgs__rosidl_typesupport_c__pyext\n'}
+[8.229244] (raspimouse_run_corridor) JobStarted: {'identifier': 'raspimouse_run_corridor'}
+[8.271411] (-) TimerEvent: {}
+[8.355494] (raspimouse_msgs) StdoutLine: {'line': b'[100%] Built target raspimouse_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[8.377013] (-) TimerEvent: {}
+[8.482217] (-) TimerEvent: {}
+[8.507517] (raspimouse_launch) JobProgress: {'identifier': 'raspimouse_launch', 'progress': 'cmake'}
+[8.544443] (raspimouse_launch) JobProgress: {'identifier': 'raspimouse_launch', 'progress': 'build'}
+[8.549574] (raspimouse_launch) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ubuntu/ros2_ws/build/raspimouse_launch', '--', '-j4', '-l4'], 'cwd': '/home/ubuntu/ros2_ws/build/raspimouse_launch', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ubuntu'), ('SSH_CLIENT', '192.168.1.13 58130 22'), ('LC_TIME', 'C.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ubuntu/ros2_ws/install/raspimouse_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/ubuntu'), ('OLDPWD', '/home/ubuntu'), ('SSH_TTY', '/dev/pts/2'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'C.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/ubuntu/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ubuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ubuntu/.local/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'C.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'C.UTF-8'), ('LC_TELEPHONE', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/ubuntu/ros2_ws/install/raspimouse:/home/ubuntu/ros2_ws/install/raspimouse_run_corridor:/home/ubuntu/ros2_ws/install/raspimouse_msgs:/home/ubuntu/ros2_ws/install/raspimouse_launch:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'C.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'C.UTF-8'), ('LC_IDENTIFICATION', 'C.UTF-8'), ('PWD', '/home/ubuntu/ros2_ws/build/raspimouse_launch'), ('SSH_CONNECTION', '192.168.1.13 58130 192.168.1.11 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ubuntu/ros2_ws/install/raspimouse/lib/python3.8/site-packages:/home/ubuntu/ros2_ws/install/raspimouse_run_corridor/lib/python3.8/site-packages:/home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'C.UTF-8'), ('LC_PAPER', 'C.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ubuntu/ros2_ws/install/raspimouse_msgs:/home/ubuntu/ros2_ws/install/raspimouse_launch:/home/ubuntu/ros2_ws/install/raspimouse_run_corridor:/home/ubuntu/ros2_ws/install/raspimouse:/opt/ros/foxy')]), 'shell': False}
+[8.591106] (-) TimerEvent: {}
+[8.632667] (raspimouse_msgs) CommandEnded: {'returncode': 0}
+[8.691195] (-) TimerEvent: {}
+[8.793737] (-) TimerEvent: {}
+[8.896143] (-) TimerEvent: {}
+[8.998569] (-) TimerEvent: {}
+[9.101006] (-) TimerEvent: {}
+[9.203635] (-) TimerEvent: {}
+[9.305546] (-) TimerEvent: {}
+[9.408520] (-) TimerEvent: {}
+[9.812261] (-) TimerEvent: {}
+[9.913869] (-) TimerEvent: {}
+[10.015878] (-) TimerEvent: {}
+[10.117980] (-) TimerEvent: {}
+[10.220043] (-) TimerEvent: {}
+[10.321981] (-) TimerEvent: {}
+[10.423851] (-) TimerEvent: {}
+[10.525712] (-) TimerEvent: {}
+[10.627577] (-) TimerEvent: {}
+[10.730879] (-) TimerEvent: {}
+[10.832782] (-) TimerEvent: {}
+[10.935420] (-) TimerEvent: {}
+[11.036957] (-) TimerEvent: {}
+[11.138791] (-) TimerEvent: {}
+[11.242079] (-) TimerEvent: {}
+[11.343943] (-) TimerEvent: {}
+[11.445746] (-) TimerEvent: {}
+[11.547713] (-) TimerEvent: {}
+[11.560343] (raspimouse_launch) CommandEnded: {'returncode': 0}
+[11.598185] (raspimouse_msgs) JobProgress: {'identifier': 'raspimouse_msgs', 'progress': 'install'}
+[11.648187] (-) TimerEvent: {}
+[11.684477] (raspimouse_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ubuntu/ros2_ws/build/raspimouse_msgs'], 'cwd': '/home/ubuntu/ros2_ws/build/raspimouse_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ubuntu'), ('SSH_CLIENT', '192.168.1.13 58130 22'), ('LC_TIME', 'C.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ubuntu/ros2_ws/install/raspimouse_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/ubuntu'), ('OLDPWD', '/home/ubuntu'), ('SSH_TTY', '/dev/pts/2'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'C.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/ubuntu/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ubuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ubuntu/.local/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'C.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'C.UTF-8'), ('LC_TELEPHONE', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/ubuntu/ros2_ws/install/raspimouse_run_corridor:/home/ubuntu/ros2_ws/install/raspimouse_msgs:/home/ubuntu/ros2_ws/install/raspimouse_launch:/home/ubuntu/ros2_ws/install/raspimouse:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'C.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'C.UTF-8'), ('LC_IDENTIFICATION', 'C.UTF-8'), ('PWD', '/home/ubuntu/ros2_ws/build/raspimouse_msgs'), ('SSH_CONNECTION', '192.168.1.13 58130 192.168.1.11 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ubuntu/ros2_ws/install/raspimouse_run_corridor/lib/python3.8/site-packages:/home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages:/home/ubuntu/ros2_ws/install/raspimouse/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'C.UTF-8'), ('LC_PAPER', 'C.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ubuntu/ros2_ws/install/raspimouse_msgs:/home/ubuntu/ros2_ws/install/raspimouse_launch:/home/ubuntu/ros2_ws/install/raspimouse_run_corridor:/home/ubuntu/ros2_ws/install/raspimouse:/opt/ros/foxy')]), 'shell': False}
+[11.733934] (raspimouse_run_corridor) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/raspimouse_run_corridor', 'build', '--build-base', '/home/ubuntu/ros2_ws/build/raspimouse_run_corridor/build', 'install', '--prefix', '/home/ubuntu/ros2_ws/install/raspimouse_run_corridor', '--record', '/home/ubuntu/ros2_ws/build/raspimouse_run_corridor/install.log', '--single-version-externally-managed'], 'cwd': '/home/ubuntu/ros2_ws/src/raspimouse_run_corridor', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ubuntu', 'SSH_CLIENT': '192.168.1.13 58130 22', 'LC_TIME': 'C.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ubuntu/ros2_ws/install/raspimouse_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/ubuntu', 'OLDPWD': '/home/ubuntu', 'SSH_TTY': '/dev/pts/2', 'ROS_PYTHON_VERSION': '3', 'LC_MONETARY': 'C.UTF-8', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/ubuntu/ros2_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/ubuntu/.local/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'C.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'C.UTF-8', 'LC_TELEPHONE': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/ubuntu/ros2_ws/install/raspimouse:/home/ubuntu/ros2_ws/install/raspimouse_run_corridor:/home/ubuntu/ros2_ws/install/raspimouse_msgs:/home/ubuntu/ros2_ws/install/raspimouse_launch:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'C.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'C.UTF-8', 'LC_IDENTIFICATION': 'C.UTF-8', 'PWD': '/home/ubuntu/ros2_ws/build/raspimouse_run_corridor', 'SSH_CONNECTION': '192.168.1.13 58130 192.168.1.11 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ubuntu/ros2_ws/install/raspimouse_run_corridor/lib/python3.8/site-packages:/home/ubuntu/ros2_ws/install/raspimouse/lib/python3.8/site-packages:/home/ubuntu/ros2_ws/install/raspimouse_run_corridor/lib/python3.8/site-packages:/home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'C.UTF-8', 'LC_PAPER': 'C.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/ubuntu/ros2_ws/install/raspimouse_msgs:/home/ubuntu/ros2_ws/install/raspimouse_launch'}, 'shell': False}
+[11.758245] (-) TimerEvent: {}
+[11.855354] (raspimouse_launch) JobProgress: {'identifier': 'raspimouse_launch', 'progress': 'install'}
+[11.858193] (raspimouse_launch) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ubuntu/ros2_ws/build/raspimouse_launch'], 'cwd': '/home/ubuntu/ros2_ws/build/raspimouse_launch', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ubuntu'), ('SSH_CLIENT', '192.168.1.13 58130 22'), ('LC_TIME', 'C.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ubuntu/ros2_ws/install/raspimouse_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/ubuntu'), ('OLDPWD', '/home/ubuntu'), ('SSH_TTY', '/dev/pts/2'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'C.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/ubuntu/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ubuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ubuntu/.local/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'C.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'C.UTF-8'), ('LC_TELEPHONE', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/ubuntu/ros2_ws/install/raspimouse:/home/ubuntu/ros2_ws/install/raspimouse_run_corridor:/home/ubuntu/ros2_ws/install/raspimouse_msgs:/home/ubuntu/ros2_ws/install/raspimouse_launch:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'C.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'C.UTF-8'), ('LC_IDENTIFICATION', 'C.UTF-8'), ('PWD', '/home/ubuntu/ros2_ws/build/raspimouse_launch'), ('SSH_CONNECTION', '192.168.1.13 58130 192.168.1.11 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ubuntu/ros2_ws/install/raspimouse/lib/python3.8/site-packages:/home/ubuntu/ros2_ws/install/raspimouse_run_corridor/lib/python3.8/site-packages:/home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'C.UTF-8'), ('LC_PAPER', 'C.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ubuntu/ros2_ws/install/raspimouse_msgs:/home/ubuntu/ros2_ws/install/raspimouse_launch:/home/ubuntu/ros2_ws/install/raspimouse_run_corridor:/home/ubuntu/ros2_ws/install/raspimouse:/opt/ros/foxy')]), 'shell': False}
+[11.863501] (-) TimerEvent: {}
+[11.965359] (-) TimerEvent: {}
+[12.012609] (raspimouse_launch) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[12.019049] (raspimouse_launch) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_launch/share/raspimouse_launch//launch\n'}
+[12.021467] (raspimouse_launch) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_launch/share/raspimouse_launch//launch/raspimouse_launch.py\n'}
+[12.028140] (raspimouse_launch) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_launch/share/ament_index/resource_index/package_run_dependencies/raspimouse_launch\n'}
+[12.032172] (raspimouse_launch) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_launch/share/ament_index/resource_index/parent_prefix_path/raspimouse_launch\n'}
+[12.037517] (raspimouse_launch) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_launch/share/raspimouse_launch/environment/ament_prefix_path.sh\n'}
+[12.044238] (raspimouse_launch) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_launch/share/raspimouse_launch/environment/ament_prefix_path.dsv\n'}
+[12.048885] (raspimouse_launch) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_launch/share/raspimouse_launch/environment/path.sh\n'}
+[12.050491] (raspimouse_launch) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_launch/share/raspimouse_launch/environment/path.dsv\n'}
+[12.057807] (raspimouse_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[12.062948] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/ament_index/resource_index/rosidl_interfaces/raspimouse_msgs\n'}
+[12.064923] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs\n'}
+[12.073375] (-) TimerEvent: {}
+[12.079090] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg\n'}
+[12.093624] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/timed_motion.h\n'}
+[12.096472] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/motor_freqs.h\n'}
+[12.109926] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail\n'}
+[12.112002] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/light_sensors__functions.c\n'}
+[12.114062] (raspimouse_launch) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_launch/share/raspimouse_launch/local_setup.bash\n'}
+[12.116639] (raspimouse_launch) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_launch/share/raspimouse_launch/local_setup.sh\n'}
+[12.122831] (raspimouse_launch) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_launch/share/raspimouse_launch/local_setup.zsh\n'}
+[12.125109] (raspimouse_launch) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_launch/share/raspimouse_launch/local_setup.dsv\n'}
+[12.129147] (raspimouse_launch) StdoutLine: {'line': b'-- Installing: /home/ubuntu/ros2_ws/install/raspimouse_launch/share/raspimouse_launch/package.dsv\n'}
+[12.135782] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/timed_motion__functions.c\n'}
+[12.145318] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/timed_motion__functions.h\n'}
+[12.148201] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/light_sensors__struct.h\n'}
+[12.151435] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/motor_freqs__struct.h\n'}
+[12.159277] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/motor_freqs__functions.c\n'}
+[12.164631] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/light_sensors__functions.h\n'}
+[12.177130] (-) TimerEvent: {}
+[12.179852] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/motor_freqs__type_support.h\n'}
+[12.190501] (raspimouse_launch) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_launch/share/ament_index/resource_index/packages/raspimouse_launch\n'}
+[12.193053] (raspimouse_launch) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_launch/share/raspimouse_launch/cmake/raspimouse_launchConfig.cmake\n'}
+[12.194891] (raspimouse_launch) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_launch/share/raspimouse_launch/cmake/raspimouse_launchConfig-version.cmake\n'}
+[12.200671] (raspimouse_launch) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_launch/share/raspimouse_launch/package.xml\n'}
+[12.205213] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/timed_motion__type_support.h\n'}
+[12.208187] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/light_sensors__type_support.h\n'}
+[12.215147] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/motor_freqs__functions.h\n'}
+[12.220494] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/timed_motion__struct.h\n'}
+[12.222591] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[12.237800] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/light_sensors.h\n'}
+[12.241529] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv\n'}
+[12.246929] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail\n'}
+[12.248713] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/light_sensors_service__functions.h\n'}
+[12.256727] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/light_sensors_service__type_support.h\n'}
+[12.261740] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/motor_freqs_service__struct.h\n'}
+[12.264559] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/motor_freqs_service__functions.c\n'}
+[12.267075] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/motor_freqs_service__type_support.h\n'}
+[12.271798] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/timed_motion_service__struct.h\n'}
+[12.273616] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/motor_freqs_service__functions.h\n'}
+[12.275571] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/timed_motion_service__functions.h\n'}
+[12.291114] (-) TimerEvent: {}
+[12.296675] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/light_sensors_service__struct.h\n'}
+[12.298478] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/timed_motion_service__type_support.h\n'}
+[12.314831] (raspimouse_launch) CommandEnded: {'returncode': 0}
+[12.321107] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/light_sensors_service__functions.c\n'}
+[12.324344] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/timed_motion_service__functions.c\n'}
+[12.330211] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/motor_freqs_service.h\n'}
+[12.335522] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/light_sensors_service.h\n'}
+[12.340304] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/timed_motion_service.h\n'}
+[12.343863] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action\n'}
+[12.348763] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/music.h\n'}
+[12.370178] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/move_robot.h\n'}
+[12.372593] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail\n'}
+[12.374334] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/movement__functions.h\n'}
+[12.378896] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/music__functions.c\n'}
+[12.380683] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/music__struct.h\n'}
+[12.382124] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/move_robot__type_support.h\n'}
+[12.383971] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/move_robot__struct.h\n'}
+[12.385399] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/music__functions.h\n'}
+[12.395698] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/move_robot__functions.h\n'}
+[12.402784] (-) TimerEvent: {}
+[12.413406] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/movement__struct.h\n'}
+[12.415328] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/move_robot__functions.c\n'}
+[12.430832] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/movement__functions.c\n'}
+[12.432525] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/movement__type_support.h\n'}
+[12.433831] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/music__type_support.h\n'}
+[12.435337] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/movement.h\n'}
+[12.436964] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/environment/library_path.sh\n'}
+[12.438504] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/environment/library_path.dsv\n'}
+[12.446216] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/libraspimouse_msgs__rosidl_generator_c.so\n'}
+[12.448206] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs\n'}
+[12.449888] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg\n'}
+[12.451628] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail\n'}
+[12.453453] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/timed_motion__rosidl_typesupport_fastrtps_c.h\n'}
+[12.455167] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/light_sensors__rosidl_typesupport_fastrtps_c.h\n'}
+[12.456582] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/motor_freqs__rosidl_typesupport_fastrtps_c.h\n'}
+[12.458195] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[12.471585] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv\n'}
+[12.473201] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail\n'}
+[12.475181] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/motor_freqs_service__rosidl_typesupport_fastrtps_c.h\n'}
+[12.476584] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/timed_motion_service__rosidl_typesupport_fastrtps_c.h\n'}
+[12.477974] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/light_sensors_service__rosidl_typesupport_fastrtps_c.h\n'}
+[12.479596] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action\n'}
+[12.480831] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail\n'}
+[12.482383] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/movement__rosidl_typesupport_fastrtps_c.h\n'}
+[12.489538] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/music__rosidl_typesupport_fastrtps_c.h\n'}
+[12.493620] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/move_robot__rosidl_typesupport_fastrtps_c.h\n'}
+[12.496433] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/libraspimouse_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[12.508990] (-) TimerEvent: {}
+[12.510511] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs\n'}
+[12.512362] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg\n'}
+[12.513937] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail\n'}
+[12.531857] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/light_sensors__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.535053] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/dds_fastrtps\n'}
+[12.536749] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/timed_motion__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.538143] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/motor_freqs__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.539796] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[12.541199] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv\n'}
+[12.542531] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail\n'}
+[12.544232] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/timed_motion_service__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.545902] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/dds_fastrtps\n'}
+[12.559898] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/light_sensors_service__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.561586] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/motor_freqs_service__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.563331] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action\n'}
+[12.564566] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail\n'}
+[12.565809] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/music__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.580291] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/dds_fastrtps\n'}
+[12.582056] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/move_robot__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.583852] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/movement__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.585576] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/libraspimouse_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[12.587451] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs\n'}
+[12.589447] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg\n'}
+[12.599707] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail\n'}
+[12.605011] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/light_sensors__type_support.c\n'}
+[12.606807] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/light_sensors__rosidl_typesupport_introspection_c.h\n'}
+[12.608268] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/timed_motion__rosidl_typesupport_introspection_c.h\n'}
+[12.609696] (-) TimerEvent: {}
+[12.615418] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/motor_freqs__rosidl_typesupport_introspection_c.h\n'}
+[12.617224] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/motor_freqs__type_support.c\n'}
+[12.618957] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/timed_motion__type_support.c\n'}
+[12.620773] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[12.622281] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv\n'}
+[12.623928] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail\n'}
+[12.625337] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/light_sensors_service__rosidl_typesupport_introspection_c.h\n'}
+[12.639010] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/timed_motion_service__rosidl_typesupport_introspection_c.h\n'}
+[12.640901] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/motor_freqs_service__rosidl_typesupport_introspection_c.h\n'}
+[12.656644] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/timed_motion_service__type_support.c\n'}
+[12.658557] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/motor_freqs_service__type_support.c\n'}
+[12.660305] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/light_sensors_service__type_support.c\n'}
+[12.661771] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action\n'}
+[12.663363] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail\n'}
+[12.665045] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/move_robot__type_support.c\n'}
+[12.676595] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/move_robot__rosidl_typesupport_introspection_c.h\n'}
+[12.678426] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/music__rosidl_typesupport_introspection_c.h\n'}
+[12.680302] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/movement__rosidl_typesupport_introspection_c.h\n'}
+[12.681904] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/music__type_support.c\n'}
+[12.683930] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/movement__type_support.c\n'}
+[12.685919] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/libraspimouse_msgs__rosidl_typesupport_introspection_c.so\n'}
+[12.695972] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/libraspimouse_msgs__rosidl_typesupport_c.so\n'}
+[12.697472] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs\n'}
+[12.699099] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg\n'}
+[12.700720] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail\n'}
+[12.707139] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/light_sensors__struct.hpp\n'}
+[12.708689] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/timed_motion__traits.hpp\n'}
+[12.709951] (-) TimerEvent: {}
+[12.711391] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/light_sensors__builder.hpp\n'}
+[12.713135] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/timed_motion__struct.hpp\n'}
+[12.715311] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/timed_motion__builder.hpp\n'}
+[12.717082] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/motor_freqs__struct.hpp\n'}
+[12.728093] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/motor_freqs__traits.hpp\n'}
+[12.729369] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/motor_freqs__builder.hpp\n'}
+[12.730719] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/light_sensors__traits.hpp\n'}
+[12.732372] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/timed_motion.hpp\n'}
+[12.733916] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/light_sensors.hpp\n'}
+[12.735745] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/motor_freqs.hpp\n'}
+[12.737398] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv\n'}
+[12.751061] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail\n'}
+[12.761822] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/motor_freqs_service__traits.hpp\n'}
+[12.763562] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/motor_freqs_service__struct.hpp\n'}
+[12.765197] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/light_sensors_service__struct.hpp\n'}
+[12.767081] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/timed_motion_service__struct.hpp\n'}
+[12.768892] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/light_sensors_service__builder.hpp\n'}
+[12.770578] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/light_sensors_service__traits.hpp\n'}
+[12.780746] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/motor_freqs_service__builder.hpp\n'}
+[12.782148] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/timed_motion_service__builder.hpp\n'}
+[12.783720] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/timed_motion_service__traits.hpp\n'}
+[12.785295] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/timed_motion_service.hpp\n'}
+[12.786935] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/light_sensors_service.hpp\n'}
+[12.788647] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/motor_freqs_service.hpp\n'}
+[12.790294] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action\n'}
+[12.805200] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/move_robot.hpp\n'}
+[12.807113] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/movement.hpp\n'}
+[12.809042] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail\n'}
+[12.818707] (-) TimerEvent: {}
+[12.820170] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/move_robot__struct.hpp\n'}
+[12.821929] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/music__builder.hpp\n'}
+[12.823705] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/movement__builder.hpp\n'}
+[12.825294] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/movement__traits.hpp\n'}
+[12.838995] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/move_robot__traits.hpp\n'}
+[12.840581] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/music__traits.hpp\n'}
+[12.841983] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/music__struct.hpp\n'}
+[12.843545] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/movement__struct.hpp\n'}
+[12.845129] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/move_robot__builder.hpp\n'}
+[12.846779] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/music.hpp\n'}
+[12.848381] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs\n'}
+[12.849712] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg\n'}
+[12.863343] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail\n'}
+[12.864932] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/motor_freqs__type_support.cpp\n'}
+[12.866281] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/light_sensors__type_support.cpp\n'}
+[12.867955] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/timed_motion__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.869383] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/light_sensors__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.871139] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/motor_freqs__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.872776] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/msg/detail/timed_motion__type_support.cpp\n'}
+[12.874207] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv\n'}
+[12.875880] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail\n'}
+[12.877335] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/light_sensors_service__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.878912] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/motor_freqs_service__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.880223] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/motor_freqs_service__type_support.cpp\n'}
+[12.881497] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/light_sensors_service__type_support.cpp\n'}
+[12.896431] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/timed_motion_service__type_support.cpp\n'}
+[12.898070] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/srv/detail/timed_motion_service__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.899871] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action\n'}
+[12.901371] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail\n'}
+[12.914931] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/movement__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.916417] (-) TimerEvent: {}
+[12.917611] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/music__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.919123] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/movement__type_support.cpp\n'}
+[12.920447] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/music__type_support.cpp\n'}
+[12.921835] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/move_robot__type_support.cpp\n'}
+[12.923557] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/include/raspimouse_msgs/action/detail/move_robot__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.925073] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/libraspimouse_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[12.926548] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/libraspimouse_msgs__rosidl_typesupport_cpp.so\n'}
+[12.936550] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/environment/pythonpath.sh\n'}
+[12.937766] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/environment/pythonpath.dsv\n'}
+[12.939121] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/__init__.py\n'}
+[13.022137] (-) TimerEvent: {}
+[13.131080] (-) TimerEvent: {}
+[13.235264] (-) TimerEvent: {}
+[13.267665] (raspimouse_launch) JobEnded: {'identifier': 'raspimouse_launch', 'rc': 0}
+[13.315598] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/msg\n'}
+[13.317116] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/msg/_light_sensors.py\n'}
+[13.318589] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/msg/__init__.py\n'}
+[13.320293] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/msg/_timed_motion_s.c\n'}
+[13.321748] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/msg/_timed_motion.py\n'}
+[13.324479] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/msg/_motor_freqs.py\n'}
+[13.325949] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/msg/_motor_freqs_s.c\n'}
+[13.327410] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/msg/_light_sensors_s.c\n'}
+[13.328795] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/srv\n'}
+[13.342946] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/srv/__init__.py\n'}
+[13.344463] (-) TimerEvent: {}
+[13.345590] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/srv/_light_sensors_service_s.c\n'}
+[13.347274] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/srv/_motor_freqs_service.py\n'}
+[13.348925] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/srv/_light_sensors_service.py\n'}
+[13.364691] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/srv/_motor_freqs_service_s.c\n'}
+[13.366468] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/srv/_timed_motion_service_s.c\n'}
+[13.368305] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/srv/_timed_motion_service.py\n'}
+[13.370107] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/action\n'}
+[13.376331] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/action/__init__.py\n'}
+[13.377862] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/action/_movement_s.c\n'}
+[13.386282] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/action/_move_robot.py\n'}
+[13.388065] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/action/_move_robot_s.c\n'}
+[13.389880] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/action/_music.py\n'}
+[13.391753] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/action/_movement.py\n'}
+[13.393264] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/action/_music_s.c\n'}
+[13.407141] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/raspimouse_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\n'}
+[13.408963] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/raspimouse_msgs_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\n'}
+[13.410880] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/python3.8/site-packages/raspimouse_msgs/raspimouse_msgs_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\n'}
+[13.412507] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/lib/libraspimouse_msgs__python.so\n'}
+[13.414079] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/msg/LightSensors.idl\n'}
+[13.424209] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/srv/LightSensorsService.idl\n'}
+[13.426484] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/msg/MotorFreqs.idl\n'}
+[13.428275] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/srv/MotorFreqsService.idl\n'}
+[13.429858] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/msg/TimedMotion.idl\n'}
+[13.440500] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/srv/TimedMotionService.idl\n'}
+[13.442139] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/action/Music.idl\n'}
+[13.444103] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/action/Movement.idl\n'}
+[13.445620] (-) TimerEvent: {}
+[13.457730] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/action/MoveRobot.idl\n'}
+[13.459752] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/msg/LightSensors.msg\n'}
+[13.461387] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/srv/LightSensorsService.srv\n'}
+[13.469512] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/srv/LightSensorsService_Request.msg\n'}
+[13.473001] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/srv/LightSensorsService_Response.msg\n'}
+[13.474797] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/msg/MotorFreqs.msg\n'}
+[13.476646] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/srv/MotorFreqsService.srv\n'}
+[13.478134] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/srv/MotorFreqsService_Request.msg\n'}
+[13.479893] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/srv/MotorFreqsService_Response.msg\n'}
+[13.481632] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/msg/TimedMotion.msg\n'}
+[13.493214] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/srv/TimedMotionService.srv\n'}
+[13.495184] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/srv/TimedMotionService_Request.msg\n'}
+[13.496851] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/srv/TimedMotionService_Response.msg\n'}
+[13.498556] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/action/Music.action\n'}
+[13.500291] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/action/Movement.action\n'}
+[13.501910] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/action/MoveRobot.action\n'}
+[13.518400] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/ament_index/resource_index/package_run_dependencies/raspimouse_msgs\n'}
+[13.522772] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/ament_index/resource_index/parent_prefix_path/raspimouse_msgs\n'}
+[13.524529] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/environment/ament_prefix_path.sh\n'}
+[13.526240] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/environment/ament_prefix_path.dsv\n'}
+[13.528059] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/environment/path.sh\n'}
+[13.529789] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/environment/path.dsv\n'}
+[13.541852] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/local_setup.bash\n'}
+[13.548211] (-) TimerEvent: {}
+[13.553807] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/local_setup.sh\n'}
+[13.569194] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/local_setup.zsh\n'}
+[13.570971] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/local_setup.dsv\n'}
+[13.572686] (raspimouse_msgs) StdoutLine: {'line': b'-- Installing: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/package.dsv\n'}
+[13.574277] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/ament_index/resource_index/packages/raspimouse_msgs\n'}
+[13.576031] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/cmake/raspimouse_msgs__rosidl_generator_cExport.cmake\n'}
+[13.577726] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/cmake/raspimouse_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[13.579521] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/cmake/raspimouse_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[13.581250] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/cmake/raspimouse_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[13.584566] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/cmake/raspimouse_msgs__rosidl_typesupport_cExport.cmake\n'}
+[13.599048] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/cmake/raspimouse_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[13.600798] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/cmake/raspimouse_msgs__rosidl_generator_cppExport.cmake\n'}
+[13.602765] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/cmake/raspimouse_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[13.604612] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/cmake/raspimouse_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[13.606418] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/cmake/raspimouse_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[13.628343] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/cmake/raspimouse_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[13.629961] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[13.631820] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[13.633480] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[13.635550] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[13.637226] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[13.638961] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[13.640875] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[13.642553] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/cmake/raspimouse_msgsConfig.cmake\n'}
+[13.644453] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/cmake/raspimouse_msgsConfig-version.cmake\n'}
+[13.646201] (raspimouse_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/ros2_ws/install/raspimouse_msgs/share/raspimouse_msgs/package.xml\n'}
+[13.663805] (-) TimerEvent: {}
+[13.665122] (raspimouse_msgs) CommandEnded: {'returncode': 0}
+[13.766271] (-) TimerEvent: {}
+[13.868177] (-) TimerEvent: {}
+[13.970080] (-) TimerEvent: {}
+[14.071958] (-) TimerEvent: {}
+[14.174857] (-) TimerEvent: {}
+[14.276672] (-) TimerEvent: {}
+[14.378414] (-) TimerEvent: {}
+[14.483375] (-) TimerEvent: {}
+[14.587692] (-) TimerEvent: {}
+[14.692051] (-) TimerEvent: {}
+[14.796160] (-) TimerEvent: {}
+[14.899535] (-) TimerEvent: {}
+[14.981729] (raspimouse_run_corridor) StdoutLine: {'line': b'running egg_info\n'}
+[14.995689] (raspimouse_run_corridor) StdoutLine: {'line': b'writing ../../build/raspimouse_run_corridor/raspimouse_run_corridor.egg-info/PKG-INFO\n'}
+[14.999887] (-) TimerEvent: {}
+[15.002783] (raspimouse_run_corridor) StdoutLine: {'line': b'writing dependency_links to ../../build/raspimouse_run_corridor/raspimouse_run_corridor.egg-info/dependency_links.txt\n'}
+[15.011270] (raspimouse_run_corridor) StdoutLine: {'line': b'writing entry points to ../../build/raspimouse_run_corridor/raspimouse_run_corridor.egg-info/entry_points.txt\n'}
+[15.013142] (raspimouse_run_corridor) StdoutLine: {'line': b'writing requirements to ../../build/raspimouse_run_corridor/raspimouse_run_corridor.egg-info/requires.txt\n'}
+[15.014817] (raspimouse_run_corridor) StdoutLine: {'line': b'writing top-level names to ../../build/raspimouse_run_corridor/raspimouse_run_corridor.egg-info/top_level.txt\n'}
+[15.100207] (-) TimerEvent: {}
+[15.201679] (-) TimerEvent: {}
+[15.304030] (-) TimerEvent: {}
+[15.406066] (-) TimerEvent: {}
+[15.428223] (raspimouse_run_corridor) StdoutLine: {'line': b"reading manifest file '../../build/raspimouse_run_corridor/raspimouse_run_corridor.egg-info/SOURCES.txt'\n"}
+[15.440075] (raspimouse_run_corridor) StdoutLine: {'line': b"writing manifest file '../../build/raspimouse_run_corridor/raspimouse_run_corridor.egg-info/SOURCES.txt'\n"}
+[15.441907] (raspimouse_run_corridor) StdoutLine: {'line': b'running build\n'}
+[15.443719] (raspimouse_run_corridor) StdoutLine: {'line': b'running build_py\n'}
+[15.447513] (raspimouse_run_corridor) StdoutLine: {'line': b'running install\n'}
+[15.455463] (raspimouse_run_corridor) StdoutLine: {'line': b'running install_lib\n'}
+[15.476320] (raspimouse_run_corridor) StdoutLine: {'line': b'running install_data\n'}
+[15.481938] (raspimouse_run_corridor) StdoutLine: {'line': b'running install_egg_info\n'}
+[15.501059] (raspimouse_run_corridor) StdoutLine: {'line': b"removing '/home/ubuntu/ros2_ws/install/raspimouse_run_corridor/lib/python3.8/site-packages/raspimouse_run_corridor-0.0.1-py3.8.egg-info' (and everything under it)\n"}
+[15.506070] (raspimouse_run_corridor) StdoutLine: {'line': b'Copying ../../build/raspimouse_run_corridor/raspimouse_run_corridor.egg-info to /home/ubuntu/ros2_ws/install/raspimouse_run_corridor/lib/python3.8/site-packages/raspimouse_run_corridor-0.0.1-py3.8.egg-info\n'}
+[15.507589] (-) TimerEvent: {}
+[15.609098] (-) TimerEvent: {}
+[15.706208] (raspimouse_run_corridor) StdoutLine: {'line': b'running install_scripts\n'}
+[15.711031] (-) TimerEvent: {}
+[15.815437] (-) TimerEvent: {}
+[15.921078] (-) TimerEvent: {}
+[15.932746] (raspimouse_run_corridor) StdoutLine: {'line': b'Installing _wall_stop script to /home/ubuntu/ros2_ws/install/raspimouse_run_corridor/lib/raspimouse_run_corridor\n'}
+[15.937820] (raspimouse_run_corridor) StdoutLine: {'line': b'Installing wall_stop script to /home/ubuntu/ros2_ws/install/raspimouse_run_corridor/lib/raspimouse_run_corridor\n'}
+[15.941610] (raspimouse_run_corridor) StdoutLine: {'line': b'Installing wall_stop_service script to /home/ubuntu/ros2_ws/install/raspimouse_run_corridor/lib/raspimouse_run_corridor\n'}
+[15.951384] (raspimouse_run_corridor) StdoutLine: {'line': b"writing list of installed files to '/home/ubuntu/ros2_ws/build/raspimouse_run_corridor/install.log'\n"}
+[16.021472] (-) TimerEvent: {}
+[16.124693] (-) TimerEvent: {}
+[16.228593] (-) TimerEvent: {}
+[16.246414] (raspimouse_run_corridor) CommandEnded: {'returncode': 0}
+[16.334034] (-) TimerEvent: {}
+[16.384666] (raspimouse_run_corridor) JobEnded: {'identifier': 'raspimouse_run_corridor', 'rc': 0}
+[16.434518] (-) TimerEvent: {}
+[16.536492] (-) TimerEvent: {}
+[16.642839] (-) TimerEvent: {}
+[16.647469] (raspimouse_msgs) JobEnded: {'identifier': 'raspimouse_msgs', 'rc': 0}
+[16.663069] (-) EventReactorShutdown: {}
