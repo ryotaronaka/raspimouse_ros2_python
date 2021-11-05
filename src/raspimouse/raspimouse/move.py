@@ -65,12 +65,10 @@ class Motor(Node):
             '/move',
             execute_callback = self.execute_callback_simple, # Callback function for processing accepted goals.
             goal_callback = self.goal_callback,
-            #handle_accepted_callback=self.handle_accepted_callback,
+            handle_accepted_callback=self.handle_accepted_callback,
             cancel_callback=self.cancel_callback
         )
 
-        print("*** move action ***")
-    
     def execute_callback_simple(self, goal_handle):
         # Vector: x(side +:right, -:left), y(+:forward, -:back), z(no-use) / unit(m)
         self.get_logger().info('Executing goal(simple)...')
@@ -99,7 +97,7 @@ class Motor(Node):
 
         goal_handle.succeed()
         #self.cmd_vel(0.0, 0.0) #stop
-        self.set_raw_freq(0.0, 0.0)
+        #self.set_raw_freq(0.0, 0.0)
 
         result.message = 'MoveRobot suceeded.'
         return result
@@ -124,7 +122,7 @@ class Motor(Node):
 
         self.get_logger().info('left_hz : "%f"' % left_hz)
         self.get_logger().info('right_hz : "%f"' % right_hz)
-        self.get_logger().info('duration_ms : "%f"' % duration_ms)       
+        self.get_logger().info('duration_ms : "%d"' % int(duration_ms))       
 
         if not self.is_on:
             self.get_logger().info("not enpowered")
@@ -133,7 +131,7 @@ class Motor(Node):
         dev = "/dev/rtmotor0"
         try:
             with open(dev, 'w') as f:
-                f.write("%s %s %s\n" % (str(left_hz), str(right_hz), str(int(duration_ms))))
+                f.write("%s %s %s\n" % (str(int(round(left_hz))), str(int(round(right_hz))), str(int(round(duration_ms)))))
                 self.last_time = self.get_clock().now()
                 self.get_logger().info("pull TimedMotion : %s" % self.last_time)
 
@@ -141,7 +139,7 @@ class Motor(Node):
             self.get_logger().info("cannot write to " + dev)
             return 0
         
-        #time.sleep(duration_ms/1000)
+        #time.sleep(2)
         return 1
 
     def goal_callback(self, goal_request):

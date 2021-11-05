@@ -38,7 +38,7 @@ class WallStop(Node):
 
         self._action_client = ActionClient(self, MoveRobot, '/move')
         
-    
+        
     def callback(self, msg):
         self.sensor_values = msg
         #self.get_logger().info('I heard right_forward : "%d"' % msg.right_forward)
