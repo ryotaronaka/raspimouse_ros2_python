@@ -38,6 +38,7 @@ class LightSensors_Node(Node):
                 # self.get_logger().info("right_forward : %d" % msg.right_forward)
                 # self.get_logger().info("left_forward : %d" % msg.left_forward)
                 # self.get_logger().info("sum_forward : %d" % msg.sum_forward)
+                # self.get_logger().info("sum_forward : %d" % msg.sum_all)
 
                 # msg=Int16MultiArray()
                 # msg.data.append(data[0])
@@ -55,7 +56,7 @@ class LightSensors_Node(Node):
             self.get_logger().info("cannot write to " + devfile)
 
     def get_freq(self):
-        f = self.declare_parameter('lightsensors_freq', 5)
+        f = self.declare_parameter('lightsensors_freq', 1)
         f = f._value
         #self.get_logger().info("lightsensors_freq : {0}".format(f))
         self.get_logger().info("lightsensors_freq : %f" % f)

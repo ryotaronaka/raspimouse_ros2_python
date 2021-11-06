@@ -34,6 +34,7 @@ setup(
             'motors2 = raspimouse.motors2:main',
             'motors = raspimouse.motors:main',
             'move = raspimouse.move:main',
+            'motor_action_server = raspimouse.motor_action_server:main',
         ],
     },
 )

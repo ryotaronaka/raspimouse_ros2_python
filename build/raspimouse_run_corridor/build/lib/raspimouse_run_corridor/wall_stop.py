@@ -35,10 +35,10 @@ class WallStop(Node):
             self.callback,
             10
         )
-
-        self._action_client = ActionClient(self, MoveRobot, '/move')
         
-    
+        self._action_client = ActionClient(self, MoveRobot, '/move')
+
+
     def callback(self, msg):
         self.sensor_values = msg
         #self.get_logger().info('I heard right_forward : "%d"' % msg.right_forward)
@@ -56,9 +56,12 @@ class WallStop(Node):
         # アクションサーバーが開始されるのを待つ
         self._action_client.wait_for_server()
         
+        self.get_logger().info('I heard left_forward : "%d"' % self.sensor_values.left_forward)
+
         self._send_goal_future = self._action_client.send_goal_async(goal_msg)
 
         self._send_goal_future.add_done_callback(self.goal_response_callback)
+        
 
     def goal_response_callback(self, future):
         goal_handle = future.result()

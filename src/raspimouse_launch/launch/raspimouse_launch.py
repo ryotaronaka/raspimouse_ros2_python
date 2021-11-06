@@ -16,14 +16,14 @@ def generate_launch_description():
             package='raspimouse',
             executable='buzzer',
         ),
-        Node(
-            package='raspimouse',
-            executable='lightsensors',
-            parameters=[
-                join(pkg_prefix, 'cfg/_parameter.yaml') #if ros2 don't read parameter.yaml, copy the yaml to cfg folder.
-                #{"lightsensors_freq": 1}
-            ]
-        ),
+        #Node(
+        #    package='raspimouse',
+        #    executable='lightsensors',
+        #    parameters=[
+        #        join(pkg_prefix, 'cfg/_parameter.yaml') #if ros2 don't read parameter.yaml, copy the yaml to cfg folder.
+        #        #{"lightsensors_freq": 1}
+        #    ]
+        #),
         Node(
             package='raspimouse',
             executable='motors',
@@ -31,5 +31,9 @@ def generate_launch_description():
         Node(
             package='raspimouse',
             executable='move',
+        ),
+        Node(
+            package='raspimouse',
+            executable='motor_action_server',
         )
     ])
