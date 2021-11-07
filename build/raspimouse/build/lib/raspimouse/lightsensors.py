@@ -56,7 +56,7 @@ class LightSensors_Node(Node):
             self.get_logger().info("cannot write to " + devfile)
 
     def get_freq(self):
-        f = self.declare_parameter('lightsensors_freq', 1)
+        f = self.declare_parameter('lightsensors_freq', 0.5)
         f = f._value
         #self.get_logger().info("lightsensors_freq : {0}".format(f))
         self.get_logger().info("lightsensors_freq : %f" % f)

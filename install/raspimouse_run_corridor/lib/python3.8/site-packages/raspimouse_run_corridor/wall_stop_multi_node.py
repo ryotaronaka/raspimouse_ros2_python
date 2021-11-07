@@ -63,6 +63,7 @@ class WallStop(Node):
         # アクションサーバーが開始されるのを待つ
         self._action_client.wait_for_server()
         
+        #Lightsensorの情報は、司令を出した側には戻ってこない
         #self.get_logger().info('I heard sum_all : "%d"' % self.sensor_values.sum_all)
 
         self._send_goal_future = self._action_client.send_goal_async(goal_msg)

@@ -116,7 +116,7 @@ class MotorActionServer(Node):
         #self.cmd_vel(0.0, 0.0) #stop
         #self.set_raw_freq(0.0, 0.0)
 
-        result.message = 'MoveRobot suceeded.'
+        result.message = 'MoveRobot ran at ' + str(tm_result) + ' ms.'
         return result
 
     #motors.py : ros2 service call /timed_motion raspimouse_msgs/srv/TimedMotionService "{left_hz: 300, right_hz: -300, duration_ms: 500}"
@@ -154,50 +154,45 @@ class MotorActionServer(Node):
         mod = duration_ms % float(motion_interval) # 割り算の剰余
         self.get_logger().info('mod : "%f"' % mod)
 
-        #sum_interval = 0.0
+        sum_interval = 0.0
 
         dev = "/dev/rtmotor0"
-        if mod == 0.0 :
-            for n in range(1, rotation):
-                #sum_interval = sum_interval + motion_interval
+        for n in range(1, rotation):
+            if self.lightsensors.sum_all > 500:
                 self.get_logger().info('I heard sum_all : "%d"' % self.lightsensors.sum_all)
+                time.sleep(2)
+            else:
                 try:
                     with open(dev, 'w') as f:
                         f.write("%s %s %s\n" % (str(int(round(left_hz))), str(int(round(right_hz))), str(motion_interval)))
                         self.last_time = self.get_clock().now()
                         self.get_logger().info("pull TimedMotion : %s" % self.last_time)
+                        sum_interval = sum_interval + motion_interval
+                        time.sleep(2)
 
                 except:
                     self.get_logger().info("cannot write to " + dev)
                     return 0
-        else :
-            for n in range(1, rotation):
-                #sum_interval = sum_interval + motion_interval
-                self.get_logger().info('I heard sum_all : "%d"' % self.lightsensors.sum_all)
-                try:
-                    with open(dev, 'w') as f:
-                        f.write("%s %s %s\n" % (str(int(round(left_hz))), str(int(round(right_hz))), str(motion_interval)))
-                        self.last_time = self.get_clock().now()
-                        self.get_logger().info("pull TimedMotion : %s" % self.last_time)
 
-                except:
-                    self.get_logger().info("cannot write to " + dev)
-                    return 0
-            
+
+        if mod != 0.0 :
             #割り算の剰余
-            self.get_logger().info('I heard sum_all : "%d"' % self.lightsensors.sum_all)
-            try:
-                with open(dev, 'w') as f:
-                    f.write("%s %s %s\n" % (str(int(round(left_hz))), str(int(round(right_hz))), str(int(round(mod)))))
-                    self.last_time = self.get_clock().now()
-                    self.get_logger().info("pull TimedMotion : %s" % self.last_time)
+            if self.lightsensors.sum_all > 500:
+                self.get_logger().info('I heard sum_all : "%d"' % self.lightsensors.sum_all)
+                time.sleep(2)
+            else:
+                try:
+                    with open(dev, 'w') as f:
+                        f.write("%s %s %s\n" % (str(int(round(left_hz))), str(int(round(right_hz))), str(int(round(mod)))))
+                        self.last_time = self.get_clock().now()
+                        self.get_logger().info("pull TimedMotion : %s" % self.last_time)
+                        sum_interval = sum_interval + motion_interval
 
-            except:
-                self.get_logger().info("cannot write to " + dev)
-                return 0
+                except:
+                    self.get_logger().info("cannot write to " + dev)
+                    return 0
 
-        #time.sleep(2)
-        return 1
+        return sum_interval
 
     def goal_callback(self, goal_request):
         self.get_logger().info('Received goal request')
