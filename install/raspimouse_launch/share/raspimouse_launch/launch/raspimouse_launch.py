@@ -24,14 +24,14 @@ def generate_launch_description():
         #        #{"lightsensors_freq": 1}
         #    ]
         #),
-        Node(
-            package='raspimouse',
-            executable='motors',
-        ),
-        Node(
-            package='raspimouse',
-            executable='move',
-        ),
+        #Node(
+        #    package='raspimouse',
+        #    executable='motors',
+        #),
+        #Node(
+        #    package='raspimouse',
+        #    executable='move',
+        #),
         Node(
             package='raspimouse',
             executable='motor_action_server',
