@@ -237,7 +237,7 @@ void MoveRobot_Feedback__rosidl_typesupport_introspection_c__MoveRobot_Feedback_
   raspimouse_msgs__action__MoveRobot_Feedback__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember MoveRobot_Feedback__rosidl_typesupport_introspection_c__MoveRobot_Feedback_message_member_array[3] = {
+static rosidl_typesupport_introspection_c__MessageMember MoveRobot_Feedback__rosidl_typesupport_introspection_c__MoveRobot_Feedback_message_member_array[4] = {
   {
     "x",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
@@ -282,13 +282,28 @@ static rosidl_typesupport_introspection_c__MessageMember MoveRobot_Feedback__ros
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "d",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(raspimouse_msgs__action__MoveRobot_Feedback, d),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers MoveRobot_Feedback__rosidl_typesupport_introspection_c__MoveRobot_Feedback_message_members = {
   "raspimouse_msgs__action",  // message namespace
   "MoveRobot_Feedback",  // message name
-  3,  // number of fields
+  4,  // number of fields
   sizeof(raspimouse_msgs__action__MoveRobot_Feedback),
   MoveRobot_Feedback__rosidl_typesupport_introspection_c__MoveRobot_Feedback_message_member_array,  // message members
   MoveRobot_Feedback__rosidl_typesupport_introspection_c__MoveRobot_Feedback_init_function,  // function to initialize message memory (memory has to be allocated)

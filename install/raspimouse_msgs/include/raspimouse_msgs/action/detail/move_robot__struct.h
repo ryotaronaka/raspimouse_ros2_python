@@ -67,6 +67,7 @@ typedef struct raspimouse_msgs__action__MoveRobot_Feedback
   double x;
   double y;
   double z;
+  double d;
 } raspimouse_msgs__action__MoveRobot_Feedback;
 
 // Struct for a sequence of raspimouse_msgs__action__MoveRobot_Feedback.

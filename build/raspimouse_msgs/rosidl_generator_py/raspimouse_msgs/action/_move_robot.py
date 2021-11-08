@@ -334,15 +334,18 @@ class MoveRobot_Feedback(metaclass=Metaclass_MoveRobot_Feedback):
         '_x',
         '_y',
         '_z',
+        '_d',
     ]
 
     _fields_and_field_types = {
         'x': 'double',
         'y': 'double',
         'z': 'double',
+        'd': 'double',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
@@ -355,6 +358,7 @@ class MoveRobot_Feedback(metaclass=Metaclass_MoveRobot_Feedback):
         self.x = kwargs.get('x', float())
         self.y = kwargs.get('y', float())
         self.z = kwargs.get('z', float())
+        self.d = kwargs.get('d', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -390,6 +394,8 @@ class MoveRobot_Feedback(metaclass=Metaclass_MoveRobot_Feedback):
         if self.y != other.y:
             return False
         if self.z != other.z:
+            return False
+        if self.d != other.d:
             return False
         return True
 
@@ -436,6 +442,19 @@ class MoveRobot_Feedback(metaclass=Metaclass_MoveRobot_Feedback):
                 isinstance(value, float), \
                 "The 'z' field must be of type 'float'"
         self._z = value
+
+    @property
+    def d(self):
+        """Message field 'd'."""
+        return self._d
+
+    @d.setter
+    def d(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'd' field must be of type 'float'"
+        self._d = value
 
 
 # Import statements for member types

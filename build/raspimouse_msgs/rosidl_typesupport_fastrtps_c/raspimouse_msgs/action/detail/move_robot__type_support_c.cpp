@@ -466,6 +466,11 @@ static bool _MoveRobot_Feedback__cdr_serialize(
     cdr << ros_message->z;
   }
 
+  // Field name: d
+  {
+    cdr << ros_message->d;
+  }
+
   return true;
 }
 
@@ -491,6 +496,11 @@ static bool _MoveRobot_Feedback__cdr_deserialize(
   // Field name: z
   {
     cdr >> ros_message->z;
+  }
+
+  // Field name: d
+  {
+    cdr >> ros_message->d;
   }
 
   return true;
@@ -525,6 +535,12 @@ size_t get_serialized_size_raspimouse_msgs__action__MoveRobot_Feedback(
   // field.name z
   {
     size_t item_size = sizeof(ros_message->z);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name d
+  {
+    size_t item_size = sizeof(ros_message->d);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -567,6 +583,13 @@ size_t max_serialized_size_raspimouse_msgs__action__MoveRobot_Feedback(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
   // member: z
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+  // member: d
   {
     size_t array_size = 1;
 

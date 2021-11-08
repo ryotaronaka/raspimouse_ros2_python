@@ -301,7 +301,7 @@ void MoveRobot_Feedback_fini_function(void * message_memory)
   typed_message->~MoveRobot_Feedback();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveRobot_Feedback_message_member_array[3] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveRobot_Feedback_message_member_array[4] = {
   {
     "x",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
@@ -346,13 +346,28 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveRobot_Fee
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "d",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(raspimouse_msgs::action::MoveRobot_Feedback, d),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers MoveRobot_Feedback_message_members = {
   "raspimouse_msgs::action",  // message namespace
   "MoveRobot_Feedback",  // message name
-  3,  // number of fields
+  4,  // number of fields
   sizeof(raspimouse_msgs::action::MoveRobot_Feedback),
   MoveRobot_Feedback_message_member_array,  // message members
   MoveRobot_Feedback_init_function,  // function to initialize message memory (memory has to be allocated)

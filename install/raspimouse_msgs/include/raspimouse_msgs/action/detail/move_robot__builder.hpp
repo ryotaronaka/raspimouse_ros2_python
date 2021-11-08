@@ -136,16 +136,32 @@ namespace action
 namespace builder
 {
 
+class Init_MoveRobot_Feedback_d
+{
+public:
+  explicit Init_MoveRobot_Feedback_d(::raspimouse_msgs::action::MoveRobot_Feedback & msg)
+  : msg_(msg)
+  {}
+  ::raspimouse_msgs::action::MoveRobot_Feedback d(::raspimouse_msgs::action::MoveRobot_Feedback::_d_type arg)
+  {
+    msg_.d = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::raspimouse_msgs::action::MoveRobot_Feedback msg_;
+};
+
 class Init_MoveRobot_Feedback_z
 {
 public:
   explicit Init_MoveRobot_Feedback_z(::raspimouse_msgs::action::MoveRobot_Feedback & msg)
   : msg_(msg)
   {}
-  ::raspimouse_msgs::action::MoveRobot_Feedback z(::raspimouse_msgs::action::MoveRobot_Feedback::_z_type arg)
+  Init_MoveRobot_Feedback_d z(::raspimouse_msgs::action::MoveRobot_Feedback::_z_type arg)
   {
     msg_.z = std::move(arg);
-    return std::move(msg_);
+    return Init_MoveRobot_Feedback_d(msg_);
   }
 
 private:

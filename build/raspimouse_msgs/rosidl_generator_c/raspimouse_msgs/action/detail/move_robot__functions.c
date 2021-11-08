@@ -289,6 +289,7 @@ raspimouse_msgs__action__MoveRobot_Feedback__init(raspimouse_msgs__action__MoveR
   // x
   // y
   // z
+  // d
   return true;
 }
 
@@ -301,6 +302,7 @@ raspimouse_msgs__action__MoveRobot_Feedback__fini(raspimouse_msgs__action__MoveR
   // x
   // y
   // z
+  // d
 }
 
 raspimouse_msgs__action__MoveRobot_Feedback *

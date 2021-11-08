@@ -34,6 +34,9 @@ class Motor(Node):
 
         if self.set_power == False:
             self.shutdown()
+        
+        # parameter
+        self.stepping_motor_hz = 400
 
         self.sub_raw = self.create_subscription(
             MotorFreqs,
@@ -52,9 +55,6 @@ class Motor(Node):
             'motor_off',
             self.callback_off,
         )
-
-        # parameter
-        self.stepping_motor_hz = 400
 
         #--- Action ---#
         self._goal_handle = None
@@ -115,7 +115,9 @@ class Motor(Node):
         right_hz = forward_hz + rot_hz
         self.get_logger().info('left_hz : "%f"' % left_hz)
         self.get_logger().info('right_hz : "%f"' % right_hz)
+
         # この速度ではステッピングモーターが動けないので、調整する(l:r=stepping_motor_hz:x)
+        # Vector 
         duration_ms = abs((left_hz/self.stepping_motor_hz)*1000)
         right_hz = self.stepping_motor_hz*(right_hz/left_hz)
         left_hz = self.stepping_motor_hz
@@ -178,6 +180,8 @@ class Motor(Node):
         
         return False
     
+    #*** Motor Node ***
+
     def set_raw_freq(self, left_hz, right_hz):
         if not self.is_on:
             self.get_logger().info("not enpowerd")

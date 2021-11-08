@@ -446,6 +446,8 @@ cdr_serialize(
   cdr << ros_message.y;
   // Member: z
   cdr << ros_message.z;
+  // Member: d
+  cdr << ros_message.d;
   return true;
 }
 
@@ -463,6 +465,9 @@ cdr_deserialize(
 
   // Member: z
   cdr >> ros_message.z;
+
+  // Member: d
+  cdr >> ros_message.d;
 
   return true;
 }
@@ -495,6 +500,12 @@ get_serialized_size(
   // Member: z
   {
     size_t item_size = sizeof(ros_message.z);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: d
+  {
+    size_t item_size = sizeof(ros_message.d);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -534,6 +545,14 @@ max_serialized_size_MoveRobot_Feedback(
   }
 
   // Member: z
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: d
   {
     size_t array_size = 1;
 

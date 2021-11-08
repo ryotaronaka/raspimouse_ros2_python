@@ -296,6 +296,7 @@ struct MoveRobot_Feedback_
       this->x = 0.0;
       this->y = 0.0;
       this->z = 0.0;
+      this->d = 0.0;
     }
   }
 
@@ -308,6 +309,7 @@ struct MoveRobot_Feedback_
       this->x = 0.0;
       this->y = 0.0;
       this->z = 0.0;
+      this->d = 0.0;
     }
   }
 
@@ -321,6 +323,9 @@ struct MoveRobot_Feedback_
   using _z_type =
     double;
   _z_type z;
+  using _d_type =
+    double;
+  _d_type d;
 
   // setters for named parameter idiom
   Type & set__x(
@@ -339,6 +344,12 @@ struct MoveRobot_Feedback_
     const double & _arg)
   {
     this->z = _arg;
+    return *this;
+  }
+  Type & set__d(
+    const double & _arg)
+  {
+    this->d = _arg;
     return *this;
   }
 
@@ -391,6 +402,9 @@ struct MoveRobot_Feedback_
       return false;
     }
     if (this->z != other.z) {
+      return false;
+    }
+    if (this->d != other.d) {
       return false;
     }
     return true;

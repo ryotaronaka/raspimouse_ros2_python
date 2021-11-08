@@ -40,6 +40,10 @@ class MotorActionServer(Node):
         if self.set_power == False:
             self.shutdown()
 
+        # parameter
+        self.stepping_motor_hz = 400 # Hz
+        self.motion_interval = 500 # ms
+
         self.sub_raw = self.create_subscription(
             MotorFreqs,
             'motor_raw', 
@@ -64,9 +68,6 @@ class MotorActionServer(Node):
             self.listener_callback,
             10)
         self.subscription
-
-        # parameter
-        self.stepping_motor_hz = 400
 
         #--- Action ---#
         self._goal_handle = None
@@ -102,21 +103,19 @@ class MotorActionServer(Node):
         result = MoveRobot.Result()
 
         #*** Run ***
-        tm_result = self.timedmotion(vector)
-        #time.sleep(self.duration_ms/1000 + 0.2)
-        #*** Wait for result ***
+        distance = self.timedmotion(vector)
         
         # 最終的にはゴールとして送られてくるベクトルを足し合わせる
+        # distance から、動いたところまでのX座標、Y座標、方向を計算したい
         feedback.x = vector.linear.x
         feedback.y = vector.linear.y
         feedback.z = vector.linear.z
+        feedback.d = distance
         goal_handle.publish_feedback(feedback)
 
         goal_handle.succeed()
-        #self.cmd_vel(0.0, 0.0) #stop
-        #self.set_raw_freq(0.0, 0.0)
 
-        result.message = 'MoveRobot ran at ' + str(tm_result) + ' ms.'
+        result.message = 'MoveRobot ran at ' + str(distance) + ' m.'
         return result
 
     #motors.py : ros2 service call /timed_motion raspimouse_msgs/srv/TimedMotionService "{left_hz: 300, right_hz: -300, duration_ms: 500}"
@@ -137,6 +136,7 @@ class MotorActionServer(Node):
         self.get_logger().info('left_hz : "%f"' % left_hz)
         self.get_logger().info('right_hz : "%f"' % right_hz)
         # この速度ではステッピングモーターが動けないので、調整する(l:r=stepping_motor_hz:x)
+
         duration_ms = int(round(abs((left_hz/self.stepping_motor_hz)*1000)))
         right_hz = self.stepping_motor_hz*(right_hz/left_hz)
         left_hz = self.stepping_motor_hz
@@ -147,28 +147,30 @@ class MotorActionServer(Node):
 
         #self.get_logger().info('type(duration_ms) : "%s"' % type(duration_ms))
 
-        motion_interval = 500 # ms
-        rotation = duration_ms // motion_interval # 割り算の整数の商
+        rotation = duration_ms // self.motion_interval # 割り算の整数の商
         self.get_logger().info('rotation : "%d"' % rotation)
 
-        mod = duration_ms % float(motion_interval) # 割り算の剰余
+        mod = duration_ms % float(self.motion_interval) # 割り算の剰余
         self.get_logger().info('mod : "%f"' % mod)
 
-        sum_interval = 0.0
+        sum_interval = 0.0 # mm
 
         dev = "/dev/rtmotor0"
         for n in range(1, rotation):
             if self.lightsensors.sum_all > 500:
                 self.get_logger().info('I heard sum_all : "%d"' % self.lightsensors.sum_all)
-                time.sleep(2)
+                time.sleep(1)
+                n = n - 1 # rotationを進ませない
             else:
                 try:
                     with open(dev, 'w') as f:
-                        f.write("%s %s %s\n" % (str(int(round(left_hz))), str(int(round(right_hz))), str(motion_interval)))
+                        f.write("%s %s %s\n" % (str(int(round(left_hz))), str(int(round(right_hz))), str(self.motion_interval)))
                         self.last_time = self.get_clock().now()
                         self.get_logger().info("pull TimedMotion : %s" % self.last_time)
-                        sum_interval = sum_interval + motion_interval
-                        time.sleep(2)
+                        # calc distanse --> self.stepping_motor_hz(hz/s)
+                        # 動作周波数が200Hz/sで、駆動時間500msだったら、1周400Hzのタイヤが1/4回ることになる
+                        sum_interval = sum_interval + (((self.stepping_motor_hz/400) * (self.motion_interval / 1000) * 45 * math.pi))
+                        time.sleep(1)
 
                 except:
                     self.get_logger().info("cannot write to " + dev)
@@ -177,21 +179,23 @@ class MotorActionServer(Node):
 
         if mod != 0.0 :
             #割り算の剰余
+            #Light_sensorが一定値を超える場合はストップ
             if self.lightsensors.sum_all > 500:
                 self.get_logger().info('I heard sum_all : "%d"' % self.lightsensors.sum_all)
-                time.sleep(2)
+                time.sleep(1)
             else:
                 try:
                     with open(dev, 'w') as f:
                         f.write("%s %s %s\n" % (str(int(round(left_hz))), str(int(round(right_hz))), str(int(round(mod)))))
                         self.last_time = self.get_clock().now()
                         self.get_logger().info("pull TimedMotion : %s" % self.last_time)
-                        sum_interval = sum_interval + motion_interval
+                        sum_interval = sum_interval + (((self.stepping_motor_hz/400) * (self.motion_interval / 1000) * 45 * math.pi))
 
                 except:
                     self.get_logger().info("cannot write to " + dev)
                     return 0
-
+        
+        sum_interval = sum_interval/1000 # m
         return sum_interval
 
     def goal_callback(self, goal_request):

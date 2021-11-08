@@ -322,6 +322,15 @@ bool raspimouse_msgs__action__move_robot__feedback__convert_from_py(PyObject * _
     ros_message->z = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // d
+    PyObject * field = PyObject_GetAttrString(_pymsg, "d");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->d = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -371,6 +380,17 @@ PyObject * raspimouse_msgs__action__move_robot__feedback__convert_to_py(void * r
     field = PyFloat_FromDouble(ros_message->z);
     {
       int rc = PyObject_SetAttrString(_pymessage, "z", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // d
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->d);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "d", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
