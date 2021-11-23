@@ -158,3 +158,58 @@ ubuntu@ubuntu:~/ros2_ws$ ros2 run raspimouse_run_corridor wall_stop_multi_node
 [INFO] [1637652051.294986676] [wall_stop_multi_node]: MoveRobot ran at 0.3534291735288517 m.
 ubuntu@ubuntu:~/ros2_ws$
 ```
+Actionノードなので、Goal / Result / Feedback が表示されていることがわかる。
+
+## ビルド処理
+コンパイルではないが、準備したコードを動かせるようにするための準備が必要。
+コードを編集したら以下のコマンドを実施。
+必ず、作業フォルダの最上位(今回はros2_ws)で実施すること。
+コマンドは、colcon build と source ~/ros2_ws/install/setup.bash の2種類。
+```
+ubuntu@ubuntu:~$ cd ros*
+ubuntu@ubuntu:~/ros2_ws$ colcon build
+Starting >>> raspimouse
+Starting >>> raspimouse_msgs             
+Finished <<< raspimouse [10.3s]                                                           
+Starting >>> raspimouse_launch
+Starting >>> raspimouse_run_corridor                                                            
+Finished <<< raspimouse_launch [6.31s]                                                                        
+Finished <<< raspimouse_run_corridor [8.96s]                                                            
+Finished <<< raspimouse_msgs [21.3s]                    
+
+Summary: 4 packages finished [24.2s]
+ubuntu@ubuntu:~/ros2_ws$ source ~/ros2_ws/install/setup.bash
+```
+
+messageの型を変更したり、追加した場合は以下も実施する。
+```
+ubuntu@ubuntu:~/ros2_ws$ . install/setup.bash
+```
+
+## ROS2その他コマンド
+raspimouseフォルダで準備していたMotorサービス(move.py)を動かしたい場合は以下。
+```
+ubuntu@ubuntu:~/ros2_ws$ ros2 run raspimouse move
+```
+MotorActionServerへ直接、目標を送りつけたいときのコマンド。ros2 action function <-- node というイメージ。
+```
+ros2 action send_goal /move raspimouse_msgs/action/MoveRobot '{x: 0.0, y: 0.5, z: 0.0}'
+```
+
+## ROS2 パッケージの作成
+パッケージの雛形を作る。ここでは、ROS2のビルドツール「colcon」をインストールする。
+```
+ubuntu@ubuntu:~$ cd ros*
+ubuntu@ubuntu:~/ros2_ws$ sudo apt install python3-colcon-common-extentions
+```
+
+ros2_wsディレクトリの配下に「src」というディレクトリを準備して、空っぽのままビルドする。
+```
+ubuntu@ubuntu:~/ros2_ws$ mkdir ~/ros2_ws/src
+ubuntu@ubuntu:~/ros2_ws$ colcon build
+
+Summary: 0 packages finished [0.14s]
+```
+まだsrcフォルダにパッケージが一つもないので、0パッケージ。
+
+
