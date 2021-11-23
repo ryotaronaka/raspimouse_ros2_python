@@ -246,6 +246,8 @@ raspimouse_run_corridor
 
 ## 参考文献
 - Raspberry Pi で学ぶROSロボット入門/著者　上田隆一：ROS1で記載されているので、全部は使えない。考え方、デバイスドライバー、Gitの箇所は役に立つ。
+  - [上田さんのGit](https://github.com/ryotaronaka/raspimouse_book_info)
+  - 著書のコードが置かれているが章によって置き場所が異なるので注意（各章のリポジトリという項目を探す）
 - Scamper と Raspberry Pi で学ぶROS2 プログラミング入門/鹿貫　悠太：C++で記載されているので、Pythonへの翻訳が必要。Actionのマルチ部分を読み解くのが難しい。
 - [公式チュートリアル](https://docs.ros.org/en/foxy/Tutorials.html)：慣れてくればこれだけで基本のPublisher, Subscriver, Topic, Service, Actionがわかる。
 - [金沢工業大学 ROS2演習](https://demura.net/robot/ros2/20681.html)：公式チュートリアルを読み解くのに大変役に立ちました。
