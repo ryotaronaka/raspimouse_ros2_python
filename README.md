@@ -18,12 +18,30 @@
 ```
 ros2-ws
 ├── README.md
-├── build (ここは基本的にROS2が使う部分)
-├── install (ここは基本的にROS2が使う部分)
-├── log (ここは基本的にROS2が使う部分)
+├── build                                 * ここは基本的にROS2が使う部分
+├── install                               * ここは基本的にROS2が使う部分
+├── log                                   * ここは基本的にROS2が使う部分
 └── src
     ├── raspimouse
+    |   ├── raspimouse
+    |   |   ├── __init__.py
+    |   |   ├── lightsensors.py          * motor_action_server.pyから呼び出し
+    |   |   └── motor_action_server.py
+    |   ├── package.xml
+    |   └── setup.py
     ├── raspimouse_msgs
+    |   ├── action
+    |   |   └── MoveRobot.action
+    |   ├── msg
+    |   |   ├── LightSensors.msg         * motor_action_server.pyから呼び出し
+    |   |   └── MotorFreqs.msg           * motor_action_server.pyから呼び出しているが未利用
+    |   ├── srv                          * action を使う際に service 関連のメッセージを使わなくなった
+    |   ├── CMakeLists.txt
+    |   └── packge.xml
     ├── raspimouse_launch
+    |   ├── launch
+    |   |   └── raspimouse_launch.py
+    |   ├── CMakeLists.txt               * 最初に生成されたまま
+    |   └── packge.xml                   * name/version などを微修正
     └── raspimouse_run_corridor
 ```
