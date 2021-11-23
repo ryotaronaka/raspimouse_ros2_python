@@ -1,6 +1,6 @@
 # Raspimouse-V2 上で ROS2(Python) を動かす
 
-# 開発環境
+## 開発環境
 - 母艦PC : Ubuntu 20.04
 - Code Editor : Visual Studio Code
 - Robot : Raspimouse V2
@@ -9,12 +9,12 @@
   - ROS2インストール済み
   - このあたりの手順は[こちら](https://github.com/ryotaronaka/Raspimouse-ROS2_foxy)を参照
  
-# プログラミング目標
+## プログラミング目標
 - action への指示は、50cm全方へ進む、という具体的な距離で指示ができること
 - action を利用して、Lightsensorによる観測値を元にモーター動作をストップできること
 - 今回は前進とストップが繰り返され、当初設定された駆動距離に対して分割された駆動回数分に対して、前進もしくはストップして終了する。
 
-# 最終的に利用しているコード
+## 最終的に利用しているコード
 ```
 /ros2-ws
 ├── README.md
@@ -49,4 +49,30 @@
             ├── wall_stop_multi_node.py ** Action Client 動作の指示を出す部分。起点。
             ├── package.xml             ** raspimouse, rclpy を追記
             └── setup.py                ** entry_points の部分に利用したいraspimouse_run_corridor内のソースを記載する必要あり
+```
+
+##コード、ノード(クラス)のつながり
+```
+# 表記について　/**** は nodeを示す
+
+raspimouse_launch.py ---> motor_action_server.py
+                          └── MultiThreadedExecutor                                    * Action は外側のトピック/サービスを受け付けないので、複数ノードを実行できるように
+                              ├── MotorActionServer(ActionServer())
+                              |   ├── Service(msg type:Triggr):/motor_on, /motor_off   * モーターのon/offを受け持つサービスノード。サービスは同期型。処理が終わるまで待つ。
+                              |   ├── Subscriver(msg type:LightSensors):/lightsensors  * トピックを通じてメッセージ(光センサーの値)を購読するノード。非同期。
+                              |   └── ActionServer(msg type:MoveRobot):/moter_action_server
+                              |       ├── execute_callback()
+                              |       ├── goal_callback()
+                              |       ├── handle_accepted_callback()
+                              |       ├── cancel_callback()
+                              |       └── callback_group()
+                              └── lightsensors.py ---> LightSensors_Node(msg type:LightSensors):/lightsensors
+
+wall_stop_multi_node.py --- WallStop
+                              └── ActionClient(msg type:MoveRobot):/moter_action_server
+                                  ├── send_goal()                                       * x, y, z の進行ベクトルを渡す。実装は直進の y しか出来ていない。
+                                  ├── goal_response_callback()                          * MoveRobot.action のGolaを送信できる(self._action_client.send_goal_async())
+                                  ├── feedback_callback()                               * MoveRobot.action のFeedbackを受信できる
+                                  └── get_result_callback()                             * MoveRobot.action のResultを受信できる
+
 ```
