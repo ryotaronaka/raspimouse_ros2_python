@@ -51,7 +51,7 @@
             └── setup.py                ** entry_points の部分に利用したいraspimouse_run_corridor内のソースを記載する必要あり
 ```
 
-##コード、ノード(クラス)のつながり
+## コード、ノード(クラス)のつながり
 ```
 # 表記について　/**** は nodeを示す
 
@@ -75,4 +75,44 @@ wall_stop_multi_node.py --- WallStop
                                   ├── feedback_callback()                               * MoveRobot.action のFeedbackを受信できる
                                   └── get_result_callback()                             * MoveRobot.action のResultを受信できる
 
+```
+
+## 使い方
+### 1つ目のターミナル
+```
+ubuntu@ubuntu:~/ros2_ws$ ros2 launch raspimouse_launch raspimouse_launch.py
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2021-11-23-07-20-00-273211-ubuntu-4666
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [buzzer-1]: process started with pid [4669]
+[INFO] [motor_action_server-2]: process started with pid [4671]
+[motor_action_server-2] [INFO] [1637652008.747529935] [lightsensors]: lightsensors_freq : 0.500000
+```
+ここまで表記されるまで待つ。
+
+3つのターミナル(wall_stop_multi_node.py)からゴールが送られてくると、以下のメッセージが出る
+```
+[motor_action_server-2] [INFO] [1637652041.507044400] [motors]: Received goal request
+[motor_action_server-2] [INFO] [1637652041.521701548] [motors]: Executing goal(simple)...
+[motor_action_server-2] [INFO] [1637652041.529047362] [motors]: vector.x : "0.000000"
+[motor_action_server-2] [INFO] [1637652041.534360316] [motors]: vector.y : "0.500000"
+[motor_action_server-2] [INFO] [1637652041.539718635] [motors]: timed motion requested.
+[motor_action_server-2] [INFO] [1637652041.544777893] [motors]: left_hz : "1414.710605"
+[motor_action_server-2] [INFO] [1637652041.549601525] [motors]: right_hz : "1414.710605"
+[motor_action_server-2] [INFO] [1637652041.554219430] [motors]: left_hz : "400"
+[motor_action_server-2] [INFO] [1637652041.558885823] [motors]: right_hz : "400"
+[motor_action_server-2] [INFO] [1637652041.563460030] [motors]: duration_ms : "3537"
+[motor_action_server-2] [INFO] [1637652041.568226163] [motors]: rotation : "7"
+[motor_action_server-2] [INFO] [1637652041.572880161] [motors]: mod : "37.000000"
+[motor_action_server-2] [INFO] [1637652041.578368584] [motors]: pull TimedMotion : Time(nanoseconds=1637652041573637711, clock_type=ROS_TIME)
+[motor_action_server-2] [INFO] [1637652043.122000333] [motors]: pull TimedMotion : Time(nanoseconds=1637652043114138427, clock_type=ROS_TIME)
+[motor_action_server-2] [INFO] [1637652044.658068826] [motors]: pull TimedMotion : Time(nanoseconds=1637652044650181347, clock_type=ROS_TIME)
+[motor_action_server-2] [INFO] [1637652046.192736128] [motors]: pull TimedMotion : Time(nanoseconds=1637652046186113333, clock_type=ROS_TIME)
+[motor_action_server-2] [INFO] [1637652047.730175509] [motors]: pull TimedMotion : Time(nanoseconds=1637652047722113812, clock_type=ROS_TIME)
+[motor_action_server-2] [INFO] [1637652049.270022909] [motors]: I heard sum_all : "6298"
+[motor_action_server-2] [INFO] [1637652050.276237673] [motors]: I heard sum_all : "6443"
+```
+
+３つのターミナルのうち、最後に終了させる(Ctrl+c)
+```
+^C[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
 ```
