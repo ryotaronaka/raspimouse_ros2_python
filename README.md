@@ -78,6 +78,14 @@ wall_stop_multi_node.py --- WallStop
 ```
 
 ## 使い方
+ROS 2でワークスペースを利用するとき、端末でそのワークスペースをアクティベートすること（有効にすること）が必要になるらしい。 
+このため、ワークスペースの最上のディレクトリでsource install/local_setup.bashを実行するらしい。
+でも、実行したことがない。
+```
+ubuntu@ubuntu:~$ cd ros*
+ubuntu@ubuntu:~/ros2_ws$ source install/local_setup.bash
+```
+
 ### 1つ目のターミナル
 初めにros2_wsフォルダへ移動しておく。
 ```
@@ -211,5 +219,35 @@ ubuntu@ubuntu:~/ros2_ws$ colcon build
 Summary: 0 packages finished [0.14s]
 ```
 まだsrcフォルダにパッケージが一つもないので、0パッケージ。
+ただ、必要となるフォルダが生成されている。
+```
+/ros2-ws
+├── /build    
+├── /install     
+├── /log       
+└── /src
+```
 
+パッケージを生成するには以下。ament_pythonにより、ROS 2ではsetup.pyを書いてPython標準のsetuptoolsでビルドできるようになります。
+コマンドの最後がパッケージ名。ここではraspimouse。
+```
+ubuntu@ubuntu:~$ cd ros2_ws/src
+ubuntu@ubuntu:~/ros2_ws/src$ ros2 pkg --build-type ament_python raspimouse
+```
 
+今回の場合、
+```
+raspimouse
+raspimouse_launch
+raspimouse_msgs
+raspimouse_run_corridor
+```
+の４つのパッケージを作った、ということになる。
+
+## 参考文献
+- Raspberry Pi で学ぶROSロボット入門/著者　上田隆一：ROS1で記載されているので、全部は使えない。考え方、デバイスドライバー、Gitの箇所は役に立つ。
+- Scamper と Raspberry Pi で学ぶROS2 プログラミング入門/鹿貫　悠太：C++で記載されているので、Pythonへの翻訳が必要。Actionのマルチ部分を読み解くのが難しい。
+- [公式チュートリアル](https://docs.ros.org/en/foxy/Tutorials.html)：慣れてくればこれだけで基本のPublisher, Subscriver, Topic, Service, Actionがわかる。
+- [金沢工業大学 ROS2演習](https://demura.net/robot/ros2/20681.html)：公式チュートリアルを読み解くのに大変役に立ちました。
+- [ROS2勉強会@別府の資料](https://www.slideshare.net/AtsukiYokota/ros2-7pythonrclpy)：Actionで複数ノードを扱うためのMultiThreadedExecutorをこれで知った。
+- [ROS 2 Raspberry Pi GPIO Control Package](https://github.com/mlherd/ros2_pi_gpio)：基本的なActionの使い方が参考になったのと、将来的に自分でロボットを準備するときのGPIO参考資料。
