@@ -79,7 +79,9 @@ wall_stop_multi_node.py --- WallStop
 
 ## 使い方
 ### 1つ目のターミナル
+初めにros2_wsフォルダへ移動しておく。
 ```
+ubuntu@ubuntu:~$ cd ros*
 ubuntu@ubuntu:~/ros2_ws$ ros2 launch raspimouse_launch raspimouse_launch.py
 [INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2021-11-23-07-20-00-273211-ubuntu-4666
 [INFO] [launch]: Default logging verbosity is set to INFO
@@ -115,4 +117,44 @@ ubuntu@ubuntu:~/ros2_ws$ ros2 launch raspimouse_launch raspimouse_launch.py
 ３つのターミナルのうち、最後に終了させる(Ctrl+c)
 ```
 ^C[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+```
+
+### 2つ目のターミナル
+初めにros2_wsフォルダへ移動しておく。
+モーターをon/offさせる。
+まず、1つ目のターミナルで以下まで読み込まれて、センサーが点滅し始めるまで待つ。
+```
+[motor_action_server-2] [INFO] [1637652008.747529935] [lightsensors]: lightsensors_freq : 0.500000
+```
+モーターONのコマンドを送る。
+```
+ubuntu@ubuntu:~$ cd ros*
+ubuntu@ubuntu:~/ros2_ws$ ros2 service call /motor_on std_srvs/srv/Trigger
+requester: making request: std_srvs.srv.Trigger_Request()
+
+response:
+std_srvs.srv.Trigger_Response(success=True, message='ON')
+```
+サービス・ノードなのでレスポンスが返ってきていることがわかる。
+
+モーターをoffする場合は以下。
+```
+ubuntu@ubuntu:~$ ros2 service call /motor_off std_srvs/srv/Trigger
+requester: making request: std_srvs.srv.Trigger_Request()
+
+response:
+std_srvs.srv.Trigger_Response(success=True, message='OFF')
+```
+いずれも、少し時間がかかる。
+
+### 3つ目のターミナル
+初めにros2_wsフォルダへ移動しておく。
+1つ目、2つ目のターミナルでライトセンサーが点滅し始め、モーターONになったら準備完了。モーターの物理電源をONにしておくこと。
+```
+ubuntu@ubuntu:~$ cd ros*
+ubuntu@ubuntu:~/ros2_ws$ ros2 run raspimouse_run_corridor wall_stop_multi_node
+[INFO] [1637652041.721096899] [wall_stop_multi_node]: Goal accepted
+[INFO] [1637652051.286781645] [wall_stop_multi_node]: feedback.distanse:0.3534291735288517
+[INFO] [1637652051.294986676] [wall_stop_multi_node]: MoveRobot ran at 0.3534291735288517 m.
+ubuntu@ubuntu:~/ros2_ws$
 ```
