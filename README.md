@@ -232,7 +232,7 @@ Summary: 0 packages finished [0.14s]
 コマンドの最後がパッケージ名。ここではraspimouse。
 ```
 ubuntu@ubuntu:~$ cd ros2_ws/src
-ubuntu@ubuntu:~/ros2_ws/src$ ros2 pkg --build-type ament_python raspimouse
+ubuntu@ubuntu:~/ros2_ws/src$ ros2 pkg create --build-type ament_python raspimouse
 ```
 
 今回の場合、
@@ -253,3 +253,9 @@ raspimouse_run_corridor
 - [金沢工業大学 ROS2演習](https://demura.net/robot/ros2/20681.html)：公式チュートリアルを読み解くのに大変役に立ちました。
 - [ROS2勉強会@別府の資料](https://www.slideshare.net/AtsukiYokota/ros2-7pythonrclpy)：Actionで複数ノードを扱うためのMultiThreadedExecutorをこれで知った。
 - [ROS 2 Raspberry Pi GPIO Control Package](https://github.com/mlherd/ros2_pi_gpio)：基本的なActionの使い方が参考になったのと、将来的に自分でロボットを準備するときのGPIO参考資料。
+
+## クリーンな状態のRaspimouseや、OSが不調でOSごと入れ替えた場合の注意点
+- OSを入れ、ROS2をインストールし、.bashrcへ「source /opt/ros/foxy/setup.bash」を書き込む。
+- RSA暗号鍵をGitに登録して、git init, git remote add origin, を実施してGitに接続しておく。
+- ここでgit pull origin main をやるとcolcon buildでハマるので、先にros2 pkg createを実行してパッケージを準備する。
+- あとはgit pullでコードを引っ張ってきてcolcon buildでOK。
